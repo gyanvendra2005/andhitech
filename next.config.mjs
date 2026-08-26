@@ -1,7 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export',
-  basePath: '/andhitech',
+  reactStrictMode: true,
   images: { unoptimized: true },
 };
 

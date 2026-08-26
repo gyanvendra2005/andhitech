@@ -120,7 +120,7 @@ export default function Home() {
         <div className="mx-auto max-w-[1400px] px-6 lg:px-10 py-6 flex items-center justify-between">
           <a href="#top" className="flex items-center gap-3">
             <img
-              src="/andhitech/assets/ahil-logo-light.svg"
+              src="/assets/ahil-logo-light.svg"
               alt="AHIL — And Hitech Industries Limited"
               className="h-9 md:h-10 w-auto"
             />
@@ -186,7 +186,7 @@ export default function Home() {
       <section id="top" className="relative min-h-[100svh] overflow-hidden bg-navy-deep">
         <div className="absolute inset-0">
           <img
-            src="/andhitech/assets/hero-rail.jpg"
+            src="/assets/hero-rail.jpg"
             alt=""
             aria-hidden="true"
             className="hero-motion absolute inset-0 h-full w-full object-cover"
@@ -393,7 +393,7 @@ export default function Home() {
               <div className="grid md:grid-cols-2">
                 <div className="relative aspect-[4/3] md:aspect-auto md:min-h-[340px] overflow-hidden bg-navy-deep">
                   <img
-                    src="/andhitech/assets/product-brake-disc.jpg"
+                    src="/assets/product-brake-disc.jpg"
                     alt="Axle & Wheel Mounted Brake Discs"
                     loading="lazy"
                     className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
@@ -424,7 +424,7 @@ export default function Home() {
               <div className="grid grid-cols-1">
                 <div className="relative aspect-[4/3] md:aspect-auto md:min-h-[340px] overflow-hidden bg-navy-deep">
                   <img
-                    src="/andhitech/assets/product-hvac.jpg"
+                    src="/assets/product-hvac.jpg"
                     alt="Roof-Mounted Package Units (RMPU)"
                     loading="lazy"
                     className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
@@ -455,7 +455,7 @@ export default function Home() {
               <div className="grid grid-cols-1">
                 <div className="relative aspect-[4/3] md:aspect-auto md:min-h-[340px] overflow-hidden bg-navy-deep">
                   <img
-                    src="/andhitech/assets/product-suspension.jpg"
+                    src="/assets/product-suspension.jpg"
                     alt="Air Suspension & LHB Dampers"
                     loading="lazy"
                     className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
@@ -486,7 +486,7 @@ export default function Home() {
               <div className="grid md:grid-cols-2">
                 <div className="relative aspect-[4/3] md:aspect-auto md:min-h-[340px] overflow-hidden bg-navy-deep">
                   <img
-                    src="/andhitech/assets/product-pantograph.jpg"
+                    src="/assets/product-pantograph.jpg"
                     alt="Spring-Type Pantographs"
                     loading="lazy"
                     className="absolute inset-0 h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
@@ -518,7 +518,7 @@ export default function Home() {
       {/* Facility Section */}
       <section id="facility" className="relative bg-ink text-white py-24 md:py-32 overflow-hidden">
         <img
-          src="/andhitech/assets/facility.jpg"
+          src="/assets/facility.jpg"
           alt=""
           aria-hidden="true"
           className="absolute inset-0 h-full w-full object-cover opacity-30"
@@ -673,7 +673,7 @@ export default function Home() {
       <footer className="bg-ink text-white/70 py-14">
         <div className="mx-auto max-w-[1400px] px-6 lg:px-10 grid md:grid-cols-12 gap-8 items-start">
           <div className="md:col-span-5">
-            <img src="/andhitech/assets/ahil-logo-dark.svg" alt="AHIL" className="h-10 w-auto bg-white p-2" />
+            <img src="/assets/ahil-logo-dark.svg" alt="AHIL" className="h-10 w-auto bg-white p-2" />
             <p className="mt-6 text-sm max-w-md leading-relaxed">
               And Hitech Industries Limited — precision manufacturing of rolling stock components, HVAC systems and thermal solutions for the world's railways.
             </p>

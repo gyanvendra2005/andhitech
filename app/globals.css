@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --radius: 0.25rem;
+  --navy-deep: oklch(22% 0.11 268);
+  --navy: oklch(32% 0.14 268);
+  --gold: oklch(87% 0.19 92);
+  --gold-soft: oklch(94% 0.11 96);
+  --steel: oklch(82% 0.005 260);
+  --ink: oklch(16% 0.01 260);
+
+  --background: oklch(100% 0 0);
+  --foreground: var(--ink);
+
+  --card: oklch(100% 0 0);
+  --card-foreground: var(--ink);
+
+  --popover: oklch(100% 0 0);
+  --popover-foreground: var(--ink);
+
+  --primary: var(--navy);
+  --primary-foreground: oklch(100% 0 0);
+
+  --secondary: oklch(97% 0.005 260);
+  --secondary-foreground: var(--navy);
+
+  --muted: oklch(96% 0.005 260);
+  --muted-foreground: oklch(45% 0.02 260);
+
+  --accent: var(--gold);
+  --accent-foreground: var(--navy);
+
+  --border: oklch(92% 0.008 260);
+  --input: oklch(92% 0.008 260);
+  --ring: var(--navy);
+}
+
+/* Direct CSS Color Utility Classes */
+.bg-navy-deep {
+  background-color: oklch(22% 0.11 268);
+}
+
+.bg-navy {
+  background-color: oklch(32% 0.14 268);
+}
+
+.bg-gold {
+  background-color: oklch(87% 0.19 92);
+}
+
+.bg-ink {
+  background-color: oklch(16% 0.01 260);
+}
+
+.text-navy-deep {
+  color: oklch(22% 0.11 268);
+}
+
+.text-navy {
+  color: oklch(32% 0.14 268);
+}
+
+.text-gold {
+  color: oklch(87% 0.19 92);
+}
+
+.border-gold {
+  border-color: oklch(87% 0.19 92);
+}
+
+.border-navy {
+  border-color: oklch(32% 0.14 268);
+}
+
+/* Grid lines overlay */
+.grid-lines {
+  background-image: 
+    linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+  background-size: 80px 80px;
+}
+
+/* Gold underline highlight */
+.gold-underline {
+  background-image: linear-gradient(90deg, oklch(87% 0.19 92), oklch(87% 0.19 92));
+  background-position: 0 88%;
+  background-repeat: no-repeat;
+  background-size: 100% 0.35em;
+}
+
+/* Animated rail streak */
+@keyframes rail-streak {
+  0% { opacity: 0; transform: translate(100%); }
+  20% { opacity: 1; }
+  80% { opacity: 1; }
+  to { opacity: 0; transform: translate(-120%); }
+}
+
+.rail-streak {
+  filter: blur(0.5px);
+  background: linear-gradient(90deg, transparent, oklch(87% 0.19 92) 40%, #ffffff 50%, oklch(87% 0.19 92) 60%, transparent);
+  height: 2px;
+  animation: 2.4s linear infinite rail-streak;
+  position: absolute;
+}
+
+/* Hero pan motion */
+@keyframes rail-pan {
+  0% { transform: translate(0) scale(1.08); }
+  to { transform: translate(-4%) scale(1.08); }
+}
+
+.hero-motion {
+  will-change: transform;
+  animation: 14s linear infinite alternate rail-pan;
+}
+
+/* Continuous Ticker marquee */
+@keyframes ticker {
+  0% { transform: translate(0); }
+  to { transform: translate(-50%); }
+}
+
+.ticker-track {
+  animation: 40s linear infinite ticker;
+}
+
+.ticker-track:hover {
+  animation-play-state: paused;
+}
+
+/* Gold pulse button glow */
+@keyframes pulse-gold {
+  0%, to { box-shadow: 0 0 rgba(255, 208, 0, 0.55); }
+  50% { box-shadow: 0 0 0 14px rgba(255, 208, 0, 0); }
+}
+
+.pulse-gold {
+  animation: 2.4s ease-out infinite pulse-gold;
+}

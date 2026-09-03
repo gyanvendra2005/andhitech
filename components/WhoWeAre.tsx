@@ -29,19 +29,25 @@ export default function WhoWeAre() {
     <section ref={sectionRef} className="who-we-are-section">
       <div className="who-we-are-container">
         {/* Left Side Title with Scroll Reveal */}
-        <div className={`who-we-are-left-title fade-in-scroll ${isVisible ? 'is-visible' : ''}`}>
+        <h2 className={`who-we-are-left-title fade-in-scroll ${isVisible ? 'is-visible' : ''}`}>
           About AHIL
-        </div>
+        </h2>
 
         {/* Right Side Content with Scroll Reveal */}
-        <div className={`who-we-are-right-content fade-in-scroll fade-in-scroll-delay-1 ${isVisible ? 'is-visible' : ''}`}>
-          <h2 className="who-we-are-heading">
+        {/* <div className={`who-we-are-right-content fade-in-scroll fade-in-scroll-delay-1 ${isVisible ? 'is-visible' : ''}`}> */}
+          
+          <div className="who-we-are-img-cont">
+            <img className="who-we-are-img" src="https://placehold.co/600x400" alt="AHIL Facility" /> 
+           <div className="who-we-are-cont">
+            <h2 className="who-we-are-heading">
             Who we are
           </h2>
           <p className="who-we-are-text">
             Established in 2013, AHIL has emerged as a trusted name in precision manufacturing, specializing in high-quality components for Railway Rolling Stock applications, and developing HVAC systems for Railways and Metros. Known for our commitment to engineering excellence, customer satisfaction, and on-time delivery, we have built strong partnerships across multiple industries.
           </p>
-        </div>
+          </div>
+          </div>
+        {/* </div> */}
       </div>
     </section>
   );

@@ -272,10 +272,15 @@ body {
   max-width: 1400px;
   margin: 0 auto;
   padding: 0 2.5rem;
-  display: grid;
-  grid-template-columns: 4fr 8fr;
+  /* display: grid; */
+  /* grid-template-columns: 4fr 8fr; */
   gap: 4rem;
   align-items: center;
+}
+.who-we-are-img-cont {
+  margin: 40px 0;
+  display: flex;
+  gap:5rem;
 }
 
 @media (max-width: 768px) {
@@ -288,8 +293,8 @@ body {
 
 .who-we-are-left-title {
   font-family: 'Manrope', sans-serif;
-  font-size: 2.5rem;
-  font-weight: 600;
+  font-size: 2.75rem;
+  font-weight: 800;
   color: #1e293b;
   letter-spacing: -0.02em;
 }
@@ -302,14 +307,16 @@ body {
 
 .who-we-are-heading {
   font-family: 'Manrope', sans-serif;
-  font-size: 3.25rem;
+  font-size: 2.25rem;
   font-weight: 300;
   color: #0f172a;
   letter-spacing: -0.02em;
   line-height: 1.1;
-  margin: 0;
+  margin-bottom: 20px;
 }
-
+.who-we-are-img{
+  border-radius: 24px;
+}
 .who-we-are-text {
   font-family: 'Inter', sans-serif;
   font-size: 1.125rem;

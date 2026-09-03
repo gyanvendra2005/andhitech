@@ -22,33 +22,33 @@ export default function Header({ onOpenQuote }: HeaderProps) {
         </Link>
 
         <nav className="hidden lg:flex items-center gap-7">
-          {/* <Link href="/about-us" className="text-sm font-medium text-white/85 hover:text-gold transition-colors">
+          <Link href="/about-us" className="text-sm font-medium text-white/85 hover:text-gold transition-colors">
             About Us
-          </Link> */}
-          <a href="/#capabilities" className="text-sm font-medium text-white/85 hover:text-gold transition-colors">
+          </Link>
+          {/* <a href="/#capabilities" className="text-sm font-medium text-white/85 hover:text-gold transition-colors">
             Capabilities
-          </a>
-          <a href="/#products" className="text-sm font-medium text-white/85 hover:text-gold transition-colors">
+          </a> */}
+          {/* <a href="/#products" className="text-sm font-medium text-white/85 hover:text-gold transition-colors">
             Products
-          </a>
-          <a href="/#facility" className="text-sm font-medium text-white/85 hover:text-gold transition-colors">
+          </a> */}
+          {/* <a href="/#facility" className="text-sm font-medium text-white/85 hover:text-gold transition-colors">
             Facility
-          </a>
-          <a href="/#sustainability" className="text-sm font-medium text-white/85 hover:text-gold transition-colors">
+          </a> */}
+          {/* <a href="/#sustainability" className="text-sm font-medium text-white/85 hover:text-gold transition-colors">
             Sustainability
-          </a>
-          {/* <Link href="/new&media" className="text-sm font-medium text-white/85 hover:text-gold transition-colors">
+          </a> */}
+          <Link href="/new&media" className="text-sm font-medium text-white/85 hover:text-gold transition-colors">
             News &amp; Media
-          </Link> */}
-          {/* <Link href="/online-complaint" className="text-sm font-medium text-white/85 hover:text-gold transition-colors">
+          </Link>
+          <Link href="/online-complaint" className="text-sm font-medium text-white/85 hover:text-gold transition-colors">
             Online Complaint
-          </Link> */}
-          <a href="/#clients" className="text-sm font-medium text-white/85 hover:text-gold transition-colors">
+          </Link>
+          {/* <a href="/#clients" className="text-sm font-medium text-white/85 hover:text-gold transition-colors">
             Clients
-          </a>
-          {/* <Link href="/contact-us" className="text-sm font-medium text-white/85 hover:text-gold transition-colors">
+          </a> */}
+          <Link href="/contact-us" className="text-sm font-medium text-white/85 hover:text-gold transition-colors">
             Contact Us
-          </Link> */}
+          </Link>
         </nav>
 
         <button

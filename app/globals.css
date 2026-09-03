@@ -2004,7 +2004,7 @@ body {
 .contact-send-btn-icon {
   background-color: #d4af37;
   color: #0b1329;
-  padding: 0.9rem 1.25rem;
+  padding: 1rem 1.25rem;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2572,7 +2572,7 @@ body {
 .complaint-submit-icon {
   background-color: #d4af37;
   color: #0b1329;
-  padding: 0.85rem 1.15rem;
+  padding: 1rem 1.15rem;
   display: flex;
   align-items: center;
   justify-content: center;

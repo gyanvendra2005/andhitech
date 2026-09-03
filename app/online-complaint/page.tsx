@@ -148,7 +148,7 @@ export default function OnlineComplaintPage() {
                   <div className="complaint-process-body">
                     <h4 className="complaint-process-title">Direct QA &amp; Engineering Escalation</h4>
                     <p className="complaint-process-desc">
-                      Every logged complaint is directly routed to our Chief Metrology &amp; Rolling Stock Quality Engineers within <span className="complaint-highlight-pill">2 Hours</span>.
+                      Every logged complaint is directly routed to our Chief Metrology &amp; Rolling Stock Quality Engineers within 2 Hours.
                     </p>
                   </div>
                 </div>
@@ -159,7 +159,7 @@ export default function OnlineComplaintPage() {
                   <div className="complaint-process-body">
                     <h4 className="complaint-process-title">On-Site Technical Investigation</h4>
                     <p className="complaint-process-desc">
-                      For critical depot or coach failures, a certified field service engineer is deployed for physical inspection within <span className="complaint-highlight-pill">24–48 Hours</span>.
+                      For critical depot or coach failures, a certified field service engineer is deployed for physical inspection within 24–48 Hours.
                     </p>
                   </div>
                 </div>
@@ -170,7 +170,7 @@ export default function OnlineComplaintPage() {
                   <div className="complaint-process-body">
                     <h4 className="complaint-process-title">RDSO &amp; ISO Compliant Root Cause Analysis</h4>
                     <p className="complaint-process-desc">
-                      Comprehensive 8D Failure Analysis and corrective action reports provided with <span className="complaint-highlight-pill">material micro-structure validation</span>.
+                      Comprehensive 8D Failure Analysis and corrective action reports provided with material micro-structure validation.
                     </p>
                   </div>
                 </div>
@@ -181,7 +181,7 @@ export default function OnlineComplaintPage() {
                   <div className="complaint-process-body">
                     <h4 className="complaint-process-title">Guaranteed Component Replacement SLA</h4>
                     <p className="complaint-process-desc">
-                      Immediate dispatch of precision replacement components and buffer stock with <span className="complaint-highlight-pill">zero operational transit delay</span>.
+                      Immediate dispatch of precision replacement components and buffer stock with zero operational transit delay.
                     </p>
                   </div>
                 </div>

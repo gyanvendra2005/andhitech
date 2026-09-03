@@ -64,11 +64,11 @@ body {
 
 /* Direct CSS Color Utility Classes */
 .bg-navy-deep {
-  background-color: #060b18;
+  background-color: #07104c;
 }
 
 .bg-navy {
-  background-color: #0b1329;
+  background-color: #07104c;
 }
 
 .bg-gold {
@@ -84,7 +84,7 @@ body {
 }
 
 .text-navy {
-  color: #0b1329;
+  color: #162779;
 }
 
 .text-gold {

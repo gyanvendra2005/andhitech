@@ -31,7 +31,7 @@ export default function Home() {
         <Capabilities />
         <Products onSelectDatasheet={(ds) => setSelectedDatasheet(ds)} />
         <Facility />
-        <Sustainability />
+        {/* <Sustainability /> */}
         <Clients />
         <Contact onOpenQuote={() => setQuoteModalOpen(true)} />
       </main>

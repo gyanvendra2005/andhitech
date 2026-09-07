@@ -30,10 +30,10 @@ export default function Footer() {
           </ul>
         </div>
         <div className="md:col-span-4">
-          <div className="text-xs uppercase tracking-widest text-white/50 mb-4">Registered</div>
+          <div className="text-xs uppercase tracking-widest text-white/50 mb-4">Contact-us</div>
           <p className="text-sm leading-relaxed">
-            AHIL — And Hitech Industries Limited<br />
-            info@andhitech.in · andhitech.in
+            011-25710064<br />
+            info@andhitech.in
           </p>
         </div>
         <div className="md:col-span-12 border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between gap-3 text-xs text-white/45">

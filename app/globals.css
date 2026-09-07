@@ -833,7 +833,7 @@ body {
 
 .cv-timeline-line {
   position: absolute;
-  left: 6px;
+  /* left: 6px; */
   top: 1.25rem;
   bottom: 1.25rem;
   width: 2px;
@@ -1845,7 +1845,7 @@ body {
 }
 
 .contact-form-main-title span {
-  color: #d97706;
+  color: #D4AF37;
 }
 
 .contact-form-main-desc {

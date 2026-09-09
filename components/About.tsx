@@ -12,16 +12,16 @@ export default function About() {
             <span className="text-xs font-semibold tracking-[0.28em] uppercase text-navy">About AHIL</span>
           </div>
           <h2 className="font-display font-bold text-4xl md:text-5xl leading-[1.05] text-navy">
-            Built to <span className="gold-underline">perform.</span><br />
-            Designed to lead.
+            Engineered with <span className="gold-underline">excellence,</span><br />
+            Build for future.
           </h2>
         </div>
         <div className="md:col-span-8 md:pt-4">
-          <p className="text-lg md:text-xl leading-relaxed text-foreground/80">
-            Since 2013, <strong className="text-navy">And Hitech Industries Limited</strong> has grown into a trusted manufacturing partner for Indian Railways, Metros and PSUs. Under the leadership of Mr. Angad Singh, a 100-strong team combines engineering discipline with state-of-the-art facilities to deliver components the country's rolling stock depends on.
+          <p className="mt-6 text-base md:text-lg leading-relaxed text-foreground/70">
+            Established in 2013, <strong className="text-navy">AND Hitech Industries Limited</strong> is an RDSO registered and UIC approved organization has grown from a precision component manufacturer into multidisciplinary railway engineering organization serving Indian Railways, metro network, rolling stock manufacturers and public sector organizations. Our capabilities span product development, precision manufacturing, assembly, testing quality assurance and lifecycle support allowing us to take greater responsibility across the product journey.
           </p>
           <p className="mt-6 text-base md:text-lg leading-relaxed text-foreground/70">
-            From the axle-mounted brake disc that safely stops a Vande Bharat to the RMPU keeping an LHB coach cool at 130 km/h — every AHIL product is engineered, tested and documented against the standards railway operators trust.
+            From specialized railway components to increasingly integrated system, our portfolio today spans from Braking, Suspension, HVAC, railway Doors, Electrical, Inter vehicular solution and track maintenance products. AHIL brings together engineering, manufacturing, assembly, testing and quality assurance to support customers from product development and localization through serial production and life cycle support.
           </p>
           <div className="mt-10 grid sm:grid-cols-3 gap-6">
             <div className="border-t border-border pt-5">

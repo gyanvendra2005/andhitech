@@ -58,7 +58,7 @@ export default function VisionMission() {
                 Our Vision
               </h3>
               <p className="vm-card-text">
-                To lead the shift in rail mobility by engineering next-generation, high-speed rolling stock systems — powering Vande Bharat, Indian Railways, and global transit networks with zero-defect precision and reliability.
+                To build globally competitive railway technologies from India and become a trusted engineering partner for the future of rail mobility.
               </p>
             </div>
           </div>
@@ -78,16 +78,16 @@ export default function VisionMission() {
                 Our Mission
               </h3>
               <p className="vm-card-text">
-                To manufacture high-reliability, RDSO-certified components and HVAC solutions that maximize passenger safety, comfort, and operational efficiency through continuous innovation, state-of-the-art testing, and strict quality compliance.
+                To engineer and manufacture reliable railway products and systems through innovation, disciplined manufacturing and uncompromising quality — by continuously strengthening our people, technology and engineering capabilities.
               </p>
             </div>
           </div>
         </div>
 
         {/* Bottom Brand Mark */}
-        {/* <div className={`vm-brand-mark fade-in-scroll fade-in-scroll-delay-2 ${isVisible ? 'is-visible' : ''}`}>
-          AHIL · AND HITECH
-        </div> */}
+        <div className={`vm-brand-mark fade-in-scroll fade-in-scroll-delay-2 ${isVisible ? 'is-visible' : ''}`}>
+          ENGINEER | MANUFACTURE | INNOVATE | DELIVER
+        </div>
       </div>
     </section>
   );

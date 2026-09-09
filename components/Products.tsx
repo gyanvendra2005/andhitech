@@ -22,9 +22,6 @@ export default function Products({ onSelectDatasheet }: ProductsProps) {
               engineered for the <span className="gold-underline">rail.</span>
             </h2>
           </div>
-          <p className="md:max-w-sm text-base text-muted-foreground leading-relaxed">
-            A focused portfolio of rolling-stock systems — proven on Indian Railways coaches, Vande Bharat trainsets, and metro fleets across the country.
-          </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-6 md:gap-8">

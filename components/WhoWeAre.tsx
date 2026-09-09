@@ -43,7 +43,10 @@ export default function WhoWeAre() {
             Who we are
           </h2>
           <p className="who-we-are-text">
-            Established in 2013, AHIL has emerged as a trusted name in precision manufacturing, specializing in high-quality components for Railway Rolling Stock applications, and developing HVAC systems for Railways and Metros. Known for our commitment to engineering excellence, customer satisfaction, and on-time delivery, we have built strong partnerships across multiple industries.
+            Established in 2013, AND Hitech Industries Limited, AHIL has evolved from a specialized railway components manufacturer into a multi-disciplinary engineering and manufacturing organization serving the railway and mobility sector.
+          </p>
+          <p className="who-we-are-text">
+            Our portfolio spans braking systems, suspension and ride control components, HVAC systems and railway doors.
           </p>
           </div>
           </div>

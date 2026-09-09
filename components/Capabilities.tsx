@@ -19,46 +19,46 @@ export default function Capabilities() {
         </div>
         <div className="mt-16 grid md:grid-cols-2 lg:grid-cols-4 gap-px bg-white/10 border border-white/10">
           <div className="group relative bg-navy p-8 md:p-10 hover:bg-navy-deep transition-colors">
-            <div className="flex items-start justify-between">
+            {/* <div className="flex items-start justify-between">
               <span className="font-display text-2xl font-bold text-gold">01</span>
               <span className="h-2 w-2 rounded-full bg-gold mt-3 opacity-70 group-hover:opacity-100 group-hover:scale-125 transition-all"></span>
-            </div>
-            <h3 className="mt-16 font-display text-xl md:text-2xl font-bold leading-tight">Design &amp; Simulation</h3>
+            </div> */}
+            <h3 className="underroof-card-heading">Engineering and Product Development</h3>
             <p className="mt-4 text-sm text-white/70 leading-relaxed">
-              Customer-centric engineering with FEA, thermal and manufacturability analysis — translating specs into production-ready components.
+              From customers requirement and design review to product development prototyping and industrialization. Engineering solution built for real railway operating conditions.
             </p>
           </div>
 
           <div className="group relative bg-navy p-8 md:p-10 hover:bg-navy-deep transition-colors">
-            <div className="flex items-start justify-between">
+            {/* <div className="flex items-start justify-between">
               <span className="font-display text-2xl font-bold text-gold">02</span>
               <span className="h-2 w-2 rounded-full bg-gold mt-3 opacity-70 group-hover:opacity-100 group-hover:scale-125 transition-all"></span>
-            </div>
-            <h3 className="mt-16 font-display text-xl md:text-2xl font-bold leading-tight">Precision Manufacturing</h3>
+            </div> */}  
+            <h3 className="underroof-card-heading">Precision Manufacturing</h3>
             <p className="mt-4 text-sm text-white/70 leading-relaxed">
-              CNC machining, forging and assembly on a controlled shop floor. Traceability at every operation, from raw material to dispatch.
+              Integrated machining, fabrication assembly and controlled manufacturing processes, supported by robust process control and complete traceability
             </p>
           </div>
 
           <div className="group relative bg-navy p-8 md:p-10 hover:bg-navy-deep transition-colors">
-            <div className="flex items-start justify-between">
+            {/* <div className="flex items-start justify-between">
               <span className="font-display text-2xl font-bold text-gold">03</span>
               <span className="h-2 w-2 rounded-full bg-gold mt-3 opacity-70 group-hover:opacity-100 group-hover:scale-125 transition-all"></span>
-            </div>
-            <h3 className="mt-16 font-display text-xl md:text-2xl font-bold leading-tight">Quality &amp; Testing</h3>
+            </div> */}
+            <h3 className="underroof-card-heading">Quality and Validation</h3>
             <p className="mt-4 text-sm text-white/70 leading-relaxed">
-              In-house metrology, NDT and endurance testing. Aligned with RDSO, EN 13674 and IRIS-grade quality standards.
+              Rigorous inspection, testing and validation throughout the manufacturing cycle to ensure consistent quality, performance and reliability aligned with RDSO EN-?? Standard and IRIS- grade quality standards.
             </p>
           </div>
 
           <div className="group relative bg-navy p-8 md:p-10 hover:bg-navy-deep transition-colors">
-            <div className="flex items-start justify-between">
+            {/* <div className="flex items-start justify-between">
               <span className="font-display text-2xl font-bold text-gold">04</span>
               <span className="h-2 w-2 rounded-full bg-gold mt-3 opacity-70 group-hover:opacity-100 group-hover:scale-125 transition-all"></span>
-            </div>
-            <h3 className="mt-16 font-display text-xl md:text-2xl font-bold leading-tight">Supply &amp; Aftermarket</h3>
+            </div> */}
+            <h3 className="underroof-card-heading">Supply and Lifecycle Support</h3>
             <p className="mt-4 text-sm text-white/70 leading-relaxed">
-              Strategic procurement, tier-1 vendor network and lifecycle support for Indian Railways, Metros and PSU operators.
+              From serial production and delivery to field support and continuous improvement, we stay connected throughout the product life cycle.
             </p>
           </div>
         </div>

@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import QuoteModal from '@/components/QuoteModal';
 import WhoWeAre from '@/components/WhoWeAre';
 import VisionMission from '@/components/VisionMission';
+import Leadership from '@/components/Leadership';
 import KeyStrengths from '@/components/KeyStrengths';
 import CoreValues from '@/components/CoreValues';
 
@@ -38,14 +39,11 @@ export default function AboutUsPage() {
       <Header onOpenQuote={() => setQuoteModalOpen(true)} />
 
       {/* Hero Banner */}
-      <section className="about-hero">
+      <section className="about-hero about-hero-navy">
         <div className="grid-lines"></div>
         <div className="about-hero-container">
-          <div className="about-hero-badge">
-            Company Profile · Established 2013
-          </div>
           <h1 className="about-hero-title">
-            Pioneering <span>Precision Engineering</span> for Indian Railways &amp; Metros.
+            <span>Engineering Reliability</span> advancing rail mobility.
           </h1>
         </div>
       </section>
@@ -84,6 +82,9 @@ export default function AboutUsPage() {
 
       {/* Vision & Mission Component with Scroll Reveal */}
       <VisionMission />
+
+      {/* MD's Desk & Director's Message */}
+      <Leadership />
 
          {/* Core Values Component with Scroll Reveal */}
       <CoreValues />

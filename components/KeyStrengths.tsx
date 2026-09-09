@@ -37,11 +37,11 @@ export default function KeyStrengths() {
           </div>
 
           <h2 className="ks-title">
-            Core strengths in <strong>industrial innovation</strong>
+            What drives our <strong>engineering excellence</strong>
           </h2>
 
           <p className="ks-desc">
-            At AHIL, our strength lies in combining precision engineering, ethical practices, and customer-focused manufacturing to deliver products that meet the highest standards of reliability. We approach growth step by step, expanding our capabilities while staying committed to excellence and long-term partnerships.
+            At AHIL, our strength comes from combining railway focused engineering, disciplined manufacturing and rigorous quality practices. We continuously strengthen our capabilities to deliver reliable products, develop new solutions and build long-term partnership with our customers.
           </p>
         </div>
 
@@ -53,10 +53,10 @@ export default function KeyStrengths() {
               <ShieldAlert className="ks-icon" />
             </div>
             <h3 className="ks-3col-title">
-              High Reliability And Dependability
+              Railway Engineering Expertise
             </h3>
             <p className="ks-3col-text">
-              Years of experience in railway rolling stock components and HVAC systems enable us to deliver high-performance, dependable products for critical applications.
+              Our experience across railway components and systems gives us a strong understanding of demanding operating conditions, performance requirements and the reliability expected throughout the product service life.
             </p>
           </div>
 
@@ -66,10 +66,10 @@ export default function KeyStrengths() {
               <Cpu className="ks-icon" />
             </div>
             <h3 className="ks-3col-title">
-              Precision Manufacturing &amp; Quality Assurance
+              Manufacturing and Quality Excellence
             </h3>
             <p className="ks-3col-text">
-              Our state-of-the-art facilities and strict quality control processes ensure every component meets the highest reliability and safety standards.
+              Integrated manufacturing, process control, inspection and testing capabilities enable us to translate engineering requirements into consistent, production ready products with a strong focus on quality and traceability.
             </p>
           </div>
 
@@ -79,10 +79,10 @@ export default function KeyStrengths() {
               <Factory className="ks-icon" />
             </div>
             <h3 className="ks-3col-title">
-              Customer-Centric &amp; Growth-Oriented Approach
+              Innovation and Customer Partnership
             </h3>
             <p className="ks-3col-text">
-              We focus on building lasting relationships by delivering on time, supporting evolving client needs, and expanding into new markets like metros and heat exchangers. Continuous R&amp;D and Innovation
+              We work closely with customers on new product development, localization and continuous improvement — combining engineering and manufacturing expertise to develop solutions for rail and mobility requirements.
             </p>
           </div>
         </div>

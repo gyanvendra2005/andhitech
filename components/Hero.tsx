@@ -24,21 +24,22 @@ export default function Hero() {
       </div>
 
       <div className="relative z-10 mx-auto max-w-[1400px] px-6 lg:px-10 pt-40 pb-24 md:pt-52 md:pb-32">
-        <div className="max-w-3xl">
+        <div className="max-w-4xl">
           <div className="inline-flex items-center gap-3 mb-8">
             <span className="h-px w-10 bg-gold"></span>
             <span className="text-xs font-semibold tracking-[0.28em] uppercase text-gold">
-              Precision engineering · Established 2013
+              Precision engineering · Engineered in India. Built for the world.
             </span>
           </div>
-          <h1 className="font-display font-extrabold text-white leading-[0.95] text-[clamp(2.75rem,7vw,6rem)]">
-            Moving India's <br />
-            <span className="text-gold">railways</span> forward.
+          <h1 className='banner-heading'>
+            Engineering Reliability. <br />
+            <span className="text-gold">Moving Railways</span> Forward.
           </h1>
-          <p className="mt-8 max-w-xl text-lg md:text-xl text-white/80 leading-relaxed">
-            AHIL manufactures high-performance components for rolling stock — brake systems, HVAC, air suspension, pantographs and precision assemblies — engineered for safety, efficiency and a lifetime of service.
+          <p className="hero-text">
+            {/* AHIL manufactures high-performance components for rolling stock — brake systems, HVAC, air suspension, pantographs and precision assemblies — engineered for safety, efficiency and a lifetime of service. */}
+            AHIL Manufactures- AND Hitech Industries Limited- AHIL is an Indian engineering and manufacturing organization focused on safety critical products and systems for railways and metro applications.
           </p>
-          <div className="mt-10 flex flex-wrap items-center gap-4">
+          {/* <div className="mt-10 flex flex-wrap items-center gap-4">
             <a
               href="#products"
               className="inline-flex items-center gap-3 bg-gold px-7 py-4 text-sm font-bold uppercase tracking-wider text-navy hover:brightness-95 transition-all"
@@ -51,17 +52,17 @@ export default function Hero() {
             >
               Partner with us
             </a>
-          </div>
+          </div> */}
         </div>
 
-        <div className="absolute left-6 lg:left-10 right-6 lg:right-10 bottom-8 md:bottom-12">
+        <div className="stats-hero">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-px bg-white/10 border-t border-white/15">
             <div className="bg-navy-deep/70 backdrop-blur-sm px-5 py-5 md:px-8 md:py-6">
               <div className="font-display text-3xl md:text-4xl font-bold text-gold">2013</div>
               <div className="mt-1 text-xs md:text-sm text-white/70 uppercase tracking-[0.18em]">Established</div>
             </div>
             <div className="bg-navy-deep/70 backdrop-blur-sm px-5 py-5 md:px-8 md:py-6">
-              <div className="font-display text-3xl md:text-4xl font-bold text-gold">100+</div>
+              <div className="font-display text-3xl md:text-4xl font-bold text-gold">250+</div>
               <div className="mt-1 text-xs md:text-sm text-white/70 uppercase tracking-[0.18em]">Skilled professionals</div>
             </div>
             <div className="bg-navy-deep/70 backdrop-blur-sm px-5 py-5 md:px-8 md:py-6">

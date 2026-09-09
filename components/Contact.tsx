@@ -15,11 +15,10 @@ export default function Contact({ onOpenQuote }: ContactProps) {
         <div className="md:col-span-7">
           <div className="inline-flex items-center gap-3 mb-6">
             <span className="h-px w-10 bg-gold"></span>
-            <span className="text-xs font-semibold tracking-[0.28em] uppercase text-gold">Start a programme</span>
+            <span className="text-xs font-semibold tracking-[0.28em] uppercase text-gold">Partner with AHIL</span>
           </div>
           <h2 className="font-display font-bold text-4xl md:text-6xl leading-[1.02]">
-            Let's engineer your <br />
-            next <span className="text-gold">rolling stock</span> milestone.
+            Let&apos;s engineer <span className="text-gold">what comes next.</span>
           </h2>
           <p className="mt-6 max-w-xl text-lg text-white/75">
             Share your specs, timelines and volumes — our engineering team will respond within one working day with a technical proposal and indicative pricing.
@@ -48,12 +47,6 @@ export default function Contact({ onOpenQuote }: ContactProps) {
                 </div>
               </a>
             </div>
-            <button
-              onClick={onOpenQuote}
-              className="mt-8 inline-flex items-center justify-center w-full gap-3 bg-gold px-6 py-4 text-sm font-bold uppercase tracking-wider text-navy pulse-gold cursor-pointer"
-            >
-              Request a quote <span aria-hidden="true">→</span>
-            </button>
           </div>
         </div>
       </div>

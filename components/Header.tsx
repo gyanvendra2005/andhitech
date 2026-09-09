@@ -51,12 +51,12 @@ export default function Header({ onOpenQuote }: HeaderProps) {
           </Link>
         </nav>
 
-        <button
+        {/* <button
           onClick={onOpenQuote}
           className="hidden md:inline-flex items-center gap-2 rounded-none border border-white/25 bg-white/5 backdrop-blur px-5 py-2.5 text-sm font-semibold text-white hover:bg-gold hover:text-navy hover:border-gold transition-all cursor-pointer"
         >
           Request a quote <span aria-hidden="true">→</span>
-        </button>
+        </button> */}
 
         {/* Mobile Menu Button */}
         <button
@@ -82,7 +82,7 @@ export default function Header({ onOpenQuote }: HeaderProps) {
             <a href="/#clients" onClick={() => setMobileMenuOpen(false)} className="text-white hover:text-gold text-base font-medium">Clients</a>
             <Link href="/contact-us" onClick={() => setMobileMenuOpen(false)} className="text-white hover:text-gold text-base font-medium">Contact Us</Link>
           </nav>
-          <button
+          {/* <button
             onClick={() => {
               setMobileMenuOpen(false);
               onOpenQuote();
@@ -90,7 +90,7 @@ export default function Header({ onOpenQuote }: HeaderProps) {
             className="w-full bg-gold text-navy py-3 font-bold uppercase tracking-wider text-sm text-center"
           >
             Request a quote →
-          </button>
+          </button> */}
         </div>
       )}
     </header>

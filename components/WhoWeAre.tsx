@@ -34,24 +34,20 @@ export default function WhoWeAre() {
         </h2>
 
         {/* Right Side Content with Scroll Reveal */}
-        {/* <div className={`who-we-are-right-content fade-in-scroll fade-in-scroll-delay-1 ${isVisible ? 'is-visible' : ''}`}> */}
-          
-          <div className="who-we-are-img-cont">
-            <img className="who-we-are-img" src="https://placehold.co/600x400" alt="AHIL Facility" /> 
-           <div className="who-we-are-cont">
+        <div className="who-we-are-img-cont">
+          <img className="who-we-are-img" src="https://placehold.co/600x400" alt="AHIL Facility" />
+          <div className="who-we-are-cont">
             <h2 className="who-we-are-heading">
-            Who we are
-          </h2>
-          <p className="who-we-are-text">
-            Established in 2013, AND Hitech Industries Limited, AHIL has evolved from a specialized railway components manufacturer into a multi-disciplinary engineering and manufacturing organization serving the railway and mobility sector.
-          </p>
-          <p className="who-we-are-text">
-            Our portfolio spans braking systems, suspension and ride control components, HVAC systems and railway doors.
-          </p>
+              Who we are
+            </h2>
+            <p className="who-we-are-text">
+              Established in 2013, AND Hitech Industries Limited, AHIL has evolved from a specialized railway components manufacturer into a multi-disciplinary engineering and manufacturing organization serving the railway and mobility sector.
+            </p>
+            <p className="who-we-are-text">
+              Our portfolio spans braking systems, suspension and ride control components, HVAC systems and railway doors.
+            </p>
           </div>
-          </div>
-        {/* </div> */}
-        
+        </div>
       </div>
     </section>
   );

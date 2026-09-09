@@ -122,7 +122,7 @@ export default function NewsSlider({ articles }: NewsSliderProps) {
 
                   <div className="news-card-footer">
                     <span className="news-card-read-more">
-                      Read Article <ArrowRight className="w-3.5 h-3.5" />
+                      Read Article <ArrowRight className="news-card-read-more-icon" />
                     </span>
                   </div>
                 </div>
@@ -154,7 +154,7 @@ export default function NewsSlider({ articles }: NewsSliderProps) {
             className="news-slider-arrow-btn"
             aria-label="Previous slide"
           >
-            <ChevronLeft className="w-5 h-5" />
+            <ChevronLeft className="news-slider-arrow-icon" />
           </button>
           <button
             onClick={nextSlide}
@@ -162,7 +162,7 @@ export default function NewsSlider({ articles }: NewsSliderProps) {
             className="news-slider-arrow-btn"
             aria-label="Next slide"
           >
-            <ChevronRight className="w-5 h-5" />
+            <ChevronRight className="news-slider-arrow-icon" />
           </button>
         </div>
       </div>

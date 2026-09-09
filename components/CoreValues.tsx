@@ -1,14 +1,13 @@
 'use client';
 
 import React, { useEffect, useRef, useState } from 'react';
-import { 
-  UserCheck, 
-  Award, 
-  Users, 
-  Lightbulb, 
-  HeartHandshake, 
-  ChevronRight, 
-  Target 
+import {
+  UserCheck,
+  Award,
+  Users,
+  Lightbulb,
+  HeartHandshake,
+  Target
 } from 'lucide-react';
 
 export default function CoreValues() {
@@ -94,9 +93,6 @@ export default function CoreValues() {
                   </div>
                   <span className="cv-item-title">{item.title}</span>
                 </div>
-                {/* <div className="cv-item-arrow">
-                  <ChevronRight />
-                </div> */}
               </div>
             ))}
           </div>

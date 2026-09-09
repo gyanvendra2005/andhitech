@@ -152,11 +152,11 @@ export default function NewsMediaPage() {
             <div className="news-featured-body">
               <div className="news-meta-row">
                 <span className="news-meta-item">
-                  <Calendar className="w-4 h-4" /> March 15, 2024
+                  <Calendar className="news-meta-icon" /> March 15, 2024
                 </span>
                 <span>·</span>
                 <span className="news-meta-item">
-                  <Clock className="w-4 h-4" /> 4 Min Read
+                  <Clock className="news-meta-icon" /> 4 Min Read
                 </span>
               </div>
 
@@ -169,7 +169,7 @@ export default function NewsMediaPage() {
               </p>
 
               <span className="news-read-more-btn">
-                Read Full Story <ArrowRight className="w-4 h-4" />
+                Read Full Story <ArrowRight className="news-read-more-icon" />
               </span>
             </div>
           </div>
@@ -200,13 +200,13 @@ export default function NewsMediaPage() {
                   alert('Media Kit downloaded successfully.');
                 }}
               >
-                <Download className="w-5 h-5" /> Download Press Kit (.ZIP)
+                <Download className="media-kit-btn-icon" /> Download Press Kit (.ZIP)
               </a>
 
               <div className="media-contact-card">
                 <div>Media Relations Office:</div>
-                <a href="mailto:media@andhitech.com" className="flex items-center gap-2 mt-1">
-                  <Mail className="w-4 h-4" /> media@andhitech.com
+                <a href="mailto:media@andhitech.com" className="media-contact-link">
+                  <Mail className="media-contact-icon" /> media@andhitech.com
                 </a>
               </div>
             </div>

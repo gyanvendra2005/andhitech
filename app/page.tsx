@@ -21,7 +21,7 @@ export default function Home() {
   const [quoteModalOpen, setQuoteModalOpen] = useState(false);
 
   return (
-    <div className="min-h-screen bg-background text-foreground font-sans selection:bg-gold selection:text-navy">
+    <div className="home-page">
       <Header onOpenQuote={() => setQuoteModalOpen(true)} />
       
       <main>

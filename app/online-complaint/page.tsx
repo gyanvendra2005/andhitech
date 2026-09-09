@@ -127,7 +127,7 @@ export default function OnlineComplaintPage() {
             <div className="complaint-left-info is-visible">
               <div>
                 <div className="complaint-badge">
-                  <Sparkles className="w-4 h-4" />
+                  <Sparkles className="complaint-badge-icon" />
                   <span>QUALITY COMMITMENT &amp; SLA</span>
                 </div>
 
@@ -190,7 +190,7 @@ export default function OnlineComplaintPage() {
               {/* Rapid Helpdesk Contact Card */}
               <div className="complaint-helpdesk-card">
                 <h4 className="complaint-helpdesk-title">
-                  <PhoneCall className="w-5 h-5 text-gold" />
+                  <PhoneCall className="complaint-helpdesk-title-icon" />
                   <span>Direct Quality Helpdesk</span>
                 </h4>
                 <p className="complaint-helpdesk-desc">
@@ -198,15 +198,15 @@ export default function OnlineComplaintPage() {
                 </p>
                 <div className="complaint-helpdesk-links">
                   <div className="complaint-helpdesk-item">
-                    <PhoneCall className="w-4 h-4 text-gold" />
+                    <PhoneCall className="complaint-helpdesk-item-icon" />
                     <span>Emergency Hotline: <strong>+91 (0) 120-456-7890</strong></span>
                   </div>
                   <div className="complaint-helpdesk-item">
-                    <Mail className="w-4 h-4 text-gold" />
+                    <Mail className="complaint-helpdesk-item-icon" />
                     <span>Quality Desk: <strong>service@andhitech.in</strong></span>
                   </div>
                   <div className="complaint-helpdesk-item">
-                    <Clock className="w-4 h-4 text-gold" />
+                    <Clock className="complaint-helpdesk-item-icon" />
                     <span>Guaranteed SLA: <strong>&lt; 2 Hours Response</strong></span>
                   </div>
                 </div>
@@ -218,16 +218,16 @@ export default function OnlineComplaintPage() {
               {/* Submission Success Notification */}
               {submitted && (
                 <div className="complaint-success-banner is-visible">
-                  <ShieldCheck className="w-7 h-7 flex-shrink-0 text-amber-600" />
+                  <ShieldCheck className="complaint-success-banner-icon" />
                   <div>
                     <strong>Grievance Submitted Successfully! Ticket #{ticketId}</strong>
-                    <p className="text-sm mt-1">
+                    <p className="complaint-success-banner-text">
                       Your complaint regarding <strong>{formData.product || 'the rail component'}</strong> has been routed to the Senior Quality Engineer at AHIL. A confirmation has been logged for Railway/Depot: <strong>{formData.customerRailway || 'Customer'} - {formData.depot || 'N/A'}</strong>.
                     </p>
                     <button
                       type="button"
                       onClick={handleReset}
-                      className="mt-3 text-xs font-bold uppercase tracking-wider text-amber-800 underline hover:text-amber-950 cursor-pointer"
+                      className="complaint-success-banner-reset-btn"
                     >
                       Submit Another Grievance
                     </button>
@@ -239,7 +239,7 @@ export default function OnlineComplaintPage() {
                 {/* Card 1: Basic Information */}
                 <div className="complaint-card is-visible">
                   <h3 className="complaint-card-title">
-                    <FileText className="w-5 h-5 text-amber-600" />
+                    <FileText className="complaint-card-title-icon" />
                     <span>Basic Information</span>
                   </h3>
 
@@ -321,7 +321,7 @@ export default function OnlineComplaintPage() {
                 {/* Card 2: Complaint Details */}
                 <div className="complaint-card is-visible">
                   <h3 className="complaint-card-title">
-                    <Wrench className="w-5 h-5 text-amber-600" />
+                    <Wrench className="complaint-card-title-icon" />
                     <span>Complaint Details</span>
                   </h3>
 
@@ -437,7 +437,7 @@ export default function OnlineComplaintPage() {
                 {/* Card 3: Contact Information */}
                 <div className="complaint-card is-visible">
                   <h3 className="complaint-card-title">
-                    <UserCheck className="w-5 h-5 text-amber-600" />
+                    <UserCheck className="complaint-card-title-icon" />
                     <span>Contact Information</span>
                   </h3>
 
@@ -513,7 +513,7 @@ export default function OnlineComplaintPage() {
                   <button type="submit" className="complaint-submit-btn">
                     <span className="complaint-submit-text">Submit Grievance</span>
                     <span className="complaint-submit-icon">
-                      <ArrowUpRight className="w-5 h-5" />
+                      <ArrowUpRight className="complaint-submit-icon-svg" />
                     </span>
                   </button>
                 </div>

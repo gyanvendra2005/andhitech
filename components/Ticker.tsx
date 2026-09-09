@@ -16,12 +16,12 @@ export default function Ticker() {
   ];
 
   return (
-    <div className="bg-navy text-white overflow-hidden border-y border-white/10">
-      <div className="flex ticker-track whitespace-nowrap py-5">
+    <div className="ticker-section">
+      <div className="ticker-track ticker-inner">
         {[...tickerItems, ...tickerItems].map((item, idx) => (
-          <div key={idx} className="flex items-center gap-6 px-8">
-            <span className="h-1.5 w-1.5 rounded-full bg-gold"></span>
-            <span className="font-display text-sm md:text-base font-semibold tracking-wide uppercase">{item}</span>
+          <div key={idx} className="ticker-item">
+            <span className="ticker-dot"></span>
+            <span className="ticker-label">{item}</span>
           </div>
         ))}
       </div>

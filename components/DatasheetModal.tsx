@@ -14,35 +14,35 @@ export default function DatasheetModal({ datasheet, onClose, onOpenQuote }: Data
   if (!datasheet) return null;
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-      <div className="relative w-full max-w-3xl bg-navy-deep border border-gold/40 text-white p-8 max-h-[90vh] overflow-y-auto">
+    <div className="datasheet-modal-overlay">
+      <div className="datasheet-modal-panel">
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-white/60 hover:text-white"
+          className="datasheet-modal-close"
           aria-label="Close modal"
         >
-          <X className="h-6 w-6" />
+          <X className="datasheet-modal-close-icon" />
         </button>
-        <div className="text-xs font-bold uppercase tracking-widest text-gold mb-1">
+        <div className="datasheet-modal-eyebrow">
           Technical Datasheet · {datasheet.category}
         </div>
-        <h3 className="font-display text-2xl font-bold mb-4">{datasheet.title}</h3>
-        <p className="text-slate-300 text-sm leading-relaxed mb-6">{datasheet.overview}</p>
+        <h3 className="datasheet-modal-title">{datasheet.title}</h3>
+        <p className="datasheet-modal-overview">{datasheet.overview}</p>
 
-        <h4 className="text-xs uppercase tracking-wider text-gold font-semibold mb-2">Technical Specifications</h4>
-        <div className="border border-white/10 divide-y divide-white/10 mb-6 bg-black/30">
+        <h4 className="datasheet-modal-specs-heading">Technical Specifications</h4>
+        <div className="datasheet-modal-specs-list">
           {Object.entries(datasheet.specs).map(([k, v]) => (
-            <div key={k} className="grid grid-cols-2 px-4 py-2 text-xs">
-              <span className="text-slate-400 font-semibold">{k}</span>
-              <span className="text-white">{v}</span>
+            <div key={k} className="datasheet-modal-spec-row">
+              <span className="datasheet-modal-spec-key">{k}</span>
+              <span className="datasheet-modal-spec-value">{v}</span>
             </div>
           ))}
         </div>
 
-        <div className="flex items-center justify-between pt-4 border-t border-white/10">
-          <div className="flex gap-2 flex-wrap">
+        <div className="datasheet-modal-footer">
+          <div className="datasheet-modal-compliance-list">
             {datasheet.compliance.map((c, i) => (
-              <span key={i} className="text-[10px] bg-gold/10 border border-gold/30 text-gold px-2 py-0.5 uppercase tracking-wider">
+              <span key={i} className="datasheet-modal-compliance-tag">
                 {c}
               </span>
             ))}
@@ -52,7 +52,7 @@ export default function DatasheetModal({ datasheet, onClose, onOpenQuote }: Data
               onClose();
               onOpenQuote();
             }}
-            className="bg-gold text-navy px-5 py-2 text-xs font-bold uppercase tracking-wider hover:brightness-95 cursor-pointer"
+            className="datasheet-modal-quote-btn"
           >
             Request Quote
           </button>

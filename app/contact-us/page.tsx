@@ -1,31 +1,22 @@
 'use client';
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Contact from '@/components/Contact';
 import QuoteModal from '@/components/QuoteModal';
-import { 
-  Building2, 
-  Factory, 
-  Mail, 
-  Phone, 
-  Sparkles, 
-  ArrowUpRight, 
-  ArrowRight,
-  ShieldCheck, 
-  Check, 
-  FileCheck, 
-  Clock, 
-  Send 
+import {
+  Sparkles,
+  ArrowUpRight,
+  ShieldCheck,
+  Check,
+  FileCheck,
 } from 'lucide-react';
 import Link from 'next/link';
 
 export default function ContactUsPage() {
   const [quoteModalOpen, setQuoteModalOpen] = useState(false);
   const [inquirySubmitted, setInquirySubmitted] = useState(false);
-  const [isVisible, setIsVisible] = useState(false);
-  const channelsRef = useRef<HTMLElement>(null);
 
   const [inquiryForm, setInquiryForm] = useState({
     fullName: '',
@@ -35,25 +26,6 @@ export default function ContactUsPage() {
     inquiryType: 'Rolling Stock Components',
     message: '',
   });
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        }
-      },
-      { threshold: 0.1 }
-    );
-
-    if (channelsRef.current) {
-      observer.observe(channelsRef.current);
-    }
-
-    return () => {
-      observer.disconnect();
-    };
-  }, []);
 
   const handleInquiryChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
@@ -66,39 +38,6 @@ export default function ContactUsPage() {
     e.preventDefault();
     setInquirySubmitted(true);
   };
-
-  const contactChannels = [
-    {
-      icon: <Building2 className="w-6 h-6" />,
-      title: 'Corporate Headquarters',
-      desc: 'Executive management, strategic procurement, global partnerships and tender division.',
-      details: [
-        { label: 'Location', val: 'New Delhi / NCR, India' },
-        { label: 'Email', val: 'info@andhitech.in' },
-        { label: 'Working Hours', val: 'Mon - Sat: 9 AM - 6 PM' },
-      ],
-    },
-    {
-      icon: <Factory className="w-6 h-6" />,
-      title: 'Manufacturing & Tech Center',
-      desc: 'Precision CNC machining, fabrication, cleanroom HVAC assembly & metrology inspection.',
-      details: [
-        { label: 'Plant Scale', val: '50,000+ Sq. Ft. Unit' },
-        { label: 'Direct Desk', val: 'plant@andhitech.in' },
-        { label: 'Compliance', val: 'RDSO & ISO 9001:2015' },
-      ],
-    },
-    {
-      icon: <Mail className="w-6 h-6" />,
-      title: 'Sales & Engineering Bids',
-      desc: 'Send RFP/RFQ specs, CAD models, drawing packages and schedule technical alignment calls.',
-      details: [
-        { label: 'Sales Email', val: 'sales@andhitech.in' },
-        { label: 'Response SLA', val: '< 24 Hours Guaranteed' },
-        { label: 'Grievance Desk', val: 'Online Redressal Portal' },
-      ],
-    },
-  ];
 
   const locationCards = [
     {
@@ -150,55 +89,6 @@ export default function ContactUsPage() {
         </div>
       </section>
 
-      {/* Section 1: Quick Connect Channels */}
-      {/* <section ref={channelsRef} className="contact-channels-section">
-        <div className="contact-channels-container">
-          <div className={`contact-channels-header fade-in-scroll ${isVisible ? 'is-visible' : ''}`}>
-            <div className="contact-badge">
-              <Sparkles className="w-4 h-4" />
-              <span>DIRECT CHANNELS</span>
-            </div>
-            <h2 className="contact-channels-title">
-              Reach the Right Engineering Department
-            </h2>
-            <p className="contact-channels-desc">
-              Whether you are looking to start a new rolling stock programme, request technical component quotes, or schedule a physical plant visit, our team is ready to assist.
-            </p>
-          </div>
-
-          <div className="contact-channels-grid">
-            {contactChannels.map((channel, idx) => (
-              <div 
-                key={idx}
-                className={`contact-channel-card fade-in-scroll ${isVisible ? 'is-visible' : ''}`}
-                style={{ transitionDelay: `${0.15 + idx * 0.15}s` }}
-              >
-                <div>
-                  <div className="contact-channel-icon-wrap">
-                    {channel.icon}
-                  </div>
-                  <h3 className="contact-channel-title">
-                    {channel.title}
-                  </h3>
-                  <p className="contact-channel-summary">
-                    {channel.desc}
-                  </p>
-                </div>
-
-                <div className="contact-channel-details">
-                  {channel.details.map((detail, dIdx) => (
-                    <div key={dIdx} className="contact-detail-row">
-                      <span className="contact-detail-label">{detail.label}</span>
-                      <span className="contact-detail-val">{detail.val}</span>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section> */}
-
       {/* Section 2: Direct Technical Inquiry Form */}
       <section className="contact-form-section">
         <div className="contact-form-container">
@@ -208,13 +98,13 @@ export default function ContactUsPage() {
             <div className="contact-info-left">
               <div>
                 <div className="contact-badge">
-                  <Sparkles className="w-4 h-4" />
+                  <Sparkles className="contact-badge-icon" />
                   <span>DIRECT INQUIRY DESK</span>
                 </div>
                 <h2 className="contact-form-main-title">
                   Have a Custom <span>Technical Requirement?</span>
                 </h2>
-                <p className="contact-form-main-desc mt-3">
+                <p className="contact-form-main-desc contact-form-main-desc-spaced">
                   Fill out our direct inquiry form and our chief application engineers will analyze your specifications and return a preliminary feasibility review within 24 hours.
                 </p>
               </div>
@@ -223,43 +113,43 @@ export default function ContactUsPage() {
               <div className="contact-highlights-list">
                 <div className="contact-highlight-item">
                   <div className="contact-highlight-check">
-                    <Check className="w-4 h-4" />
+                    <Check className="contact-highlight-check-icon" />
                   </div>
                   <span>Confidential Non-Disclosure Agreement (NDA) on Request</span>
                 </div>
 
                 <div className="contact-highlight-item">
                   <div className="contact-highlight-check">
-                    <Check className="w-4 h-4" />
+                    <Check className="contact-highlight-check-icon" />
                   </div>
                   <span>Custom Machining, Fabrication &amp; Sub-Assembly Sourcing</span>
                 </div>
 
                 <div className="contact-highlight-item">
                   <div className="contact-highlight-check">
-                    <Check className="w-4 h-4" />
+                    <Check className="contact-highlight-check-icon" />
                   </div>
                   <span>Direct RDSO Metrology &amp; Quality Audit Support</span>
                 </div>
 
                 <div className="contact-highlight-item">
                   <div className="contact-highlight-check">
-                    <Check className="w-4 h-4" />
+                    <Check className="contact-highlight-check-icon" />
                   </div>
                   <span>24/7 Dedicated Online Grievance Escalation</span>
                 </div>
               </div>
 
               {/* Direct Railway Grievance Notice */}
-              <div className="bg-amber-50 border border-amber-200 rounded-2xl p-6 flex items-start gap-4">
-                <ShieldCheck className="w-6 h-6 text-amber-600 flex-shrink-0 mt-0.5" />
+              <div className="contact-grievance-notice">
+                <ShieldCheck className="contact-grievance-notice-icon" />
                 <div>
-                  <h4 className="font-bold text-slate-900 text-sm">
+                  <h4 className="contact-grievance-notice-title">
                     Railway Depot Grievance or Component Failure?
                   </h4>
-                  <p className="text-xs text-slate-600 mt-1 leading-relaxed">
+                  <p className="contact-grievance-notice-text">
                     For active rolling stock failure logs or warranty claims, please use our{' '}
-                    <Link href="/online-complaint" className="text-amber-700 font-bold underline">
+                    <Link href="/online-complaint" className="contact-grievance-notice-link">
                       Online Complaint Portal
                     </Link>{' '}
                     with 2-hour SLA tracking.
@@ -275,10 +165,10 @@ export default function ContactUsPage() {
               </h3>
 
               {inquirySubmitted ? (
-                <div className="bg-emerald-50 border border-emerald-200 text-emerald-900 rounded-xl p-6 text-center">
-                  <FileCheck className="w-10 h-10 text-emerald-600 mx-auto mb-3" />
-                  <h4 className="font-bold text-lg mb-1">Inquiry Dispatched Successfully!</h4>
-                  <p className="text-sm text-emerald-700 mb-4">
+                <div className="contact-inquiry-success">
+                  <FileCheck className="contact-inquiry-success-icon" />
+                  <h4 className="contact-inquiry-success-title">Inquiry Dispatched Successfully!</h4>
+                  <p className="contact-inquiry-success-text">
                     Thank you, <strong>{inquiryForm.fullName}</strong>. Our engineering leads have received your request and will follow up at <strong>{inquiryForm.email}</strong> within 24 hours.
                   </p>
                   <button
@@ -294,7 +184,7 @@ export default function ContactUsPage() {
                         message: '',
                       });
                     }}
-                    className="text-xs font-bold uppercase tracking-wider text-emerald-800 underline hover:text-emerald-950 cursor-pointer"
+                    className="contact-inquiry-success-reset-btn"
                   >
                     Send Another Message
                   </button>
@@ -305,7 +195,7 @@ export default function ContactUsPage() {
                     {/* Full Name */}
                     <div className="contact-input-group">
                       <label className="contact-form-label">
-                        Full Name <span className="text-amber-600 font-bold">*</span>
+                        Full Name <span className="contact-form-required">*</span>
                       </label>
                       <input
                         type="text"
@@ -321,7 +211,7 @@ export default function ContactUsPage() {
                     {/* Email */}
                     <div className="contact-input-group">
                       <label className="contact-form-label">
-                        Business Email <span className="text-amber-600 font-bold">*</span>
+                        Business Email <span className="contact-form-required">*</span>
                       </label>
                       <input
                         type="email"
@@ -367,7 +257,7 @@ export default function ContactUsPage() {
                     {/* Inquiry Type */}
                     <div className="contact-input-group col-span-2">
                       <label className="contact-form-label">
-                        Inquiry Focus <span className="text-amber-600 font-bold">*</span>
+                        Inquiry Focus <span className="contact-form-required">*</span>
                       </label>
                       <select
                         name="inquiryType"
@@ -388,7 +278,7 @@ export default function ContactUsPage() {
                     {/* Message */}
                     <div className="contact-input-group col-span-2">
                       <label className="contact-form-label">
-                        Project Specifications &amp; Message <span className="text-amber-600 font-bold">*</span>
+                        Project Specifications &amp; Message <span className="contact-form-required">*</span>
                       </label>
                       <textarea
                         name="message"
@@ -405,7 +295,7 @@ export default function ContactUsPage() {
                     <button type="submit" className="contact-send-btn">
                       <span className="contact-send-btn-text">Send Message</span>
                       <span className="contact-send-btn-icon">
-                        <ArrowUpRight className="w-5 h-5" />
+                        <ArrowUpRight className="contact-send-btn-icon-svg" />
                       </span>
                     </button>
                   </div>
@@ -422,7 +312,7 @@ export default function ContactUsPage() {
         <div className="contact-locations-container">
           <div className="contact-locations-header">
             <div className="contact-badge">
-              <Sparkles className="w-4 h-4" />
+              <Sparkles className="contact-badge-icon" />
               <span>REGIONAL PRESENCE</span>
             </div>
             <h2 className="contact-locations-title">
@@ -463,28 +353,6 @@ export default function ContactUsPage() {
               </div>
             ))}
           </div>
-
-          {/* Grievance Quick Banner */}
-          {/* <div className="contact-grievance-banner">
-            <div className="contact-grievance-left">
-              <div className="contact-grievance-icon">
-                <ShieldCheck className="w-7 h-7" />
-              </div>
-              <div>
-                <h3 className="contact-grievance-title">
-                  Railway Grievance Redressal &amp; Warranty Assistance
-                </h3>
-                <p className="contact-grievance-sub">
-                  Submit technical component observation reports directly to our chief quality engineers.
-                </p>
-              </div>
-            </div>
-
-            <Link href="/online-complaint" className="contact-grievance-btn">
-              <span>Open Grievance Portal</span>
-              <ArrowRight className="w-4 h-4" />
-            </Link>
-          </div> */}
         </div>
       </section>
 

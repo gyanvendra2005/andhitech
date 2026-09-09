@@ -39,61 +39,61 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/80 backdrop-blur-sm">
-      <div className="relative w-full max-w-lg bg-navy-deep border border-white/15 p-8 text-white">
+    <div className="quote-modal-overlay">
+      <div className="quote-modal-panel">
         <button
           onClick={onClose}
-          className="absolute top-4 right-4 text-white/60 hover:text-white"
+          className="quote-modal-close"
           aria-label="Close modal"
         >
-          <X className="h-6 w-6" />
+          <X className="quote-modal-close-icon" />
         </button>
-        <div className="text-xs font-semibold tracking-[0.28em] uppercase text-gold mb-1">Request a Quote</div>
-        <h3 className="font-display text-2xl font-bold mb-6">Technical RFQ Form</h3>
+        <div className="quote-modal-eyebrow">Request a Quote</div>
+        <h3 className="quote-modal-title">Technical RFQ Form</h3>
 
         {submitted ? (
-          <div className="bg-emerald-950/80 border border-emerald-500/50 p-6 text-center space-y-3">
-            <CheckCircle2 className="h-10 w-10 text-emerald-400 mx-auto" />
-            <div className="font-display text-lg font-bold">RFQ Request Submitted</div>
-            <p className="text-xs text-slate-300">Our engineering sales team will get back to you within 24 hours.</p>
+          <div className="quote-modal-success">
+            <CheckCircle2 className="quote-modal-success-icon" />
+            <div className="quote-modal-success-title">RFQ Request Submitted</div>
+            <p className="quote-modal-success-text">Our engineering sales team will get back to you within 24 hours.</p>
           </div>
         ) : (
-          <form onSubmit={handleFormSubmit} className="space-y-4">
+          <form onSubmit={handleFormSubmit} className="quote-modal-form">
             <div>
-              <label className="block text-xs uppercase tracking-wider text-slate-300 mb-1">Your Name *</label>
+              <label className="quote-modal-label">Your Name *</label>
               <input
                 type="text"
                 required
                 value={formData.name}
                 onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                className="w-full bg-white/5 border border-white/15 px-3 py-2 text-sm text-white focus:outline-none focus:border-gold"
+                className="quote-modal-input"
               />
             </div>
             <div>
-              <label className="block text-xs uppercase tracking-wider text-slate-300 mb-1">Email Address *</label>
+              <label className="quote-modal-label">Email Address *</label>
               <input
                 type="email"
                 required
                 value={formData.email}
                 onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                className="w-full bg-white/5 border border-white/15 px-3 py-2 text-sm text-white focus:outline-none focus:border-gold"
+                className="quote-modal-input"
               />
             </div>
             <div>
-              <label className="block text-xs uppercase tracking-wider text-slate-300 mb-1">Company / Organization</label>
+              <label className="quote-modal-label">Company / Organization</label>
               <input
                 type="text"
                 value={formData.company}
                 onChange={(e) => setFormData({ ...formData, company: e.target.value })}
-                className="w-full bg-white/5 border border-white/15 px-3 py-2 text-sm text-white focus:outline-none focus:border-gold"
+                className="quote-modal-input"
               />
             </div>
             <div>
-              <label className="block text-xs uppercase tracking-wider text-slate-300 mb-1">Product System</label>
+              <label className="quote-modal-label">Product System</label>
               <select
                 value={formData.product}
                 onChange={(e) => setFormData({ ...formData, product: e.target.value })}
-                className="w-full bg-navy-deep border border-white/15 px-3 py-2 text-sm text-white focus:outline-none focus:border-gold"
+                className="quote-modal-select"
               >
                 <option value="Axle & Wheel Mounted Brake Discs">Axle & Wheel Mounted Brake Discs</option>
                 <option value="Roof-Mounted Package Units (RMPU)">Roof-Mounted Package Units (RMPU)</option>
@@ -103,10 +103,10 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
             </div>
             <button
               type="submit"
-              className="w-full bg-gold text-navy py-3 text-xs font-bold uppercase tracking-wider hover:brightness-95 cursor-pointer flex items-center justify-center gap-2"
+              className="quote-modal-submit-btn"
             >
               <span>Submit Inquiry</span>
-              <Send className="h-4 w-4" />
+              <Send className="quote-modal-submit-icon" />
             </button>
           </form>
         )}

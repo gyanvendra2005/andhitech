@@ -51,6 +51,7 @@ export default function WhoWeAre() {
           </div>
           </div>
         {/* </div> */}
+        
       </div>
     </section>
   );

@@ -4,10 +4,10 @@ import React from 'react';
 
 export default function Clients() {
   return (
-    <section id="clients" className="clients-section">
-      <div className="clients-inner">
+    <section id="clients" className="section clients-section">
+      <div className="container clients-inner">
         <div className="clients-header">
-          <h2 className="clients-title">
+          <h2 className="section-title clients-title">
             Our Customers
           </h2>
           <p className="clients-subtitle">

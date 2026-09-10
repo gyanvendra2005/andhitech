@@ -4,14 +4,14 @@ import React from 'react';
 
 export default function About() {
   return (
-    <section className="about-section">
-      <div className="about-container">
+    <section className="section about-section">
+      <div className="container about-container">
         <div className="about-left">
           <div className="about-badge">
             <span className="about-badge-line"></span>
             <span className="about-badge-text">About AHIL</span>
           </div>
-          <h2 className="about-title">
+          <h2 className="section-title about-title">
             Engineered with <span className="gold-underline">excellence,</span><br />
             Build for future.
           </h2>

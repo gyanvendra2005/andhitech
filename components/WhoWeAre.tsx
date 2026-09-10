@@ -26,10 +26,10 @@ export default function WhoWeAre() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="who-we-are-section">
-      <div className="who-we-are-container">
+    <section ref={sectionRef} className="section who-we-are-section">
+      <div className="container who-we-are-container">
         {/* Left Side Title with Scroll Reveal */}
-        <h2 className={`who-we-are-left-title fade-in-scroll ${isVisible ? 'is-visible' : ''}`}>
+        <h2 className={`section-title who-we-are-left-title fade-in-scroll ${isVisible ? 'is-visible' : ''}`}>
           About AHIL
         </h2>
 
@@ -37,7 +37,7 @@ export default function WhoWeAre() {
         <div className="who-we-are-img-cont">
           <img className="who-we-are-img" src="https://placehold.co/600x400" alt="AHIL Facility" />
           <div className="who-we-are-cont">
-            <h2 className="who-we-are-heading">
+            <h2 className="section-title who-we-are-heading">
               Who we are
             </h2>
             <p className="who-we-are-text">

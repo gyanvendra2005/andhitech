@@ -6,7 +6,7 @@ import Link from 'next/link';
 export default function Footer() {
   return (
     <footer className="footer-section">
-      <div className="footer-inner">
+      <div className="container footer-inner">
         <div className="footer-col-brand">
           <Link href="/">
             <img src="/assets/ahil-logo-dark.svg" alt="AHIL" className="footer-logo" />

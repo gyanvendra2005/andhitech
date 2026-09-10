@@ -26,10 +26,10 @@ export default function Leadership() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="leadership-section">
-      <div className="leadership-container">
+    <section ref={sectionRef} className="section leadership-section">
+      <div className="container leadership-container">
         <div className={`leadership-block fade-in-scroll ${isVisible ? 'is-visible' : ''}`}>
-          <h2 className="leadership-heading">MD&apos;s Desk</h2>
+          <h2 className="section-title leadership-heading">MD&apos;s Desk</h2>
           <div className="leadership-row">
             <div className="leadership-photo-wrap">
               <img src="https://placehold.co/400x480" alt="Mr. Angad Singh, Managing Director" className="leadership-photo" />
@@ -56,7 +56,7 @@ export default function Leadership() {
         </div>
 
         <div className={`leadership-block fade-in-scroll fade-in-scroll-delay-1 ${isVisible ? 'is-visible' : ''}`}>
-          <h2 className="leadership-heading">Director&apos;s Message</h2>
+          <h2 className="section-title leadership-heading">Director&apos;s Message</h2>
           <div className="leadership-row leadership-row-reverse">
             <div className="leadership-photo-wrap">
               <img src="https://placehold.co/400x480" alt="Ms. Neha Singh, Director" className="leadership-photo" />

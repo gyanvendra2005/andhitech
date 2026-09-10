@@ -26,14 +26,14 @@ export default function VisionMission() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="vision-mission-section">
-      <div className="vision-mission-container">
+    <section ref={sectionRef} className="section vision-mission-section">
+      <div className="container vision-mission-container">
         {/* Header Area with Scroll Reveal */}
         <div className={`vm-header-wrap fade-in-scroll ${isVisible ? 'is-visible' : ''}`}>
           {/* <div className="vm-badge-number">
             02
           </div> */}
-          <h2 className="vm-main-title">
+          <h2 className="section-title vm-main-title">
             VISION &amp; MISSION
           </h2>
           <p className="vm-main-subtitle">

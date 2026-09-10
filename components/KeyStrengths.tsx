@@ -27,8 +27,8 @@ export default function KeyStrengths() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="key-strengths-section">
-      <div className="key-strengths-container">
+    <section ref={sectionRef} className="section key-strengths-section">
+      <div className="container key-strengths-container">
         {/* Header Area with Scroll Animation */}
         <div className={`ks-header-area fade-in-scroll ${isVisible ? 'is-visible' : ''}`}>
           <div className="ks-badge">
@@ -36,7 +36,7 @@ export default function KeyStrengths() {
             <span>OUR KEY STRENGTHS</span>
           </div>
 
-          <h2 className="ks-title">
+          <h2 className="section-title ks-title">
             What drives our <strong>engineering excellence</strong>
           </h2>
 

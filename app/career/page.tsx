@@ -135,7 +135,6 @@ export default function CareerPage() {
         <div className="grid-lines"></div>
         <div className="rail-streak" style={{ top: '68%', width: '40%', animationDelay: '0s' }}></div>
         <div className="rail-streak" style={{ top: '80%', width: '55%', animationDelay: '1s', opacity: 0.5 }}></div>
-
         <div className="career-hero-container">
           <div className="hero-eyebrow-row career-hero-anim career-hero-anim-1">
             <span className="hero-eyebrow-line"></span>
@@ -155,8 +154,8 @@ export default function CareerPage() {
       </section>
 
       {/* Why Join */}
-      <section className="career-why">
-        <div className="career-why-container">
+      <section className="section career-why">
+        <div className="container career-why-container">
           {WHY_JOIN.map((item, index) => {
             const Icon = item.icon;
             return (
@@ -176,13 +175,13 @@ export default function CareerPage() {
       </section>
 
       {/* Join Us Application Form */}
-      <section id="join-us" ref={formSectionRef} className="complaint-section career-form-section">
-        <div className="complaint-container career-form-container">
+      <section id="join-us" ref={formSectionRef} className="section complaint-section career-form-section">
+        <div className="container complaint-container career-form-container">
           <div className={`career-form-intro fade-in-scroll ${isVisible ? 'is-visible' : ''}`}>
             <div className="complaint-badge">
               <span>JOIN OUR TEAM</span>
             </div>
-            <h2 className="complaint-main-title career-form-title">
+            <h2 className="section-title complaint-main-title career-form-title">
               Apply in <span>Minutes</span>
             </h2>
             <p className="complaint-main-subtitle">

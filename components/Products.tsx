@@ -9,15 +9,15 @@ interface ProductsProps {
 
 export default function Products({ onSelectDatasheet }: ProductsProps) {
   return (
-    <section id="products" className="products-section">
-      <div className="products-inner">
+    <section id="products" className="section products-section">
+      <div className="container products-inner">
         <div className="products-header">
           <div className="products-header-content">
             <div className="products-eyebrow-row">
               <span className="products-eyebrow-line"></span>
               <span className="products-eyebrow-text">Product Systems</span>
             </div>
-            <h2 className="products-title">
+            <h2 className="section-title products-title">
               Every component,<br />
               engineered for the <span className="gold-underline">rail.</span>
             </h2>

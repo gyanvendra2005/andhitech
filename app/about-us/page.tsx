@@ -52,8 +52,8 @@ export default function AboutUsPage() {
       <WhoWeAre />
 
       {/* Dark Navy Metric Stats Bar with Scroll Reveal */}
-      <section ref={statsRef} className="stats-banner">
-        <div className="stats-banner-container">
+      <section ref={statsRef} className="section stats-banner">
+        <div className="container stats-banner-container">
           <div className={`stat-box fade-in-scroll ${statsVisible ? 'is-visible' : ''}`}>
             <div className="stat-number">100+</div>
             <div className="stat-title">Skilled Professionals</div>

@@ -107,8 +107,8 @@ export default function NewsMediaPage() {
       </section>
 
       {/* Main News Section */}
-      <section ref={sectionRef} className="news-section">
-        <div className="news-section-container">
+      <section ref={sectionRef} className="section news-section">
+        <div className="container news-section-container">
           {/* Header & Filter Tabs */}
           <div className={`news-header-area fade-in-scroll ${isVisible ? 'is-visible' : ''}`}>
             <div className="news-badge">
@@ -116,7 +116,7 @@ export default function NewsMediaPage() {
               <span>PRESS &amp; MEDIA RELEASES</span>
             </div>
 
-            <h2 className="news-section-title">
+            <h2 className="section-title news-section-title">
               News &amp; Media Highlights
             </h2>
 

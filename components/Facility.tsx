@@ -4,7 +4,7 @@ import React from 'react';
 
 export default function Facility() {
   return (
-    <section id="facility" className="facility-section">
+    <section id="facility" className="section facility-section">
       <img
         src="/assets/facility.jpg"
         alt=""
@@ -12,13 +12,13 @@ export default function Facility() {
         className="facility-bg-img"
         loading="lazy"
       />
-      <div className="facility-inner">
+      <div className="container facility-inner">
         <div className="facility-header">
           <div className="facility-eyebrow-row">
             <span className="facility-eyebrow-line"></span>
             <span className="facility-eyebrow-text">MANUFACTURING EXCELLENCE</span>
           </div>
-          <h2 className="facility-title">
+          <h2 className="section-title facility-title">
             Precision manufacturing built for<br />
             <span className="facility-title-accent"> Railway reliability.</span>
           </h2>

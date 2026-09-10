@@ -57,8 +57,8 @@ export default function CoreValues() {
   ];
 
   return (
-    <section ref={sectionRef} className="core-values-section">
-      <div className="core-values-container">
+    <section ref={sectionRef} className="section core-values-section">
+      <div className="container core-values-container">
         {/* Left Column: Timeline & Value Pills */}
         <div className={`cv-left-content fade-in-scroll ${isVisible ? 'is-visible' : ''}`}>
           <div className="cv-badge">
@@ -66,7 +66,7 @@ export default function CoreValues() {
             <span>WHO WE ARE</span>
           </div>
 
-          <h2 className="cv-title">
+          <h2 className="section-title cv-title">
             Core Values
           </h2>
 

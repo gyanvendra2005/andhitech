@@ -119,8 +119,8 @@ export default function OnlineComplaintPage() {
       </section>
 
       {/* Main Complaint 2-Column Section */}
-      <section ref={formSectionRef} className="complaint-section">
-        <div className="complaint-container">
+      <section ref={formSectionRef} className="section complaint-section">
+        <div className="container complaint-container">
           <div className="complaint-2col-layout">
             
             {/* Left Column: Numbered Commitment List & Helpdesk Card */}
@@ -131,7 +131,7 @@ export default function OnlineComplaintPage() {
                   <span>QUALITY COMMITMENT &amp; SLA</span>
                 </div>
 
-                <h2 className="complaint-main-title">
+                <h2 className="section-title complaint-main-title">
                   Rapid Response &amp; <span>Zero-Defect</span> Resolution
                 </h2>
 

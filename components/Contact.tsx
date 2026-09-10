@@ -8,16 +8,16 @@ interface ContactProps {
 
 export default function Contact({ onOpenQuote }: ContactProps) {
   return (
-    <section id="contact" className="contact-cta-section">
+    <section id="contact" className="section contact-cta-section">
       <div className="contact-cta-grid-lines grid-lines" aria-hidden="true"></div>
       <div className="contact-cta-glow"></div>
-      <div className="contact-cta-inner">
+      <div className="container contact-cta-inner">
         <div className="contact-cta-left">
           <div className="contact-cta-eyebrow-row">
             <span className="contact-cta-eyebrow-line"></span>
             <span className="contact-cta-eyebrow-text">Partner with AHIL</span>
           </div>
-          <h2 className="contact-cta-title">
+          <h2 className="section-title contact-cta-title">
             Let&apos;s engineer <span className="contact-cta-title-accent">what comes next.</span>
           </h2>
           <p className="contact-cta-desc">

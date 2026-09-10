@@ -4,8 +4,8 @@ import React from 'react';
 
 export default function Sustainability() {
   return (
-    <section id="sustainability" className="sustainability-section">
-      <div className="sustainability-inner">
+    <section id="sustainability" className="section sustainability-section">
+      <div className="container sustainability-inner">
         <div className="sustainability-grid">
           {/* Left Column: Quality Assurance */}
           <div className="sustainability-left">
@@ -24,7 +24,7 @@ export default function Sustainability() {
                 QUALITY ASSURANCE
               </div>
 
-              <h2 className="sustainability-left-title">
+              <h2 className="section-title sustainability-left-title">
                 Zero-Defect Quality Control &amp; Precision Inspection Systems.
               </h2>
 

@@ -90,8 +90,8 @@ export default function ContactUsPage() {
       </section>
 
       {/* Section 2: Direct Technical Inquiry Form */}
-      <section className="contact-form-section">
-        <div className="contact-form-container">
+      <section className="section contact-form-section">
+        <div className="container contact-form-container">
           <div className="contact-form-2col">
             
             {/* Left Column: Information & Guarantees */}
@@ -101,7 +101,7 @@ export default function ContactUsPage() {
                   <Sparkles className="contact-badge-icon" />
                   <span>DIRECT INQUIRY DESK</span>
                 </div>
-                <h2 className="contact-form-main-title">
+                <h2 className="section-title contact-form-main-title">
                   Have a Custom <span>Technical Requirement?</span>
                 </h2>
                 <p className="contact-form-main-desc contact-form-main-desc-spaced">
@@ -308,14 +308,14 @@ export default function ContactUsPage() {
       </section>
 
       {/* Section 3: Regional Engineering Hubs & Offices */}
-      <section className="contact-locations-section">
-        <div className="contact-locations-container">
+      <section className="section contact-locations-section">
+        <div className="container contact-locations-container">
           <div className="contact-locations-header">
             <div className="contact-badge">
               <Sparkles className="contact-badge-icon" />
               <span>REGIONAL PRESENCE</span>
             </div>
-            <h2 className="contact-locations-title">
+            <h2 className="section-title contact-locations-title">
               Our Offices &amp; Precision Facilities
             </h2>
             <p className="contact-channels-desc">

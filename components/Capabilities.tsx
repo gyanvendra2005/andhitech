@@ -4,15 +4,15 @@ import React from 'react';
 
 export default function Capabilities() {
   return (
-    <section id="capabilities" className="capabilities-section">
+    <section id="capabilities" className="section capabilities-section">
       <div className="capabilities-grid-lines grid-lines" aria-hidden="true"></div>
-      <div className="capabilities-inner">
+      <div className="container capabilities-inner">
         <div className="capabilities-header">
           <div className="capabilities-eyebrow-row">
             <span className="capabilities-eyebrow-line"></span>
             <span className="capabilities-eyebrow-text">What we do</span>
           </div>
-          <h2 className="capabilities-title">
+          <h2 className="section-title capabilities-title">
             End-to-end engineering, <br />
             <span className="capabilities-title-accent">under one roof.</span>
           </h2>

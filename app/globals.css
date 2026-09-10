@@ -2432,7 +2432,7 @@ margin-top:26px
 .career-hero-title {
   font-family: 'Manrope', sans-serif;
   font-weight: 800;
-  font-size: 3rem;
+  font-size: 3.5rem;
   line-height: 1.1;
   color: #ffffff;
   margin: 0 0 1.25rem 0;
@@ -2517,6 +2517,7 @@ margin-top:26px
   padding: 0 2.5rem;
   display: grid;
   gap: 1.75rem;
+  grid-template-columns: repeat(3, 1fr);
 }
 
 .career-why-card {
@@ -2678,7 +2679,12 @@ margin-top:26px
 
 .about-container {
   display: grid;
-  gap: 2.5rem;
+  gap: 4rem;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+}
+
+.about-left {
+  grid-column: span 4 / span 4;
 }
 
 .about-badge {
@@ -2707,12 +2713,13 @@ margin-top:26px
 }
 
 .about-right {
+  grid-column: span 8 / span 8;
   padding-top: 1rem;
 }
 
 .about-text {
   margin-top: 1.5rem;
-  font-size: 1rem;
+  font-size: 1.125rem;
   line-height: 1.75;
   color: rgba(15, 23, 42, 0.7);
 }
@@ -2721,6 +2728,7 @@ margin-top:26px
   margin-top: 2.5rem;
   display: grid;
   gap: 1.5rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
 }
 
 .about-stat {
@@ -2972,7 +2980,9 @@ margin-top:26px
 
 .products-header {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: space-between;
   gap: 2rem;
   margin-bottom: 4rem;
 }
@@ -3008,7 +3018,8 @@ margin-top:26px
 
 .products-grid {
   display: grid;
-  gap: 1.5rem;
+  gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .product-card {
@@ -3019,12 +3030,12 @@ margin-top:26px
 }
 
 .product-card-wide {
-  grid-column: span 1;
+  grid-column: span 2;
 }
 
 .product-card-split {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .product-card-single {
@@ -3034,7 +3045,8 @@ margin-top:26px
 
 .product-card-media {
   position: relative;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: auto;
+  min-height: 340px;
   overflow: hidden;
   background-color: #060b18;
 }
@@ -3066,7 +3078,7 @@ margin-top:26px
 }
 
 .product-card-body {
-  padding: 2rem;
+  padding: 2.5rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -3074,7 +3086,7 @@ margin-top:26px
 
 .product-card-title {
   font-family: 'Manrope', sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.875rem;
   font-weight: 700;
   color: #162779;
   line-height: 1.25;
@@ -3132,7 +3144,7 @@ margin-top:26px
 .site-header-inner {
   margin: 0 auto;
   max-width: 1400px;
-  padding: 1.5rem;
+  padding: 1.5rem 2.5rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -3145,12 +3157,12 @@ margin-top:26px
 }
 
 .site-header-logo {
-  height: 2.25rem;
+  height: 2.5rem;
   width: auto;
 }
 
 .site-header-nav {
-  display: none;
+  display: flex;
   align-items: center;
   gap: 1.75rem;
 }
@@ -3168,6 +3180,7 @@ margin-top:26px
 }
 
 .site-header-mobile-toggle {
+  display: none;
   color: #ffffff;
   padding: 0.5rem;
   background: none;
@@ -3180,6 +3193,7 @@ margin-top:26px
 }
 
 .site-header-mobile-menu {
+  display: none;
   background-color: #060b18;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding: 1.5rem;
@@ -3401,7 +3415,7 @@ margin-top:26px
   z-index: 10;
   margin: 0 auto;
   max-width: 1400px;
-  padding: 10rem 1.5rem 6rem;
+  padding: 13rem 2.5rem 8rem;
 }
 
 .hero-content-inner {
@@ -3435,7 +3449,7 @@ margin-top:26px
 
 .hero-stats-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 1px;
   background-color: rgba(255, 255, 255, 0.1);
   border-top: 1px solid rgba(255, 255, 255, 0.15);
@@ -3444,19 +3458,19 @@ margin-top:26px
 .hero-stat-cell {
   background-color: rgba(6, 11, 24, 0.7);
   backdrop-filter: blur(4px);
-  padding: 1.25rem 1.25rem;
+  padding: 1.5rem 2rem;
 }
 
 .hero-stat-number {
   font-family: 'Manrope', sans-serif;
-  font-size: 1.875rem;
+  font-size: 2.25rem;
   font-weight: 700;
   color: #d4af37;
 }
 
 .hero-stat-label {
   margin-top: 0.25rem;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   color: rgba(255, 255, 255, 0.7);
   text-transform: uppercase;
   letter-spacing: 0.18em;
@@ -3706,7 +3720,7 @@ margin-top:26px
 
 .facility-stat-number {
   font-family: 'Manrope', sans-serif;
-  font-size: 3.75rem;
+  font-size: 4.5rem;
   font-weight: 700;
   color: #d4af37;
 }
@@ -3747,7 +3761,7 @@ margin-top:26px
 
 .sustainability-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
   gap: 2rem;
   align-items: stretch;
 }
@@ -3757,12 +3771,13 @@ margin-top:26px
   flex-direction: column;
   justify-content: space-between;
   gap: 1.5rem;
+  grid-column: span 7;
 }
 
 .sustainability-img-wrap {
   position: relative;
   width: 100%;
-  height: 18rem;
+  height: 20rem;
   border-radius: 1.5rem;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(15, 23, 42, 0.12);
@@ -3799,7 +3814,7 @@ margin-top:26px
 .sustainability-card {
   background-color: #17263c;
   border-radius: 1.5rem;
-  padding: 2rem;
+  padding: 2.5rem;
   color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -3807,6 +3822,7 @@ margin-top:26px
   box-shadow: 0 20px 25px rgba(0, 0, 0, 0.15);
   border: 1px solid #1e293b;
   gap: 2rem;
+  grid-column: span 5;
 }
 
 .sustainability-card-content {
@@ -3824,7 +3840,7 @@ margin-top:26px
 
 .sustainability-card-text {
   color: #cbd5e1;
-  font-size: 0.875rem;
+  font-size: 1rem;
   line-height: 1.625;
 }
 
@@ -3866,10 +3882,11 @@ margin-top:26px
   position: relative;
   display: grid;
   gap: 2.5rem;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
 }
 
 .contact-cta-left {
-  grid-column: span 12;
+  grid-column: span 7;
 }
 
 .contact-cta-eyebrow-row {
@@ -3909,7 +3926,7 @@ margin-top:26px
 }
 
 .contact-cta-right {
-  grid-column: span 12;
+  grid-column: span 5;
 }
 
 .contact-cta-card {
@@ -3975,10 +3992,11 @@ margin-top:26px
   display: grid;
   gap: 2rem;
   align-items: start;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
 }
 
 .footer-col-brand {
-  grid-column: span 12;
+  grid-column: span 5;
 }
 
 .footer-logo {
@@ -4013,11 +4031,11 @@ margin-top:26px
 }
 
 .footer-col-explore {
-  grid-column: span 12;
+  grid-column: span 3;
 }
 
 .footer-col-contact {
-  grid-column: span 12;
+  grid-column: span 4;
 }
 
 .footer-col-heading {
@@ -4058,7 +4076,7 @@ margin-top:26px
   border-top: 1px solid rgba(255, 255, 255, 0.1);
   padding-top: 1.5rem;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 0.75rem;
   justify-content: space-between;
   font-size: 0.75rem;
@@ -4099,7 +4117,7 @@ margin-top:26px
 
 .ticker-label {
   font-family: 'Manrope', sans-serif;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 600;
   letter-spacing: 0.02em;
   text-transform: uppercase;
@@ -4120,7 +4138,7 @@ margin-top:26px
 .clients-header {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
   margin-bottom: 3rem;
 }
 
@@ -4131,11 +4149,12 @@ margin-top:26px
 .clients-subtitle {
   font-size: 0.875rem;
   color: #6b7280;
+  max-width: 24rem;
 }
 
 .clients-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   border-top: 1px solid #e2e8f0;
   border-left: 1px solid #e2e8f0;
 }
@@ -4153,7 +4172,7 @@ margin-top:26px
 
 .clients-name {
   font-family: 'Manrope', sans-serif;
-  font-size: 0.875rem;
+  font-size: 1rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -4218,12 +4237,13 @@ margin-top:26px
   gap: 1px;
   background-color: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.1);
+  grid-template-columns: repeat(2, 1fr);
 }
 
 .capabilities-card {
   position: relative;
   background-color: #162779;
-  padding: 2rem;
+  padding: 2.5rem;
   transition: background-color 0.2s ease;
 }
 
@@ -4426,50 +4446,28 @@ margin-top:26px
     align-items: center;
     justify-content: center;
   }
-}
 
-@media (min-width: 1024px) {
-.site-header-inner {
-    padding: 1.5rem 2.5rem;
+  .site-header-mobile-menu {
+    display: block;
   }
 
-.site-header-nav {
-    display: flex;
+  .site-header-inner {
+    padding: 1.5rem;
   }
 
-.site-header-mobile-toggle {
-    display: none;
+  .sustainability-grid {
+    grid-template-columns: 1fr;
   }
 
-.site-header-mobile-menu {
-    display: none;
+  .sustainability-left {
+    grid-column: auto;
   }
 
-.hero-content {
-    padding-left: 2.5rem;
-    padding-right: 2.5rem;
-  }
-
-.facility-cards-grid {
-    grid-template-columns: repeat(5, 1fr);
-  }
-
-.sustainability-grid {
-    grid-template-columns: repeat(12, minmax(0, 1fr));
-  }
-
-.sustainability-left {
-    grid-column: span 7;
-  }
-
-.sustainability-card {
-    grid-column: span 5;
-  }
-
-.capabilities-cards-grid {
-    grid-template-columns: repeat(2, 1fr);
+  .sustainability-card {
+    grid-column: auto;
   }
 }
+
 @media (max-width: 992px) {
 .ks-3col-box {
     grid-template-columns: 1fr;
@@ -4514,6 +4512,11 @@ margin-top:26px
 .vm-showcase-card:first-child {
     border-right: none;
     border-bottom: 1px solid #f1f5f9;
+  }
+
+  .leadership-photo-wrap {
+    max-width: 230px;
+    margin: 0 auto;
   }
 }
 
@@ -4572,11 +4575,6 @@ margin-top:26px
 
 .leadership-row {
     grid-template-columns: 1fr;
-  }
-
-  .leadership-photo-wrap {
-    max-width: 300px;
-    margin: 0 auto;
   }
 
   .leadership-row-reverse {
@@ -4789,179 +4787,137 @@ margin-top:26px
   .cv-floating-dots {
     display: none;
   }
-}
 
-@media (min-width: 768px) {
-  .about-container {
-    grid-template-columns: repeat(12, minmax(0, 1fr));
-    gap: 4rem;
-  }
-
-  .about-left {
-    grid-column: span 4 / span 4;
-  }
-
-  .about-right {
-    grid-column: span 8 / span 8;
-    padding-top: 1rem;
-  }
-
+  /* Desktop-first restores: mobile overrides for selectors whose desktop values now live in the base rules above */
   .about-text {
-    font-size: 1.125rem;
+    font-size: 1rem;
   }
 
   .products-header {
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: space-between;
+    flex-direction: column;
+    align-items: normal;
+    justify-content: normal;
   }
 
   .products-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2rem;
-  }
-
-  .product-card-wide {
-    grid-column: span 2;
-  }
-
-  .product-card-split {
-    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
   }
 
   .product-card-media {
-    aspect-ratio: auto;
-    min-height: 340px;
+    aspect-ratio: 4 / 3;
+    min-height: auto;
   }
 
   .product-card-body {
-    padding: 2.5rem;
+    padding: 2rem;
   }
 
   .product-card-title {
-    font-size: 1.875rem;
+    font-size: 1.5rem;
   }
 
   .site-header-logo {
-    height: 2.5rem;
-  }
-
-  .hero-content {
-    padding: 13rem 2.5rem 8rem;
+    height: 2.25rem;
   }
 
   .hero-stats-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-
-  .hero-stat-cell {
-    padding: 1.5rem 2rem;
-  }
-
-  .hero-stat-number {
-    font-size: 2.25rem;
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .hero-stat-label {
-    font-size: 0.875rem;
-  }
-
-  .facility-stat-number {
-    font-size: 4.5rem;
+    font-size: 0.75rem;
   }
 
   .contact-cta-inner {
-    grid-template-columns: repeat(12, minmax(0, 1fr));
-  }
-
-  .contact-cta-left {
-    grid-column: span 7;
-  }
-
-  .contact-cta-right {
-    grid-column: span 5;
+    grid-template-columns: 1fr;
   }
 
   .footer-inner {
-    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-template-columns: none;
   }
 
-  .footer-col-brand {
-    grid-column: span 5;
-  }
-
-  .footer-col-explore {
-    grid-column: span 3;
-  }
-
+  .footer-col-brand,
+  .footer-col-explore,
   .footer-col-contact {
-    grid-column: span 4;
+    grid-column: span 12;
   }
 
   .footer-bottom-row {
-    flex-direction: row;
+    flex-direction: column;
   }
 
   .ticker-label {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
 
   .clients-header {
-    gap: 1rem;
+    gap: 1.5rem;
   }
 
   .clients-subtitle {
-    max-width: 24rem;
+    max-width: none;
   }
 
   .clients-name {
-    font-size: 1rem;
+    font-size: 0.875rem;
   }
 
-  .capabilities-cards-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
+  /* .capabilities-cards-grid {
+    grid-template-columns: none;
+  } */
 
   .capabilities-card {
-    padding: 2.5rem;
+    padding: 2rem;
   }
 
   .career-why-container {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr;
   }
 
   .career-hero-title {
-    font-size: 3.5rem;
+    font-size: 3rem;
   }
 }
 
-@media (min-width: 575px) {
-.about-stats {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
+@media (max-width: 575px) {
+  .about-stats {
+    grid-template-columns: 1fr;
   }
 
-.facility-cards-grid {
+  .products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card-wide {
+    grid-column: span 1;
+  }
+
+  .product-card-split {
+    grid-template-columns: 1fr;
+  }
+
+  .sustainability-img-wrap {
+    height: 18rem;
+  }
+
+  .sustainability-card {
+    padding: 2rem;
+  }
+
+  .sustainability-card-text {
+    font-size: 0.875rem;
+  }
+
+  .clients-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-.sustainability-img-wrap {
-    height: 20rem;
+  .leadership-photo-wrap {
+    max-width: 300px;
+    margin: 0 auto;
   }
-
-.sustainability-card {
-    padding: 2.5rem;
-  }
-
-.sustainability-card-text {
-    font-size: 1rem;
-  }
-
-.clients-grid {
-    grid-template-columns: repeat(4, 1fr);
-  }
-.leadership-photo-wrap {
-        max-width: 230px;
-        margin: 0 auto;
+  .capabilities-cards-grid {
+    grid-template-columns: 1fr;
   }
 }
 

@@ -3681,6 +3681,7 @@ margin-top:26px
   margin-top: 4rem;
   display: grid;
   gap: 1px;
+  grid-template-columns: repeat(5, 1fr);
   background-color: rgba(255, 255, 255, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(4px);

@@ -34,7 +34,7 @@ export default function VisionMission() {
             02
           </div> */}
           <h2 className="section-title vm-main-title">
-            VISION &amp; MISSION
+            Vision &amp; Mission
           </h2>
           <p className="vm-main-subtitle">
             Defining AHIL&apos;s purpose, engineering precision, and long-term direction — the driving force behind India&apos;s rolling stock and rail innovation.
@@ -53,7 +53,7 @@ export default function VisionMission() {
               />
             </div>
             <div className="vm-card-body">
-              <div className="vm-accent-triangle"></div>
+              {/* <div className="vm-accent-triangle"></div> */}
               <h3 className="vm-card-title">
                 Our Vision
               </h3>
@@ -73,7 +73,7 @@ export default function VisionMission() {
               />
             </div>
             <div className="vm-card-body">
-              <div className="vm-accent-triangle"></div>
+              {/* <div className="vm-accent-triangle"></div> */}
               <h3 className="vm-card-title">
                 Our Mission
               </h3>

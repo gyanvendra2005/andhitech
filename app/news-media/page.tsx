@@ -5,7 +5,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import QuoteModal from '@/components/QuoteModal';
 import NewsSlider from '@/components/NewsSlider';
-import { Sparkles, ArrowRight, Download, Mail, Calendar, Clock } from 'lucide-react';
+import { ArrowRight, Download, Mail, Calendar, Clock } from 'lucide-react';
 
 export default function NewsMediaPage() {
   const [quoteModalOpen, setQuoteModalOpen] = useState(false);
@@ -112,12 +112,12 @@ export default function NewsMediaPage() {
           {/* Header & Filter Tabs */}
           <div className={`news-header-area fade-in-scroll ${isVisible ? 'is-visible' : ''}`}>
             <div className="news-badge">
-              <Sparkles />
+              <span className="news-badge-line"></span>
               <span>PRESS &amp; MEDIA RELEASES</span>
             </div>
 
             <h2 className="section-title news-section-title">
-              News &amp; Media Highlights
+              News &amp; Media <span className="gold-underline">Highlights</span>
             </h2>
 
             <p className="news-section-subtitle">

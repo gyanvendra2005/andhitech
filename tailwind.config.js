@@ -17,7 +17,7 @@ module.exports = {
             brand: 'oklch(32% 0.14 268)'
         },
         gold: {
-          DEFAULT: '#d4af37',
+          DEFAULT: '#ffce00',
         },
         ink: '#05070e'
       },

@@ -154,7 +154,7 @@ export default function CareerPage() {
       </section>
 
       {/* Why Join */}
-      <section className="section career-why">
+      {/* <section className="section career-why">
         <div className="container career-why-container">
           {WHY_JOIN.map((item, index) => {
             const Icon = item.icon;
@@ -172,158 +172,174 @@ export default function CareerPage() {
             );
           })}
         </div>
-      </section>
+      </section> */}
 
       {/* Join Us Application Form */}
       <section id="join-us" ref={formSectionRef} className="section complaint-section career-form-section">
         <div className="container complaint-container career-form-container">
-          <div className={`career-form-intro fade-in-scroll ${isVisible ? 'is-visible' : ''}`}>
-            <div className="complaint-badge">
-              <span>JOIN OUR TEAM</span>
-            </div>
-            <h2 className="section-title complaint-main-title career-form-title">
-              Apply in <span>Minutes</span>
-            </h2>
-            <p className="complaint-main-subtitle">
-              Don&apos;t see an open role that matches you exactly? Send us your details anyway — we keep every application on file and reach out as soon as a fit opens up.
-            </p>
-          </div>
+          <div className="complaint-2col-layout">
 
-          {submitted && (
-            <div className="complaint-success-banner is-visible career-form-banner">
-              <ShieldCheck className="complaint-success-banner-icon" />
+            {/* Left Column: Simple Intro Info */}
+            <div className={`complaint-left-info career-form-intro fade-in-scroll ${isVisible ? 'is-visible' : ''}`}>
               <div>
-                <strong>Application Submitted Successfully! Reference #{referenceId}</strong>
-                <p className="complaint-success-banner-text">
-                  Thank you, <strong>{formData.candidateName || 'Candidate'}</strong>. Your application for <strong>{formData.positionAppliedFor || 'the applied position'}</strong> has been received by our HR team and will be reviewed shortly.
+                <div className="complaint-badge career-badge">
+                  <span className="career-badge-line"></span>
+                  <span>JOIN OUR TEAM</span>
+                </div>
+                <h2 className="section-title complaint-main-title career-form-title">
+                  Apply in <span className="gold-underline">Minutes</span>
+                </h2>
+                <p className="complaint-main-subtitle">
+                  Don&apos;t see an open role that matches you exactly? Send us your details anyway — we keep every application on file and reach out as soon as a fit opens up.
                 </p>
-                <button
-                  type="button"
-                  onClick={handleReset}
-                  className="complaint-success-banner-reset-btn"
-                >
-                  Submit Another Application
-                </button>
               </div>
-            </div>
-          )}
 
-          <form onSubmit={handleSubmit} className={`career-form-wrap fade-in-scroll fade-in-scroll-delay-1 ${isVisible ? 'is-visible' : ''}`}>
-            <div className="complaint-card">
-              <h3 className="complaint-card-title">
-                <UserCheck className="complaint-card-title-icon" />
-                <span>Candidate Details</span>
-              </h3>
+              <div className="contact-info-divider"></div>
 
-              <div className="complaint-form-grid">
-                <div className="complaint-form-group">
-                  <label className="complaint-label">
-                    Candidate Name <span className="complaint-required">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    name="candidateName"
-                    placeholder="Enter your full name"
-                    value={formData.candidateName}
-                    onChange={handleChange}
-                    required
-                    className="complaint-input"
-                  />
-                </div>
-
-                <div className="complaint-form-group">
-                  <label className="complaint-label">
-                    Mobile Number <span className="complaint-required">*</span>
-                  </label>
-                  <input
-                    type="tel"
-                    name="mobileNumber"
-                    placeholder="+91 XXXXX XXXXX"
-                    pattern="[0-9+\s]{10,15}"
-                    value={formData.mobileNumber}
-                    onChange={handleChange}
-                    required
-                    className="complaint-input"
-                  />
-                </div>
-
-                <div className="complaint-form-group">
-                  <label className="complaint-label">
-                    Email <span className="complaint-required">*</span>
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    placeholder="you@example.com"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="complaint-input"
-                  />
-                </div>
-
-                <div className="complaint-form-group">
-                  <label className="complaint-label">
-                    Position Applied For <span className="complaint-required">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    name="positionAppliedFor"
-                    placeholder="e.g., Design Engineer / QA Executive"
-                    value={formData.positionAppliedFor}
-                    onChange={handleChange}
-                    required
-                    className="complaint-input"
-                  />
-                </div>
-
-                <div className="complaint-form-group col-span-2">
-                  <label className="complaint-label">Comments</label>
-                  <textarea
-                    name="comments"
-                    placeholder="Tell us about your experience, availability or anything else relevant..."
-                    value={formData.comments}
-                    onChange={handleChange}
-                    className="complaint-textarea"
-                  />
-                </div>
-
-                <div className="complaint-form-group col-span-2">
-                  <label className="complaint-label">
-                    Upload CV <span className="complaint-required">*</span>
-                  </label>
-                  <label htmlFor="cv-upload" className="career-upload-box">
-                    <UploadCloud className="career-upload-icon" />
-                    <span className="career-upload-text">
-                      {cvFile ? cvFile.name : 'Click to upload your CV'}
-                    </span>
-                    <span className="career-upload-hint">PDF or Word format · 5 MB max</span>
-                    <input
-                      id="cv-upload"
-                      type="file"
-                      accept=".pdf,.doc,.docx"
-                      onChange={handleFileChange}
-                      required
-                      className="career-upload-input"
-                    />
-                  </label>
-                  {fileError && <span className="career-upload-error">{fileError}</span>}
-                </div>
+              <div className="contact-info-address-card">
+                <h4 className="contact-info-address-title">What Happens Next</h4>
+                <p className="contact-info-address-text">
+                  Our HR team reviews every application within 3–5 business days and reaches out directly for roles that match your profile.
+                </p>
               </div>
             </div>
 
-            <div className="complaint-submit-wrapper">
-              <button type="submit" className="complaint-submit-btn">
-                <span className="complaint-submit-text">Submit Application</span>
-                <span className="complaint-submit-icon">
-                  <ArrowUpRight className="complaint-submit-icon-svg" />
-                </span>
-              </button>
+            {/* Right Column: Application Form */}
+            <div className="complaint-right-form">
+              {submitted && (
+                <div className="complaint-success-banner is-visible career-form-banner">
+                  <ShieldCheck className="complaint-success-banner-icon" />
+                  <div>
+                    <strong>Application Submitted Successfully! Reference #{referenceId}</strong>
+                    <p className="complaint-success-banner-text">
+                      Thank you, <strong>{formData.candidateName || 'Candidate'}</strong>. Your application for <strong>{formData.positionAppliedFor || 'the applied position'}</strong> has been received by our HR team and will be reviewed shortly.
+                    </p>
+                    <button
+                      type="button"
+                      onClick={handleReset}
+                      className="complaint-success-banner-reset-btn"
+                    >
+                      Submit Another Application
+                    </button>
+                  </div>
+                </div>
+              )}
+
+              <form onSubmit={handleSubmit} className={`career-form-wrap fade-in-scroll fade-in-scroll-delay-1 ${isVisible ? 'is-visible' : ''}`}>
+                <div className="complaint-card">
+                  <h3 className="complaint-card-title">
+                    <UserCheck className="complaint-card-title-icon" />
+                    <span>Candidate Details</span>
+                  </h3>
+
+                  <div className="complaint-form-grid">
+                    <div className="complaint-form-group">
+                      <label className="complaint-label">
+                        Candidate Name <span className="complaint-required">*</span>
+                      </label>
+                      <input
+                        type="text"
+                        name="candidateName"
+                        placeholder="Enter your full name"
+                        value={formData.candidateName}
+                        onChange={handleChange}
+                        required
+                        className="complaint-input"
+                      />
+                    </div>
+
+                    <div className="complaint-form-group">
+                      <label className="complaint-label">
+                        Mobile Number <span className="complaint-required">*</span>
+                      </label>
+                      <input
+                        type="tel"
+                        name="mobileNumber"
+                        placeholder="+91 XXXXX XXXXX"
+                        pattern="[0-9+\s]{10,15}"
+                        value={formData.mobileNumber}
+                        onChange={handleChange}
+                        required
+                        className="complaint-input"
+                      />
+                    </div>
+
+                    <div className="complaint-form-group">
+                      <label className="complaint-label">
+                        Email <span className="complaint-required">*</span>
+                      </label>
+                      <input
+                        type="email"
+                        name="email"
+                        placeholder="you@example.com"
+                        value={formData.email}
+                        onChange={handleChange}
+                        required
+                        className="complaint-input"
+                      />
+                    </div>
+
+                    <div className="complaint-form-group">
+                      <label className="complaint-label">
+                        Position Applied For <span className="complaint-required">*</span>
+                      </label>
+                      <input
+                        type="text"
+                        name="positionAppliedFor"
+                        placeholder="e.g., Design Engineer / QA Executive"
+                        value={formData.positionAppliedFor}
+                        onChange={handleChange}
+                        required
+                        className="complaint-input"
+                      />
+                    </div>
+
+                    <div className="complaint-form-group col-span-2">
+                      <label className="complaint-label">Comments</label>
+                      <textarea
+                        name="comments"
+                        placeholder="Tell us about your experience, availability or anything else relevant..."
+                        value={formData.comments}
+                        onChange={handleChange}
+                        className="complaint-textarea"
+                      />
+                    </div>
+
+                    <div className="complaint-form-group col-span-2">
+                      <label className="complaint-label">
+                        Upload CV <span className="complaint-required">*</span>
+                      </label>
+                      <label htmlFor="cv-upload" className="career-upload-box">
+                        <UploadCloud className="career-upload-icon" />
+                        <span className="career-upload-text">
+                          {cvFile ? cvFile.name : 'Click to upload your CV'}
+                        </span>
+                        <span className="career-upload-hint">PDF or Word format · 5 MB max</span>
+                        <input
+                          id="cv-upload"
+                          type="file"
+                          accept=".pdf,.doc,.docx"
+                          onChange={handleFileChange}
+                          required
+                          className="career-upload-input"
+                        />
+                      </label>
+                      {fileError && <span className="career-upload-error">{fileError}</span>}
+                    </div>
+                  </div>
+
+                  <div className="complaint-submit-wrapper">
+                    <button type="submit" className="contact-form-submit-btn">
+                      Submit Application
+                    </button>
+                  </div>
+                </div>
+              </form>
             </div>
-          </form>
+          </div>
         </div>
 
-        <div className="complaint-corner-accent"></div>
+        {/* <div className="complaint-corner-accent"></div> */}
       </section>
 
       <Footer />

@@ -28,10 +28,11 @@ export default function WhoWeAre() {
   return (
     <section ref={sectionRef} className="section who-we-are-section">
       <div className="container who-we-are-container">
-        {/* Left Side Title with Scroll Reveal */}
-        <h2 className={`section-title who-we-are-left-title fade-in-scroll ${isVisible ? 'is-visible' : ''}`}>
-          About AHIL
-        </h2>
+        {/* Left Side Eyebrow Badge with Scroll Reveal */}
+        <div className={`about-badge who-we-are-left-title fade-in-scroll ${isVisible ? 'is-visible' : ''}`}>
+          <span className="about-badge-line"></span>
+          <span className="about-badge-text">About AHIL</span>
+        </div>
 
         {/* Right Side Content with Scroll Reveal */}
         <div className="who-we-are-img-cont">

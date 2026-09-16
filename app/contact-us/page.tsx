@@ -6,10 +6,6 @@ import Footer from '@/components/Footer';
 import Contact from '@/components/Contact';
 import QuoteModal from '@/components/QuoteModal';
 import {
-  Sparkles,
-  ArrowUpRight,
-  ShieldCheck,
-  Check,
   FileCheck,
 } from 'lucide-react';
 import Link from 'next/link';
@@ -98,72 +94,62 @@ export default function ContactUsPage() {
             <div className="contact-info-left fade-in-scroll">
               <div>
                 <div className="contact-badge">
-                  <Sparkles className="contact-badge-icon" />
+                  <span className="contact-badge-line"></span>
                   <span>DIRECT INQUIRY DESK</span>
                 </div>
-                <h2 className="section-title contact-form-main-title">
-                  Have a Custom <span>Technical Requirement?</span>
+                <h2 className="contact-form-simple-title">
+                  Contact our <span className="gold-underline">team</span>
                 </h2>
-                <p className="contact-form-main-desc contact-form-main-desc-spaced">
-                  Fill out our direct inquiry form and our chief application engineers will analyze your specifications and return a preliminary feasibility review within 24 hours.
+                <p className="contact-form-simple-subtitle">
+                  Let&apos;s help you get started.
                 </p>
               </div>
 
-              {/* Highlights List */}
-              <div className="contact-highlights-list">
-                <div className="contact-highlight-item">
-                  <div className="contact-highlight-check">
-                    <Check className="contact-highlight-check-icon" />
-                  </div>
-                  <span>Confidential Non-Disclosure Agreement (NDA) on Request</span>
-                </div>
+              <div className="contact-info-divider"></div>
 
-                <div className="contact-highlight-item">
-                  <div className="contact-highlight-check">
-                    <Check className="contact-highlight-check-icon" />
-                  </div>
-                  <span>Custom Machining, Fabrication &amp; Sub-Assembly Sourcing</span>
+              {/* Plain Contact Details List */}
+              <div className="contact-info-phone-list">
+                <div className="contact-info-phone-row">
+                  <span className="contact-info-phone-label">Engineering Desk</span>
+                  <span className="contact-info-phone-value">+91 (0) 120-456-7890</span>
                 </div>
-
-                <div className="contact-highlight-item">
-                  <div className="contact-highlight-check">
-                    <Check className="contact-highlight-check-icon" />
-                  </div>
-                  <span>Direct RDSO Metrology &amp; Quality Audit Support</span>
+                <div className="contact-info-phone-row">
+                  <span className="contact-info-phone-label">Business Email</span>
+                  <span className="contact-info-phone-value">service@andhitech.in</span>
                 </div>
-
-                <div className="contact-highlight-item">
-                  <div className="contact-highlight-check">
-                    <Check className="contact-highlight-check-icon" />
-                  </div>
-                  <span>24/7 Dedicated Online Grievance Escalation</span>
+                <div className="contact-info-phone-row">
+                  <span className="contact-info-phone-label">Grievance SLA</span>
+                  <span className="contact-info-phone-value">&lt; 2 Hours Response</span>
                 </div>
               </div>
 
+              {/* Address / Info Card */}
+              <div className="contact-info-address-card">
+                <h4 className="contact-info-address-title">AHIL Saket Executive Office</h4>
+                <p className="contact-info-address-text">
+                  F-11, Select CITYWALK<br />
+                  District Centre, Saket<br />
+                  New Delhi, Delhi, 110017
+                </p>
+              </div>
+
               {/* Direct Railway Grievance Notice */}
-              <div className="contact-grievance-notice">
-                <ShieldCheck className="contact-grievance-notice-icon" />
-                <div>
-                  <h4 className="contact-grievance-notice-title">
-                    Railway Depot Grievance or Component Failure?
-                  </h4>
-                  <p className="contact-grievance-notice-text">
-                    For active rolling stock failure logs or warranty claims, please use our{' '}
-                    <Link href="/online-complaint" className="contact-grievance-notice-link">
-                      Online Complaint Portal
-                    </Link>{' '}
-                    with 2-hour SLA tracking.
-                  </p>
-                </div>
+              <div className="contact-info-address-card">
+                <h4 className="contact-info-address-title">
+                  Railway Depot Grievance or Component Failure?
+                </h4>
+                <p className="contact-info-address-text">
+                  For active rolling stock failure logs or warranty claims, please use our{' '}
+                  <Link href="/online-complaint" className="contact-info-address-link">
+                    Online Complaint Portal
+                  </Link>{' '}
+                  with 2-hour SLA tracking.
+                </p>
               </div>
             </div>
 
             {/* Right Column: Interactive Form Card */}
             <div className="contact-inquiry-card fade-in-scroll fade-in-scroll-delay-1">
-              <h3 className="contact-inquiry-card-title">
-                Send a Message to Engineering
-              </h3>
-
               {inquirySubmitted ? (
                 <div className="contact-inquiry-success">
                   <FileCheck className="contact-inquiry-success-icon" />
@@ -291,12 +277,16 @@ export default function ContactUsPage() {
                     </div>
                   </div>
 
+                  <p className="contact-form-disclaimer">
+                    Upon submitting this form, we will contact you using the information provided.
+                    I agree to the processing and international transfer of my personal data by AHIL as described in the{' '}
+                    <Link href="/" className="contact-form-disclaimer-link">Privacy Policy</Link>.
+                    You may unsubscribe at any time by clicking the unsubscribe link on any emails you receive.
+                  </p>
+
                   <div className="contact-form-submit-wrap">
-                    <button type="submit" className="contact-send-btn">
-                      <span className="contact-send-btn-text">Send Message</span>
-                      <span className="contact-send-btn-icon">
-                        <ArrowUpRight className="contact-send-btn-icon-svg" />
-                      </span>
+                    <button type="submit" className="contact-form-submit-btn">
+                      Submit
                     </button>
                   </div>
                 </form>
@@ -312,11 +302,11 @@ export default function ContactUsPage() {
         <div className="container contact-locations-container">
           <div className="contact-locations-header fade-in-scroll">
             <div className="contact-badge">
-              <Sparkles className="contact-badge-icon" />
+              <span className="contact-badge-line"></span>
               <span>REGIONAL PRESENCE</span>
             </div>
             <h2 className="section-title contact-locations-title">
-              Our Offices &amp; Precision Facilities
+              Our Offices &amp; <span className="gold-underline">Precision Facilities</span>
             </h2>
             <p className="contact-channels-desc">
               Visit our corporate offices, advanced manufacturing centers and regional mobility support hubs across key transit corridors.

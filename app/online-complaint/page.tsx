@@ -4,11 +4,9 @@ import React, { useState, useEffect, useRef } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import QuoteModal from '@/components/QuoteModal';
-import { 
-  ArrowUpRight, 
-  CheckCircle2, 
-  Sparkles, 
-  FileText, 
+import {
+  CheckCircle2,
+  FileText,
   UserCheck, 
   Wrench, 
   ShieldCheck, 
@@ -127,12 +125,12 @@ export default function OnlineComplaintPage() {
             <div className="complaint-left-info fade-in-scroll">
               <div>
                 <div className="complaint-badge">
-                  <Sparkles className="complaint-badge-icon" />
+                  <span className="complaint-badge-line"></span>
                   <span>QUALITY COMMITMENT &amp; SLA</span>
                 </div>
 
                 <h2 className="section-title complaint-main-title">
-                  Rapid Response &amp; <span>Zero-Defect</span> Resolution
+                  Rapid Response &amp; <span className="gold-underline">Zero-Defect Resolution</span>
                 </h2>
 
                 <p className="complaint-main-subtitle">
@@ -141,51 +139,7 @@ export default function OnlineComplaintPage() {
               </div>
 
               {/* Numbered Process List (Matching Reference Image 01, 02, 03, 04) */}
-              <div className="complaint-process-list">
-                {/* 01 */}
-                <div className="complaint-process-item">
-                  <span className="complaint-process-num">01</span>
-                  <div className="complaint-process-body">
-                    <h4 className="complaint-process-title">Direct QA &amp; Engineering Escalation</h4>
-                    <p className="complaint-process-desc">
-                      Every logged complaint is directly routed to our Chief Metrology &amp; Rolling Stock Quality Engineers within 2 Hours.
-                    </p>
-                  </div>
-                </div>
-
-                {/* 02 */}
-                <div className="complaint-process-item">
-                  <span className="complaint-process-num">02</span>
-                  <div className="complaint-process-body">
-                    <h4 className="complaint-process-title">On-Site Technical Investigation</h4>
-                    <p className="complaint-process-desc">
-                      For critical depot or coach failures, a certified field service engineer is deployed for physical inspection within 24–48 Hours.
-                    </p>
-                  </div>
-                </div>
-
-                {/* 03 */}
-                <div className="complaint-process-item">
-                  <span className="complaint-process-num">03</span>
-                  <div className="complaint-process-body">
-                    <h4 className="complaint-process-title">RDSO &amp; ISO Compliant Root Cause Analysis</h4>
-                    <p className="complaint-process-desc">
-                      Comprehensive 8D Failure Analysis and corrective action reports provided with material micro-structure validation.
-                    </p>
-                  </div>
-                </div>
-
-                {/* 04 */}
-                <div className="complaint-process-item">
-                  <span className="complaint-process-num">04</span>
-                  <div className="complaint-process-body">
-                    <h4 className="complaint-process-title">Guaranteed Component Replacement SLA</h4>
-                    <p className="complaint-process-desc">
-                      Immediate dispatch of precision replacement components and buffer stock with zero operational transit delay.
-                    </p>
-                  </div>
-                </div>
-              </div>
+           
 
               {/* Rapid Helpdesk Contact Card */}
               <div className="complaint-helpdesk-card fade-in-scroll fade-in-scroll-delay-1">
@@ -236,8 +190,8 @@ export default function OnlineComplaintPage() {
               )}
 
               <form onSubmit={handleSubmit}>
-                {/* Card 1: Basic Information */}
                 <div className="complaint-card fade-in-scroll">
+                  {/* Section 1: Basic Information */}
                   <h3 className="complaint-card-title">
                     <FileText className="complaint-card-title-icon" />
                     <span>Basic Information</span>
@@ -316,11 +270,9 @@ export default function OnlineComplaintPage() {
                       />
                     </div>
                   </div>
-                </div>
 
-                {/* Card 2: Complaint Details */}
-                <div className="complaint-card fade-in-scroll fade-in-scroll-delay-1">
-                  <h3 className="complaint-card-title">
+                  {/* Section 2: Complaint Details */}
+                  <h3 className="complaint-card-title complaint-card-title-divided">
                     <Wrench className="complaint-card-title-icon" />
                     <span>Complaint Details</span>
                   </h3>
@@ -432,11 +384,9 @@ export default function OnlineComplaintPage() {
                       />
                     </div>
                   </div>
-                </div>
 
-                {/* Card 3: Contact Information */}
-                <div className="complaint-card fade-in-scroll fade-in-scroll-delay-2">
-                  <h3 className="complaint-card-title">
+                  {/* Section 3: Contact Information */}
+                  <h3 className="complaint-card-title complaint-card-title-divided">
                     <UserCheck className="complaint-card-title-icon" />
                     <span>Contact Information</span>
                   </h3>
@@ -506,16 +456,13 @@ export default function OnlineComplaintPage() {
                       />
                     </div>
                   </div>
-                </div>
 
-                {/* Submit Action Button */}
-                <div className="complaint-submit-wrapper">
-                  <button type="submit" className="complaint-submit-btn">
-                    <span className="complaint-submit-text">Submit Grievance</span>
-                    <span className="complaint-submit-icon">
-                      <ArrowUpRight className="complaint-submit-icon-svg" />
-                    </span>
-                  </button>
+                  {/* Submit Action Button */}
+                  <div className="complaint-submit-wrapper">
+                    <button type="submit" className="contact-form-submit-btn">
+                      Submit Grievance
+                    </button>
+                  </div>
                 </div>
               </form>
             </div>
@@ -524,7 +471,7 @@ export default function OnlineComplaintPage() {
         </div>
 
         {/* Bottom Right Decorative Gold Accent */}
-        <div className="complaint-corner-accent"></div>
+        {/* <div className="complaint-corner-accent"></div> */}
       </section>
 
       <Footer />

@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useEffect, useRef, useState } from 'react';
-import { Sparkles, ShieldAlert, Cpu, Factory } from 'lucide-react';
+import { ShieldAlert, Cpu, Factory } from 'lucide-react';
 
 export default function KeyStrengths() {
   const [isVisible, setIsVisible] = useState(false);
@@ -32,12 +32,12 @@ export default function KeyStrengths() {
         {/* Header Area with Scroll Animation */}
         <div className={`ks-header-area fade-in-scroll ${isVisible ? 'is-visible' : ''}`}>
           <div className="ks-badge">
-            <Sparkles />
+            <span className="ks-badge-line"></span>
             <span>OUR KEY STRENGTHS</span>
           </div>
 
           <h2 className="section-title ks-title">
-            What drives our <strong>engineering excellence</strong>
+            What drives our engineering <span className="gold-underline">excellence</span>
           </h2>
 
           <p className="ks-desc">

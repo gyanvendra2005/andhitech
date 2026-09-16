@@ -62,15 +62,13 @@ export default function CoreValues() {
         {/* Left Column: Timeline & Value Pills */}
         <div className={`cv-left-content fade-in-scroll ${isVisible ? 'is-visible' : ''}`}>
           <div className="cv-badge">
-            <span className="cv-badge-dot"></span>
+            <span className="cv-badge-line"></span>
             <span>WHO WE ARE</span>
           </div>
 
           <h2 className="section-title cv-title">
-            Core Values
+            Core <span className="gold-underline">Values</span>
           </h2>
-
-          <div className="cv-title-underline"></div>
 
           <p className="cv-desc">
             Our values shape the way we work, collaborate and grow together to create lasting impact for our customers, our people and society.
@@ -125,11 +123,11 @@ export default function CoreValues() {
                 </div>
               </div>
 
-              <div className="cv-floating-dots">
+              {/* <div className="cv-floating-dots">
                 {Array.from({ length: 12 }).map((_, i) => (
                   <span key={i} className="cv-floating-dot"></span>
                 ))}
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

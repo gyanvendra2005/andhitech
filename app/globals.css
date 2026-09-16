@@ -4250,10 +4250,6 @@ margin-top:26px
 .capabilities-cards-grid {
   margin-top: 4rem;
   display: grid;
-  gap: 1px;
-  background-color: rgba(255, 255, 255, 0.1);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
   grid-template-columns: repeat(4, 1fr);
 }
 
@@ -4261,6 +4257,9 @@ margin-top:26px
   position: relative;
   background-color: #162779;
   padding: 2.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  margin-top: -1px;
+  margin-left: -1px;
   transition: background-color 0.2s ease;
 }
 

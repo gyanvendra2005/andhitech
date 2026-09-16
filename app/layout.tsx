@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import ScrollObserver from '@/components/ScrollObserver';
+import CustomCursor from '@/components/CustomCursor';
 
 export const metadata: Metadata = {
   title: 'AHIL — Precision Engineering for Rail & Metro',
@@ -22,6 +23,7 @@ export default function RootLayout({
       </head>
       <body className="bg-background text-foreground font-sans antialiased">
         <ScrollObserver />
+        <CustomCursor />
         {children}
       </body>
     </html>

@@ -59,7 +59,7 @@ export default function Leadership() {
           <h2 className="section-title leadership-heading">Director&apos;s Message</h2>
           <div className="leadership-row leadership-row-reverse">
             <div className="leadership-photo-wrap">
-              <img src="/assets/neha.webp" alt="Ms. Neha Singh, Director" className="leadership-photo" />
+              <img src="/assets/Neha.webp" alt="Ms. Neha Singh, Director" className="leadership-photo" />
               <div className="leadership-caption">
                 <div className="leadership-name">Ms. Neha Singh</div>
                 <div className="leadership-title">Director</div>
@@ -80,7 +80,7 @@ export default function Leadership() {
 
           <div className={`leadership-row fade-in-scroll fade-in-scroll-delay-2 ${isVisible ? 'is-visible' : ''}`}>
             <div className="leadership-photo-wrap">
-              <img src="/assets/asha.webp" alt="Ms. Asha, Director" className="leadership-photo" />
+              <img src="/assets/Asha.webp" alt="Ms. Asha, Director" className="leadership-photo" />
               <div className="leadership-caption">
                 <div className="leadership-name">Ms. Asha</div>
                 <div className="leadership-title">Director</div>

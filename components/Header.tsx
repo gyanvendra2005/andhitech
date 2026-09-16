@@ -25,6 +25,9 @@ export default function Header({ onOpenQuote }: HeaderProps) {
           <Link href="/about-us" className="site-header-link">
             About Us
           </Link>
+          <Link href="/infrastructure" className="site-header-link">
+            Infrastructure
+          </Link>
           <Link href="/new&media" className="site-header-link">
             News &amp; Media
           </Link>
@@ -54,6 +57,7 @@ export default function Header({ onOpenQuote }: HeaderProps) {
         <div className="site-header-mobile-menu">
           <nav className="site-header-mobile-nav">
             <Link href="/about-us" onClick={() => setMobileMenuOpen(false)} className="site-header-mobile-link">About Us</Link>
+            <Link href="/infrastructure" onClick={() => setMobileMenuOpen(false)} className="site-header-mobile-link">Infrastructure</Link>
             <a href="/#capabilities" onClick={() => setMobileMenuOpen(false)} className="site-header-mobile-link">Capabilities</a>
             <a href="/#products" onClick={() => setMobileMenuOpen(false)} className="site-header-mobile-link">Products</a>
             <a href="/#facility" onClick={() => setMobileMenuOpen(false)} className="site-header-mobile-link">Facility</a>

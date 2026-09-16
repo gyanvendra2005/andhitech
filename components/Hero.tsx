@@ -24,7 +24,7 @@ export default function Hero() {
       </div>
 
       <div className="hero-content">
-        <div className="hero-content-inner">
+        <div className="hero-content-inner fade-in-scroll">
           <div className="hero-eyebrow-row">
             <span className="hero-eyebrow-line"></span>
             <span className="hero-eyebrow-text">
@@ -40,7 +40,7 @@ export default function Hero() {
           </p>
         </div>
 
-        <div className="stats-hero">
+        <div className="stats-hero fade-in-scroll fade-in-scroll-delay-1">
           <div className="hero-stats-grid">
             <div className="hero-stat-cell">
               <div className="hero-stat-number">2013</div>

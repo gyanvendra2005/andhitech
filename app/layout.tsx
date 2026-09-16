@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import './globals.css';
+import ScrollObserver from '@/components/ScrollObserver';
 
 export const metadata: Metadata = {
   title: 'AHIL — Precision Engineering for Rail & Metro',
@@ -20,6 +21,7 @@ export default function RootLayout({
         <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
       </head>
       <body className="bg-background text-foreground font-sans antialiased">
+        <ScrollObserver />
         {children}
       </body>
     </html>

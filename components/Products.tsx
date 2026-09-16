@@ -12,7 +12,7 @@ export default function Products({ onSelectDatasheet }: ProductsProps) {
     <section id="products" className="section products-section">
       <div className="container products-inner">
         <div className="products-header">
-          <div className="products-header-content">
+          <div className="products-header-content fade-in-scroll">
             <div className="products-eyebrow-row">
               <span className="products-eyebrow-line"></span>
               <span className="products-eyebrow-text">Product Systems</span>
@@ -26,7 +26,7 @@ export default function Products({ onSelectDatasheet }: ProductsProps) {
 
         <div className="products-grid">
           {/* Product 1 */}
-          <article className="product-card product-card-wide">
+          <article className="product-card product-card-wide fade-in-scroll fade-in-scroll-delay-1">
             <div className="product-card-split">
               <div className="product-card-media">
                 <img
@@ -57,7 +57,7 @@ export default function Products({ onSelectDatasheet }: ProductsProps) {
           </article>
 
           {/* Product 2 */}
-          <article className="product-card">
+          <article className="product-card fade-in-scroll fade-in-scroll-delay-1">
             <div className="product-card-single">
               <div className="product-card-media">
                 <img
@@ -88,7 +88,7 @@ export default function Products({ onSelectDatasheet }: ProductsProps) {
           </article>
 
           {/* Product 3 */}
-          <article className="product-card">
+          <article className="product-card fade-in-scroll fade-in-scroll-delay-2">
             <div className="product-card-single">
               <div className="product-card-media">
                 <img
@@ -119,7 +119,7 @@ export default function Products({ onSelectDatasheet }: ProductsProps) {
           </article>
 
           {/* Product 4 */}
-          <article className="product-card product-card-wide">
+          <article className="product-card product-card-wide fade-in-scroll fade-in-scroll-delay-1">
             <div className="product-card-split">
               <div className="product-card-media">
                 <img

@@ -108,7 +108,7 @@ export default function OnlineComplaintPage() {
       {/* Hero Banner */}
       <section className="about-hero">
         <div className="grid-lines"></div>
-        <div className="about-hero-container">
+        <div className="about-hero-container fade-in-scroll">
           <div className="about-hero-badge">
             Customer Support &amp; Quality Redressal · 24/7 Rail Service
           </div>
@@ -124,7 +124,7 @@ export default function OnlineComplaintPage() {
           <div className="complaint-2col-layout">
             
             {/* Left Column: Numbered Commitment List & Helpdesk Card */}
-            <div className="complaint-left-info is-visible">
+            <div className="complaint-left-info fade-in-scroll">
               <div>
                 <div className="complaint-badge">
                   <Sparkles className="complaint-badge-icon" />
@@ -188,7 +188,7 @@ export default function OnlineComplaintPage() {
               </div>
 
               {/* Rapid Helpdesk Contact Card */}
-              <div className="complaint-helpdesk-card">
+              <div className="complaint-helpdesk-card fade-in-scroll fade-in-scroll-delay-1">
                 <h4 className="complaint-helpdesk-title">
                   <PhoneCall className="complaint-helpdesk-title-icon" />
                   <span>Direct Quality Helpdesk</span>
@@ -214,7 +214,7 @@ export default function OnlineComplaintPage() {
             </div>
 
             {/* Right Column: Complaint Form Cards */}
-            <div className="complaint-right-form">
+            <div className="complaint-right-form fade-in-scroll fade-in-scroll-delay-1">
               {/* Submission Success Notification */}
               {submitted && (
                 <div className="complaint-success-banner is-visible">
@@ -237,7 +237,7 @@ export default function OnlineComplaintPage() {
 
               <form onSubmit={handleSubmit}>
                 {/* Card 1: Basic Information */}
-                <div className="complaint-card is-visible">
+                <div className="complaint-card fade-in-scroll">
                   <h3 className="complaint-card-title">
                     <FileText className="complaint-card-title-icon" />
                     <span>Basic Information</span>
@@ -319,7 +319,7 @@ export default function OnlineComplaintPage() {
                 </div>
 
                 {/* Card 2: Complaint Details */}
-                <div className="complaint-card is-visible">
+                <div className="complaint-card fade-in-scroll fade-in-scroll-delay-1">
                   <h3 className="complaint-card-title">
                     <Wrench className="complaint-card-title-icon" />
                     <span>Complaint Details</span>
@@ -435,7 +435,7 @@ export default function OnlineComplaintPage() {
                 </div>
 
                 {/* Card 3: Contact Information */}
-                <div className="complaint-card is-visible">
+                <div className="complaint-card fade-in-scroll fade-in-scroll-delay-2">
                   <h3 className="complaint-card-title">
                     <UserCheck className="complaint-card-title-icon" />
                     <span>Contact Information</span>

@@ -135,7 +135,7 @@ export default function CareerPage() {
         <div className="grid-lines"></div>
         <div className="rail-streak" style={{ top: '68%', width: '40%', animationDelay: '0s' }}></div>
         <div className="rail-streak" style={{ top: '80%', width: '55%', animationDelay: '1s', opacity: 0.5 }}></div>
-        <div className="career-hero-container">
+        <div className="career-hero-container fade-in-scroll">
           <div className="hero-eyebrow-row career-hero-anim career-hero-anim-1">
             <span className="hero-eyebrow-line"></span>
             <span className="hero-eyebrow-text">Careers at AHIL</span>
@@ -161,7 +161,7 @@ export default function CareerPage() {
             return (
               <div
                 key={item.title}
-                className={`career-why-card fade-in-scroll fade-in-scroll-delay-${index + 1} is-visible`}
+                className={`career-why-card fade-in-scroll fade-in-scroll-delay-${index + 1}`}
               >
                 <div className="career-why-icon-wrap">
                   <Icon className="career-why-icon" />

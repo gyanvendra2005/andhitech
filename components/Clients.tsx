@@ -6,7 +6,7 @@ export default function Clients() {
   return (
     <section id="clients" className="section clients-section">
       <div className="container clients-inner">
-        <div className="clients-header">
+        <div className="clients-header fade-in-scroll">
           <h2 className="section-title clients-title">
             Our Customers
           </h2>
@@ -14,7 +14,7 @@ export default function Clients() {
             Trusted across India&apos;s rail and mobility ecosystem.
           </p>
         </div>
-        <div className="clients-grid">
+        <div className="clients-grid fade-in-scroll fade-in-scroll-delay-1">
           <div className="clients-cell">
             <span className="clients-name">Indian Railways</span>
           </div>

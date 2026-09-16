@@ -12,7 +12,7 @@ export default function Contact({ onOpenQuote }: ContactProps) {
       <div className="contact-cta-grid-lines grid-lines" aria-hidden="true"></div>
       <div className="contact-cta-glow"></div>
       <div className="container contact-cta-inner">
-        <div className="contact-cta-left">
+        <div className="contact-cta-left fade-in-scroll">
           <div className="contact-cta-eyebrow-row">
             <span className="contact-cta-eyebrow-line"></span>
             <span className="contact-cta-eyebrow-text">Partner with AHIL</span>
@@ -24,7 +24,7 @@ export default function Contact({ onOpenQuote }: ContactProps) {
             Share your specs, timelines and volumes — our engineering team will respond within one working day with a technical proposal and indicative pricing.
           </p>
         </div>
-        <div className="contact-cta-right">
+        <div className="contact-cta-right fade-in-scroll fade-in-scroll-delay-1">
           <div className="contact-cta-card">
             <div className="contact-cta-card-label">Get in touch</div>
             <div className="contact-cta-card-list">

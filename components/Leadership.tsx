@@ -32,7 +32,7 @@ export default function Leadership() {
           <h2 className="section-title leadership-heading">MD&apos;s Desk</h2>
           <div className="leadership-row">
             <div className="leadership-photo-wrap">
-              <img src="https://placehold.co/400x480" alt="Mr. Angad Singh, Managing Director" className="leadership-photo" />
+              <img src="/assets/angad.webp" alt="Mr. Angad Singh, Managing Director" className="leadership-photo" />
               <div className="leadership-caption">
                 <div className="leadership-name">Mr. Angad Singh</div>
                 <div className="leadership-title">Managing Director</div>
@@ -59,15 +59,18 @@ export default function Leadership() {
           <h2 className="section-title leadership-heading">Director&apos;s Message</h2>
           <div className="leadership-row leadership-row-reverse">
             <div className="leadership-photo-wrap">
-              <img src="https://placehold.co/400x480" alt="Ms. Neha Singh, Director" className="leadership-photo" />
+              <img src="/assets/neha.webp" alt="Ms. Neha Singh, Director" className="leadership-photo" />
               <div className="leadership-caption">
                 <div className="leadership-name">Ms. Neha Singh</div>
                 <div className="leadership-title">Director</div>
               </div>
             </div>
             <div className="leadership-text-wrap">
+              <h3 className="leadership-quote">
+                True progress is built on the pillars of innovation, trust and responsibility.
+              </h3>
               <p className="leadership-text">
-                At AND Hitech Industries Ltd., we believe that true progress is built on the pillars of innovation, trust and responsibility. Since our inception, our journey has been guided by a relentless pursuit of excellence in railway rolling stock solutions and a deep commitment to contributing to India&apos;s vision of a modern, self-reliant and safe transportation ecosystem.
+                At AND Hitech Industries Ltd., our journey has been guided by a relentless pursuit of excellence in railway rolling stock solutions and a deep commitment to contributing to India&apos;s vision of a modern, self-reliant and safe transportation ecosystem.
               </p>
               <p className="leadership-text">
                 The road ahead excites us. Together, with resilience and purpose, we will continue to craft solutions that stand the test of time.
@@ -77,15 +80,18 @@ export default function Leadership() {
 
           <div className={`leadership-row fade-in-scroll fade-in-scroll-delay-2 ${isVisible ? 'is-visible' : ''}`}>
             <div className="leadership-photo-wrap">
-              <img src="https://placehold.co/400x480" alt="Ms. Asha, Director" className="leadership-photo" />
+              <img src="/assets/asha.webp" alt="Ms. Asha, Director" className="leadership-photo" />
               <div className="leadership-caption">
                 <div className="leadership-name">Ms. Asha</div>
                 <div className="leadership-title">Director</div>
               </div>
             </div>
             <div className="leadership-text-wrap">
+              <h3 className="leadership-quote">
+                Financial stewardship is the foundation of sustainable growth.
+              </h3>
               <p className="leadership-text">
-                At AND Hitech Industries Ltd., we believe financial stewardship is the foundation of sustainable growth. Our focus has always been on balancing ambition with responsibility — investing in innovation while ensuring transparency, trust and long-term value creation. This balance is what enables us to honor commitments, strengthen partnerships and ensure that every milestone we achieve adds lasting value to the ecosystem we serve.
+                At AND Hitech Industries Ltd., our focus has always been on balancing ambition with responsibility — investing in innovation while ensuring transparency, trust and long-term value creation. This balance is what enables us to honor commitments, strengthen partnerships and ensure that every milestone we achieve adds lasting value to the ecosystem we serve.
               </p>
               <p className="leadership-text">
                 As we expand into new domains and global markets, our focus remains on ensuring that every step of growth is supported by sound financial stewardship and aligned with our larger vision of building a resilient, self-reliant, and sustainable future.

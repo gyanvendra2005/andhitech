@@ -79,7 +79,7 @@ export default function ContactUsPage() {
       {/* Hero Header */}
       <section className="about-hero">
         <div className="grid-lines"></div>
-        <div className="about-hero-container">
+        <div className="about-hero-container fade-in-scroll">
           <div className="about-hero-badge">
             CONNECT WITH AHIL · GLOBAL MOBILITY ENGINEERING
           </div>
@@ -95,7 +95,7 @@ export default function ContactUsPage() {
           <div className="contact-form-2col">
             
             {/* Left Column: Information & Guarantees */}
-            <div className="contact-info-left">
+            <div className="contact-info-left fade-in-scroll">
               <div>
                 <div className="contact-badge">
                   <Sparkles className="contact-badge-icon" />
@@ -159,7 +159,7 @@ export default function ContactUsPage() {
             </div>
 
             {/* Right Column: Interactive Form Card */}
-            <div className="contact-inquiry-card">
+            <div className="contact-inquiry-card fade-in-scroll fade-in-scroll-delay-1">
               <h3 className="contact-inquiry-card-title">
                 Send a Message to Engineering
               </h3>
@@ -310,7 +310,7 @@ export default function ContactUsPage() {
       {/* Section 3: Regional Engineering Hubs & Offices */}
       <section className="section contact-locations-section">
         <div className="container contact-locations-container">
-          <div className="contact-locations-header">
+          <div className="contact-locations-header fade-in-scroll">
             <div className="contact-badge">
               <Sparkles className="contact-badge-icon" />
               <span>REGIONAL PRESENCE</span>
@@ -323,7 +323,7 @@ export default function ContactUsPage() {
             </p>
           </div>
 
-          <div className="contact-locations-grid">
+          <div className="contact-locations-grid fade-in-scroll fade-in-scroll-delay-1">
             {locationCards.map((card, idx) => (
               <div key={idx} className="contact-location-card">
                 <div className="contact-location-img-wrap">

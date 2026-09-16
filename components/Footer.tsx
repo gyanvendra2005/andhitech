@@ -8,8 +8,12 @@ export default function Footer() {
     <footer className="footer-section">
       <div className="container footer-inner">
         <div className="footer-col-brand">
-          <Link href="/">
-            <img src="/assets/ahil-logo-dark.svg" alt="AHIL" className="footer-logo" />
+          <Link href="/" className="footer-brand">
+            <img
+              src="/assets/ahil-logo-light.svg"
+              alt="AHIL — And Hitech Industries Limited"
+              className="footer-logo"
+            />
           </Link>
           <p className="footer-brand-desc">
             And Hitech Industries Limited — precision manufacturing of rolling stock components, HVAC systems and thermal solutions for the world&apos;s railways.

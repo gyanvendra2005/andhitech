@@ -41,7 +41,7 @@ export default function AboutUsPage() {
       {/* Hero Banner */}
       <section className="about-hero about-hero-navy">
         <div className="grid-lines"></div>
-        <div className="about-hero-container">
+        <div className="about-hero-container fade-in-scroll">
           <h1 className="about-hero-title">
             <span>Engineering Reliability</span> advancing rail mobility.
           </h1>

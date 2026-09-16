@@ -96,7 +96,7 @@ export default function NewsMediaPage() {
       {/* Hero Banner */}
       <section className="about-hero">
         <div className="grid-lines"></div>
-        <div className="about-hero-container">
+        <div className="about-hero-container fade-in-scroll">
           <div className="about-hero-badge">
             Media Center · Press &amp; Announcements
           </div>

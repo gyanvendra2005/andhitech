@@ -13,7 +13,7 @@ export default function Facility() {
         loading="lazy"
       />
       <div className="container facility-inner">
-        <div className="facility-header">
+        <div className="facility-header fade-in-scroll">
           <div className="facility-eyebrow-row">
             <span className="facility-eyebrow-line"></span>
             <span className="facility-eyebrow-text">MANUFACTURING EXCELLENCE</span>
@@ -27,7 +27,7 @@ export default function Facility() {
           </p>
         </div>
 
-        <div className="facility-cards-grid">
+        <div className="facility-cards-grid fade-in-scroll fade-in-scroll-delay-1">
           <div className="facility-card facility-card-stat">
             <div className="facility-stat-number">50k+</div>
             <div className="facility-stat-label">Sq. ft. shop floor</div>

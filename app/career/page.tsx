@@ -105,12 +105,41 @@ export default function CareerPage() {
     setCvFile(file);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const randomRef = `AHIL-CAR-${Math.floor(100000 + Math.random() * 900000)}`;
-    setReferenceId(randomRef);
-    setSubmitted(true);
-    window.scrollTo({ top: 350, behavior: 'smooth' });
+    setIsSubmitting(true);
+    setErrorMessage('');
+
+    try {
+      const res = await fetch('/api/career', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          fullName: formData.candidateName,
+          email: formData.email,
+          phone: formData.mobileNumber,
+          roleOfInterest: formData.positionAppliedFor,
+          notes: formData.comments,
+        }),
+      });
+
+      const data = await res.json();
+      if (res.ok && data.success) {
+        const randomRef = `AHIL-CAR-${Math.floor(100000 + Math.random() * 900000)}`;
+        setReferenceId(randomRef);
+        setSubmitted(true);
+        window.scrollTo({ top: 350, behavior: 'smooth' });
+      } else {
+        setErrorMessage(data.error || 'Failed to submit application.');
+      }
+    } catch (err) {
+      setErrorMessage('Connection error. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleReset = () => {
@@ -328,9 +357,15 @@ export default function CareerPage() {
                     </div>
                   </div>
 
+                  {errorMessage && (
+                    <div style={{ color: '#ef4444', fontSize: '0.9rem', marginTop: '1rem', fontWeight: 600 }}>
+                      ⚠️ {errorMessage}
+                    </div>
+                  )}
+
                   <div className="complaint-submit-wrapper">
-                    <button type="submit" className="contact-form-submit-btn">
-                      Submit Application
+                    <button type="submit" disabled={isSubmitting} className="contact-form-submit-btn">
+                      {isSubmitting ? 'Submitting Application...' : 'Submit Application'}
                     </button>
                   </div>
                 </div>

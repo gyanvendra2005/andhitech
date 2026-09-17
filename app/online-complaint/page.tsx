@@ -63,6 +63,9 @@ export default function OnlineComplaintPage() {
     emailId: '',
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
   ) => {
@@ -70,12 +73,47 @@ export default function OnlineComplaintPage() {
     setFormData((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    const randomTicket = `AHIL-TKT-${Math.floor(100000 + Math.random() * 900000)}`;
-    setTicketId(randomTicket);
-    setSubmitted(true);
-    window.scrollTo({ top: 350, behavior: 'smooth' });
+    setIsSubmitting(true);
+    setErrorMessage('');
+
+    try {
+      const res = await fetch('/api/complaint', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          date: formData.date,
+          customerRailway: formData.customerRailway,
+          depot: formData.depot,
+          coachNo: formData.coachNo,
+          productionUnit: formData.productionUnit,
+          letterNo: formData.letterNo,
+          letterDate: formData.letterDate,
+          portalComplaintNo: formData.portalComplaintNo,
+          product: formData.product,
+          failureDescription: formData.failureDescription,
+          failureDate: formData.failureDate,
+          contactPersonName: formData.contactPersonName,
+          contactDesignation: formData.designation,
+          contactPhone: formData.contactNo,
+          contactEmail: formData.emailId,
+        }),
+      });
+
+      const data = await res.json();
+      if (res.ok && data.success) {
+        setTicketId(data.ticketId);
+        setSubmitted(true);
+        window.scrollTo({ top: 350, behavior: 'smooth' });
+      } else {
+        setErrorMessage(data.error || 'Failed to submit complaint.');
+      }
+    } catch (err) {
+      setErrorMessage('Connection error. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleReset = () => {
@@ -457,10 +495,16 @@ export default function OnlineComplaintPage() {
                     </div>
                   </div>
 
+                  {errorMessage && (
+                    <div style={{ color: '#ef4444', fontSize: '0.9rem', marginTop: '1rem', fontWeight: 600 }}>
+                      ⚠️ {errorMessage}
+                    </div>
+                  )}
+
                   {/* Submit Action Button */}
                   <div className="complaint-submit-wrapper">
-                    <button type="submit" className="contact-form-submit-btn">
-                      Submit Grievance
+                    <button type="submit" disabled={isSubmitting} className="contact-form-submit-btn">
+                      {isSubmitting ? 'Registering Ticket...' : 'Submit Grievance'}
                     </button>
                   </div>
                 </div>

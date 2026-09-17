@@ -5,11 +5,10 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import QuoteModal from '@/components/QuoteModal';
 import NewsSlider from '@/components/NewsSlider';
-import { ArrowRight, Download, Mail, Calendar, Clock } from 'lucide-react';
+import { Download, Mail } from 'lucide-react';
 
 export default function NewsMediaPage() {
   const [quoteModalOpen, setQuoteModalOpen] = useState(false);
-  const [activeTab, setActiveTab] = useState('All');
   const [isVisible, setIsVisible] = useState(false);
   const sectionRef = useRef<HTMLElement>(null);
 
@@ -32,62 +31,32 @@ export default function NewsMediaPage() {
     };
   }, []);
 
-  const categories = [
-    'All',
-    'Contracts & Awards',
-    'Product Innovations',
-    'Infrastructure & R&D',
-    'Quality & Certifications',
-  ];
-
   const newsArticles = [
     {
-      category: 'Quality & Standards',
-      date: 'December 18, 2023',
-      image: '/assets/facility.jpg',
-      title: 'RDSO Certification Renewed with 100% Quality & Metrology Compliance',
-      description: 'AHIL successfully completes comprehensive RDSO audits, reinforcing our zero-defect quality benchmark for railway bogie and HVAC components.',
+      image: 'https://admin.andhitech.in/media/news_media_images/newsmedia1.png',
+      title: 'रेल सुरक्षा और आराम से जुड़े उपकरण बनें आकर्षण का केंद्र',
+      description: 'ग्रेटर नोएडा में ट्रेड शो में इस बार जिले की तमाम कंपनियां अपने इनोवेटिव प्रोडक्ट्स के साथ भाग ले रही हैं।',
+      link: 'https://www.amarujala.com/video/delhi-ncr/noida/video-rail-safety-and-comfort-equipment-becomes-the-center-of-attraction-2025-09-26',
     },
     {
-      category: 'Infrastructure & R&D',
-      date: 'January 24, 2024',
-      image: '/assets/facility.jpg',
-      title: 'New 50,000 Sq. Ft. Precision CNC Machining & Assembly Plant Operational',
-      description: 'The state-of-the-art facility expands manufacturing capacity by 40%, dedicated to high-precision machining and automated testing rigs.',
+      image: 'https://admin.andhitech.in/media/news_media_images/Screenshot_2025-12-19_154029.png',
+      title: 'Massive Rail Investments Fuel Indian Industry Boom: AHIL Director Highlights Make in India Gains',
+      description: 'As Indian Railways undergoes a transformative overhaul with billions poured into infrastructure.',
+      link: 'https://www.facebook.com/NewsStationTV/videos/1543749896979304/?rdid=sVeC8lQ06fgDq4OG',
     },
     {
-      category: 'Product Innovation',
-      date: 'February 10, 2024',
-      image: '/assets/product-hvac.jpg',
-      title: 'Next-Gen Eco-Friendly Rooftop HVAC Units Launched for Metro Fleets',
-      description: 'Engineered for energy efficiency, low acoustic footprint, and reliable performance in tropical ambient operating temperatures.',
+      image: 'https://admin.andhitech.in/media/news_media_images/SAV_0115_gbJGvZW.JPG',
+      title: 'IREE Exhibition 2025',
+      description: 'See the Glimpses from Our Booth at International Rail Equipment Exhibition (IREE) 2025.',
+      link: 'https://andhitech-my.sharepoint.com/:f:/g/personal/hr_andhitech_in/IgBVNwqrtX3uR5c_LJemo24dAX57nbQCJXnTf6n0GEIc2h4?e=jX3Cuf',
     },
     {
-      category: 'Contracts & Awards',
-      date: 'March 05, 2024',
-      image: '/assets/product-brake-disc.jpg',
-      title: 'AHIL Awarded Supply Mandate for LHB High-Speed Axle Brake Disc Systems',
-      description: 'Continuing our partnership with Indian Railways rolling stock divisions, delivering high-temperature thermal-dissipating brake assemblies.',
-    },
-    {
-      category: 'Events & Expo',
-      date: 'November 14, 2023',
-      image: '/assets/hero-rail.jpg',
-      title: 'AHIL Demonstrates Advanced Transit Solutions at International Rail Expo',
-      description: 'Showcasing our indigenous pantograph mechanisms, suspension linkages, and lightweight aluminium rolling stock solutions.',
-    },
-    {
-      category: 'Media Coverage',
-      date: 'October 28, 2023',
-      image: '/assets/facility.jpg',
-      title: 'Pioneering Rail Engineering: AHIL Featured in Indian Industrial Review',
-      description: 'An exclusive feature highlighting AHIL’s journey from precision tier-2 vendor to leading tier-1 mobility engineering partner.',
+      image: 'https://admin.andhitech.in/media/news_media_images/1_CnRKpeF.JPG',
+      title: 'IRCE Exhibition 2026',
+      description: 'IRCE Exhibition',
+      link: 'https://andhitech-my.sharepoint.com/:f:/g/personal/manishkumar_andhitech_in/IgDZOKBfnTw0Q5vQ6tmcNCNPAeVG2dehQ8mo4yubTdMMDgI?e=ggfxso',
     },
   ];
-
-  const filteredArticles = activeTab === 'All' 
-    ? newsArticles 
-    : newsArticles.filter(item => item.category.toLowerCase().includes(activeTab.toLowerCase().split(' ')[0]));
 
   return (
     <div className="news-media-page">
@@ -123,60 +92,11 @@ export default function NewsMediaPage() {
             <p className="news-section-subtitle">
               Stay updated on AHIL&apos;s latest contracts, manufacturing milestones, technology launches, and corporate developments in rail mobility.
             </p>
-
-            {/* Category Tabs */}
-            <div className="news-tabs-wrap">
-              {categories.map((cat) => (
-                <button
-                  key={cat}
-                  onClick={() => setActiveTab(cat)}
-                  className={`news-tab-btn ${activeTab === cat ? 'is-active' : ''}`}
-                >
-                  {cat}
-                </button>
-              ))}
-            </div>
           </div>
 
-          {/* Featured Headline News Card */}
-          <div className={`news-featured-card fade-in-scroll fade-in-scroll-delay-1 ${isVisible ? 'is-visible' : ''}`}>
-            <div className="news-featured-img-wrap">
-              <img
-                src="/assets/hero-rail.jpg"
-                alt="Vande Bharat Trainset Project"
-                className="news-featured-img"
-              />
-              <span className="news-featured-tag">Featured Announcement</span>
-            </div>
-
-            <div className="news-featured-body">
-              <div className="news-meta-row">
-                <span className="news-meta-item">
-                  <Calendar className="news-meta-icon" /> March 15, 2024
-                </span>
-                <span>·</span>
-                <span className="news-meta-item">
-                  <Clock className="news-meta-icon" /> 4 Min Read
-                </span>
-              </div>
-
-              <h3 className="news-featured-title">
-                AHIL Wins Major Supply Contract for Next-Generation Vande Bharat Fleets
-              </h3>
-
-              <p className="news-featured-desc">
-                AHIL has been awarded a prestigious contract to manufacture and deliver precision-machined suspension components, braking subsystems, and specialized HVAC assemblies for upcoming high-speed trainsets across Indian Railways.
-              </p>
-
-              <span className="news-read-more-btn">
-                Read Full Story <ArrowRight className="news-read-more-icon" />
-              </span>
-            </div>
-          </div>
-
-          {/* Slick-Style Horizontal News Slider (Matching Image 2) */}
+          {/* News & Media Slider */}
           <div className={`fade-in-scroll fade-in-scroll-delay-2 ${isVisible ? 'is-visible' : ''}`}>
-            <NewsSlider articles={filteredArticles.length > 0 ? filteredArticles : newsArticles} />
+            <NewsSlider articles={newsArticles} />
           </div>
 
           {/* Press Kit & Media Inquiries Box */}

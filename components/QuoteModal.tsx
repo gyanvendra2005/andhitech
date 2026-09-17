@@ -19,23 +19,46 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
     notes: '',
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+
   if (!isOpen) return null;
 
-  const handleFormSubmit = (e: React.FormEvent) => {
+  const handleFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      onClose();
-      setFormData({
-        name: '',
-        email: '',
-        company: '',
-        phone: '',
-        product: 'Axle & Wheel Mounted Brake Discs',
-        notes: '',
+    setIsSubmitting(true);
+    setErrorMessage('');
+
+    try {
+      const res = await fetch('/api/quote', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
       });
-    }, 3500);
+
+      const data = await res.json();
+      if (res.ok && data.success) {
+        setSubmitted(true);
+        setTimeout(() => {
+          setSubmitted(false);
+          onClose();
+          setFormData({
+            name: '',
+            email: '',
+            company: '',
+            phone: '',
+            product: 'Axle & Wheel Mounted Brake Discs',
+            notes: '',
+          });
+        }, 3500);
+      } else {
+        setErrorMessage(data.error || 'Failed to submit quote request.');
+      }
+    } catch (err) {
+      setErrorMessage('Connection error. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -101,11 +124,17 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                 <option value="Spring-Type Pantographs">Spring-Type Pantographs</option>
               </select>
             </div>
+            {errorMessage && (
+              <div style={{ color: '#ef4444', fontSize: '0.85rem', marginTop: '0.5rem', fontWeight: 600 }}>
+                ⚠️ {errorMessage}
+              </div>
+            )}
             <button
               type="submit"
+              disabled={isSubmitting}
               className="quote-modal-submit-btn"
             >
-              <span>Submit Inquiry</span>
+              <span>{isSubmitting ? 'Submitting...' : 'Submit Inquiry'}</span>
               <Send className="quote-modal-submit-icon" />
             </button>
           </form>

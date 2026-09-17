@@ -4,11 +4,10 @@ import React, { useState, useEffect, useRef } from 'react';
 import { ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 
 interface NewsArticle {
-  category: string;
-  date: string;
   image: string;
   title: string;
   description: string;
+  link: string;
 }
 
 interface NewsSliderProps {
@@ -95,23 +94,21 @@ export default function NewsSlider({ articles }: NewsSliderProps) {
         >
           {articles.map((article, idx) => (
             <div key={idx} className="news-slider-slide">
-              <div className="news-card">
+              <a
+                href={article.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="news-card"
+              >
                 <div className="news-card-img-wrap">
                   <img
                     src={article.image}
                     alt={article.title}
                     className="news-card-img"
                   />
-                  <span className="news-card-badge">
-                    {article.category}
-                  </span>
                 </div>
 
                 <div className="news-card-content">
-                  <span className="news-card-date">
-                    {article.date}
-                  </span>
-
                   <h3 className="news-card-title">
                     {article.title}
                   </h3>
@@ -122,11 +119,11 @@ export default function NewsSlider({ articles }: NewsSliderProps) {
 
                   <div className="news-card-footer">
                     <span className="news-card-read-more">
-                      Read Article <ArrowRight className="news-card-read-more-icon" />
+                      Read More <ArrowRight className="news-card-read-more-icon" />
                     </span>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
           ))}
         </div>

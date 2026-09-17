@@ -23,6 +23,9 @@ export default function ContactUsPage() {
     message: '',
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState('');
+
   const handleInquiryChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
   ) => {
@@ -30,41 +33,47 @@ export default function ContactUsPage() {
     setInquiryForm((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleInquirySubmit = (e: React.FormEvent) => {
+  const handleInquirySubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setInquirySubmitted(true);
+    setIsSubmitting(true);
+    setErrorMessage('');
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(inquiryForm),
+      });
+
+      const data = await res.json();
+      if (res.ok && data.success) {
+        setInquirySubmitted(true);
+      } else {
+        setErrorMessage(data.error || 'Failed to submit inquiry. Please try again.');
+      }
+    } catch (err) {
+      setErrorMessage('Network connection error. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const locationCards = [
     {
-      title: 'AHIL Saket Executive Office',
-      image: '/assets/facility.jpg',
-      addressLines: [
-        'F-11, Select CITYWALK',
-        'District Centre, Saket',
-        'New Delhi, Delhi, 110017',
-      ],
-      hours: 'Open until 6:00 PM IST',
+      title: 'Corporate Office',
+      mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d448194.8284599452!2d77.178097!3d28.644082!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d03c1ac2a06ed%3A0x9fd61c4eea0cef69!2sAND%20Hitech%20Industries%20Limited.%20(Corporate%20Office)!5e0!3m2!1sen!2sin!4v1748424146134!5m2!1sen!2sin',
     },
     {
-      title: 'AHIL Noida Precision Works',
-      image: '/assets/facility.jpg',
-      addressLines: [
-        'D123-D128, Industrial Sector 18',
-        'Noida Precision Tech Zone',
-        'Noida, Uttar Pradesh, 201301',
-      ],
-      hours: 'Open until 6:00 PM IST',
+      title: 'Manufacturing Plant (Unit-1)',
+      mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14033.641263915197!2d77.565772!3d28.437045!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cbf0c1568576d%3A0xb72dcf64114b3f39!2sAND%20HITECH%20INDUSTRIES%20LTD.%20(UNIT-2)!5e0!3m2!1sen!2sin!4v1760082843630!5m2!1sen!2sin',
     },
     {
-      title: 'AHIL Borivali Transit Hub',
-      image: '/assets/facility.jpg',
-      addressLines: [
-        'G4, Sky City Complex',
-        'Off Western Express Highway, Borivali',
-        'Mumbai, Maharashtra, 400066',
-      ],
-      hours: 'Open until 6:00 PM IST',
+      title: 'Manufacturing Plant (Unit-2)',
+      mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d877.1034046751665!2d77.5685434!3d28.4369454!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cbf007bb28929%3A0x5a94ea0bef6aceef!2sSPHERE%20THERMAL%20SYSTEM%20PRIVATE%20LIMITED!5e0!3m2!1sen!2sin!4v1760082902805!5m2!1sen!2sin',
+    },
+    {
+      title: 'Manufacturing Plant (Unit-3)',
+      mapEmbedUrl: 'https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14033.641263915197!2d77.565772!3d28.437045!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390cbf0c1568576d%3A0xb72dcf64114b3f39!2sAND%20HITECH%20INDUSTRIES%20LTD.%20(UNIT-2)!5e0!3m2!1sen!2sin!4v1760082967590!5m2!1sen!2sin',
     },
   ];
 
@@ -284,9 +293,15 @@ export default function ContactUsPage() {
                     You may unsubscribe at any time by clicking the unsubscribe link on any emails you receive.
                   </p>
 
+                  {errorMessage && (
+                    <div style={{ color: '#ef4444', fontSize: '0.9rem', marginTop: '1rem', fontWeight: 600 }}>
+                      ⚠️ {errorMessage}
+                    </div>
+                  )}
+
                   <div className="contact-form-submit-wrap">
-                    <button type="submit" className="contact-form-submit-btn">
-                      Submit
+                    <button type="submit" disabled={isSubmitting} className="contact-form-submit-btn">
+                      {isSubmitting ? 'Submitting...' : 'Submit'}
                     </button>
                   </div>
                 </form>
@@ -317,28 +332,19 @@ export default function ContactUsPage() {
             {locationCards.map((card, idx) => (
               <div key={idx} className="contact-location-card">
                 <div className="contact-location-img-wrap">
-                  <img
-                    src={card.image}
-                    alt={card.title}
-                    className="contact-location-img"
+                  <iframe
+                    src={card.mapEmbedUrl}
+                    title={card.title}
+                    className="contact-location-map"
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
                   />
                 </div>
 
                 <div className="contact-location-content">
-                  <div>
-                    <h3 className="contact-location-card-title">
-                      {card.title}
-                    </h3>
-                    <div className="contact-location-address">
-                      {card.addressLines.map((line, lIdx) => (
-                        <div key={lIdx}>{line}</div>
-                      ))}
-                    </div>
-                  </div>
-
-                  <p className="contact-location-hours">
-                    {card.hours}
-                  </p>
+                  <h3 className="contact-location-card-title">
+                    {card.title}
+                  </h3>
                 </div>
               </div>
             ))}

@@ -2,6 +2,17 @@
 
 import React from 'react';
 
+const CLIENT_LOGOS = [
+  { name: 'Indian Railways', file: 'indian railway.webp' },
+  { name: 'DMRC', file: 'DM.webp' },
+  { name: 'MCF Raebareli', file: 'MCF.webp' },
+  { name: 'BHEL', file: 'BHEL.webp' },
+  { name: 'Vande Bharat', file: 'Vande bahrat.webp' },
+  { name: 'MEDHA', file: 'MEDHA.webp' },
+  { name: 'IRL', file: 'IRL.webp' },
+  { name: 'RCG', file: 'RCG.webp' },
+];
+
 export default function Clients() {
   return (
     <section id="clients" className="section clients-section">
@@ -14,30 +25,18 @@ export default function Clients() {
             Trusted across India&apos;s rail and mobility ecosystem.
           </p>
         </div>
-        <div className="clients-grid fade-in-scroll fade-in-scroll-delay-1">
-          <div className="clients-cell">
-            <span className="clients-name">Indian Railways</span>
-          </div>
-          <div className="clients-cell">
-            <span className="clients-name">ICF Chennai</span>
-          </div>
-          <div className="clients-cell">
-            <span className="clients-name">RCF Kapurthala</span>
-          </div>
-          <div className="clients-cell">
-            <span className="clients-name">MCF Raebareli</span>
-          </div>
-          <div className="clients-cell">
-            <span className="clients-name">DMRC</span>
-          </div>
-          <div className="clients-cell">
-            <span className="clients-name">BHEL</span>
-          </div>
-          <div className="clients-cell">
-            <span className="clients-name">Vande Bharat</span>
-          </div>
-          <div className="clients-cell">
-            <span className="clients-name">Kolkata Metro</span>
+        <div className="clients-slider-viewport fade-in-scroll fade-in-scroll-delay-1">
+          <div className="clients-slider-track">
+            {[...CLIENT_LOGOS, ...CLIENT_LOGOS].map((client, idx) => (
+              <div key={`${client.name}-${idx}`} className="clients-slide">
+                <img
+                  src={`/assets/logo/${encodeURIComponent(client.file)}`}
+                  alt={client.name}
+                  className="clients-logo"
+                  loading="lazy"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </div>

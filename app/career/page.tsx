@@ -7,7 +7,6 @@ import QuoteModal from '@/components/QuoteModal';
 import {
   ArrowUpRight,
   ShieldCheck,
-  UserCheck,
   UploadCloud,
   Rocket,
   Users,
@@ -257,7 +256,6 @@ export default function CareerPage() {
               <form onSubmit={handleSubmit} className={`career-form-wrap fade-in-scroll fade-in-scroll-delay-1 ${isVisible ? 'is-visible' : ''}`}>
                 <div className="complaint-card">
                   <h3 className="complaint-card-title">
-                    <UserCheck className="complaint-card-title-icon" />
                     <span>Candidate Details</span>
                   </h3>
 

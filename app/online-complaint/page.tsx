@@ -6,13 +6,10 @@ import Footer from '@/components/Footer';
 import QuoteModal from '@/components/QuoteModal';
 import {
   CheckCircle2,
-  FileText,
-  UserCheck, 
-  Wrench, 
-  ShieldCheck, 
-  PhoneCall, 
-  Mail, 
-  Clock 
+  ShieldCheck,
+  PhoneCall,
+  Mail,
+  Clock
 } from 'lucide-react';
 
 export default function OnlineComplaintPage() {
@@ -231,7 +228,6 @@ export default function OnlineComplaintPage() {
                 <div className="complaint-card fade-in-scroll">
                   {/* Section 1: Basic Information */}
                   <h3 className="complaint-card-title">
-                    <FileText className="complaint-card-title-icon" />
                     <span>Basic Information</span>
                   </h3>
 
@@ -311,7 +307,6 @@ export default function OnlineComplaintPage() {
 
                   {/* Section 2: Complaint Details */}
                   <h3 className="complaint-card-title complaint-card-title-divided">
-                    <Wrench className="complaint-card-title-icon" />
                     <span>Complaint Details</span>
                   </h3>
 
@@ -425,7 +420,6 @@ export default function OnlineComplaintPage() {
 
                   {/* Section 3: Contact Information */}
                   <h3 className="complaint-card-title complaint-card-title-divided">
-                    <UserCheck className="complaint-card-title-icon" />
                     <span>Contact Information</span>
                   </h3>
 

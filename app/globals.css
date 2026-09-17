@@ -4043,7 +4043,7 @@ margin-top:26px
 
 .contact-cta-section {
   position: relative;
-  background-color: #060b18;
+  background-color: #07104c;
   color: #ffffff;
   overflow: hidden;
 }
@@ -4338,24 +4338,6 @@ margin-top:26px
   max-width: 24rem;
 }
 
-.clients-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  border-top: 1px solid #e2e8f0;
-  border-left: 1px solid #e2e8f0;
-}
-
-.clients-cell {
-  border-right: 1px solid #e2e8f0;
-  border-bottom: 1px solid #e2e8f0;
-  aspect-ratio: 3 / 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0 1.5rem;
-  text-align: center;
-}
-
 .clients-name {
   font-family: 'Manrope', sans-serif;
   font-size: 1rem;
@@ -4363,6 +4345,50 @@ margin-top:26px
   text-transform: uppercase;
   letter-spacing: 0.1em;
   color: rgba(22, 39, 121, 0.8);
+}
+
+/* Slick continuous logo slider */
+.clients-slider-viewport {
+  width: 100%;
+  overflow: hidden;
+  border-top: 1px solid #e2e8f0;
+  border-bottom: 1px solid #e2e8f0;
+  padding: 2rem 0;
+  -webkit-mask-image: linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0, #000 6%, #000 94%, transparent 100%);
+}
+
+.clients-slider-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  gap: 3.5rem;
+  animation: 30s linear infinite ticker;
+}
+
+.clients-slider-viewport:hover .clients-slider-track {
+  animation-play-state: paused;
+}
+
+.clients-slide {
+  flex: 0 0 auto;
+  height: 5.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.clients-logo {
+  /* max-width: 7rem; */
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.clients-slide:hover .clients-logo {
+  transform: scale(1.05);
 }
 
 /* ==========================================================================
@@ -5106,10 +5132,6 @@ margin-top:26px
 
   .sustainability-card-text {
     font-size: 0.875rem;
-  }
-
-  .clients-grid {
-    grid-template-columns: repeat(2, 1fr);
   }
 
   .leadership-photo-wrap {

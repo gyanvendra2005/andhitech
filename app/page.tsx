@@ -29,7 +29,7 @@ export default function Home() {
         <Ticker />
         <About />
         <Capabilities />
-        <Products onSelectDatasheet={(ds) => setSelectedDatasheet(ds)} />
+        <Products />
         <Facility />
         {/* <Sustainability /> */}
         <Clients />

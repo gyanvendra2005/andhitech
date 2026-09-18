@@ -1,7 +1,8 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { Suspense, useState } from 'react';
 import Link from 'next/link';
+import { useSearchParams } from 'next/navigation';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import QuoteModal from '@/components/QuoteModal';
@@ -9,8 +10,22 @@ import { ArrowRight } from 'lucide-react';
 import { PRODUCT_CATALOG, PRODUCT_CATEGORIES } from '@/data/productCatalog';
 
 export default function ProductsPage() {
+  return (
+    <Suspense fallback={null}>
+      <ProductsPageInner />
+    </Suspense>
+  );
+}
+
+function ProductsPageInner() {
+  const searchParams = useSearchParams();
+  const categoryParam = searchParams.get('category');
+  const initialCategory = (PRODUCT_CATEGORIES as readonly string[]).includes(categoryParam || '')
+    ? (categoryParam as string)
+    : 'All';
+
   const [quoteModalOpen, setQuoteModalOpen] = useState(false);
-  const [activeCategory, setActiveCategory] = useState<string>('All');
+  const [activeCategory, setActiveCategory] = useState<string>(initialCategory);
 
   const filteredProducts = activeCategory === 'All'
     ? PRODUCT_CATALOG

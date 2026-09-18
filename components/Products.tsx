@@ -1,13 +1,9 @@
 'use client';
 
 import React from 'react';
-import { DATASHEETS, ProductDatasheet } from '@/data/datasheets';
+import Link from 'next/link';
 
-interface ProductsProps {
-  onSelectDatasheet: (datasheet: ProductDatasheet) => void;
-}
-
-export default function Products({ onSelectDatasheet }: ProductsProps) {
+export default function Products() {
   return (
     <section id="products" className="section products-section">
       <div className="container products-inner">
@@ -46,12 +42,12 @@ export default function Products({ onSelectDatasheet }: ProductsProps) {
                 <p className="product-card-desc">
                   Precision-machined discs engineered for LHB coaches, Vande Bharat and metro rolling stock — tested for thermal fatigue and long service life.
                 </p>
-                <button
-                  onClick={() => onSelectDatasheet(DATASHEETS['brake-discs'])}
+                <Link
+                  href="/products?category=Braking Products"
                   className="product-card-link"
                 >
                   Technical datasheet <span className="product-card-link-arrow" aria-hidden="true">→</span>
-                </button>
+                </Link>
               </div>
             </div>
           </article>
@@ -77,12 +73,12 @@ export default function Products({ onSelectDatasheet }: ProductsProps) {
                 <p className="product-card-desc">
                   Compact HVAC for LHB AC coaches and locomotive cabins — energy-efficient climate control certified for harsh operating environments.
                 </p>
-                <button
-                  onClick={() => onSelectDatasheet(DATASHEETS['hvac-rmpu'])}
+                <Link
+                  href="/products?category=HVAC Products"
                   className="product-card-link"
                 >
                   Technical datasheet <span className="product-card-link-arrow" aria-hidden="true">→</span>
-                </button>
+                </Link>
               </div>
             </div>
           </article>
@@ -108,12 +104,12 @@ export default function Products({ onSelectDatasheet }: ProductsProps) {
                 <p className="product-card-desc">
                   Air suspension control equipment and shock absorbers delivering ride comfort, stability and predictable dynamic response.
                 </p>
-                <button
-                  onClick={() => onSelectDatasheet(DATASHEETS['suspension'])}
+                <Link
+                  href="/products?category=Suspension Products"
                   className="product-card-link"
                 >
                   Technical datasheet <span className="product-card-link-arrow" aria-hidden="true">→</span>
-                </button>
+                </Link>
               </div>
             </div>
           </article>
@@ -139,12 +135,12 @@ export default function Products({ onSelectDatasheet }: ProductsProps) {
                 <p className="product-card-desc">
                   High-speed pantographs and IV couplers for reliable current collection and electrical linking between rail cars.
                 </p>
-                <button
-                  onClick={() => onSelectDatasheet(DATASHEETS['pantographs'])}
+                <Link
+                  href="/products?category=Other Products"
                   className="product-card-link"
                 >
                   Technical datasheet <span className="product-card-link-arrow" aria-hidden="true">→</span>
-                </button>
+                </Link>
               </div>
             </div>
           </article>

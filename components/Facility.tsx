@@ -6,7 +6,7 @@ export default function Facility() {
   return (
     <section id="facility" className="section facility-section">
       <img
-        src="/assets/facility.jpg"
+        src="/assets/MANUFACTURING EXCELLENCE.webp"
         alt=""
         aria-hidden="true"
         className="facility-bg-img"

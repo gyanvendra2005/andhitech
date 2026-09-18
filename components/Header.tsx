@@ -55,25 +55,29 @@ export default function Header({ onOpenQuote }: HeaderProps) {
         </button>
       </div>
 
-      {/* Mobile Navigation */}
-      {mobileMenuOpen && (
-        <div className="site-header-mobile-menu">
-          <nav className="site-header-mobile-nav">
-            <Link href="/about-us" onClick={() => setMobileMenuOpen(false)} className="site-header-mobile-link">About Us</Link>
-            <Link href="/infrastructure" onClick={() => setMobileMenuOpen(false)} className="site-header-mobile-link">Infrastructure</Link>
-            <Link href="/products" onClick={() => setMobileMenuOpen(false)} className="site-header-mobile-link">Products</Link>
-            <a href="/#capabilities" onClick={() => setMobileMenuOpen(false)} className="site-header-mobile-link">Capabilities</a>
-            <a href="/#products" onClick={() => setMobileMenuOpen(false)} className="site-header-mobile-link">Products</a>
-            <a href="/#facility" onClick={() => setMobileMenuOpen(false)} className="site-header-mobile-link">Facility</a>
-            <a href="/#sustainability" onClick={() => setMobileMenuOpen(false)} className="site-header-mobile-link">Sustainability</a>
-            <Link href="/new&media" onClick={() => setMobileMenuOpen(false)} className="site-header-mobile-link">News &amp; Media</Link>
-            <Link href="/online-complaint" onClick={() => setMobileMenuOpen(false)} className="site-header-mobile-link">Online Complaint</Link>
-            <Link href="/career" onClick={() => setMobileMenuOpen(false)} className="site-header-mobile-link">Careers</Link>
-            <a href="/#clients" onClick={() => setMobileMenuOpen(false)} className="site-header-mobile-link">Clients</a>
-            <Link href="/contact-us" onClick={() => setMobileMenuOpen(false)} className="site-header-mobile-link">Contact Us</Link>
-          </nav>
-        </div>
-      )}
+      {/* Mobile Navigation Drawer */}
+      <div
+        className={`site-header-mobile-overlay ${mobileMenuOpen ? 'is-open' : ''}`}
+        onClick={() => setMobileMenuOpen(false)}
+      ></div>
+      <div className={`site-header-mobile-menu ${mobileMenuOpen ? 'is-open' : ''}`}>
+        <button
+          onClick={() => setMobileMenuOpen(false)}
+          className="site-header-mobile-close"
+          aria-label="Close menu"
+        >
+          ✕
+        </button>
+        <nav className="site-header-mobile-nav">
+          <Link href="/about-us" onClick={() => setMobileMenuOpen(false)} className="site-header-mobile-link">About Us</Link>
+          <Link href="/infrastructure" onClick={() => setMobileMenuOpen(false)} className="site-header-mobile-link">Infrastructure</Link>
+          <Link href="/products" onClick={() => setMobileMenuOpen(false)} className="site-header-mobile-link">Products</Link>
+          <Link href="/new&media" onClick={() => setMobileMenuOpen(false)} className="site-header-mobile-link">News &amp; Media</Link>
+          <Link href="/online-complaint" onClick={() => setMobileMenuOpen(false)} className="site-header-mobile-link">Online Complaint</Link>
+          <Link href="/career" onClick={() => setMobileMenuOpen(false)} className="site-header-mobile-link">Careers</Link>
+          <Link href="/contact-us" onClick={() => setMobileMenuOpen(false)} className="site-header-mobile-link">Contact Us</Link>
+        </nav>
+      </div>
     </header>
   );
 }

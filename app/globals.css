@@ -407,8 +407,6 @@ margin-top:26px
 .stat-title {
   font-size: 0.85rem;
   font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
   color: #e2e8f0;
 }
 
@@ -544,8 +542,10 @@ margin-top:26px
   margin-top: 1.5rem;
   width: 100%;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
+  gap: 0.5rem 1.5rem;
   font-family: 'Manrope', sans-serif;
   font-size: 1.1rem;
   font-weight: 800;
@@ -599,6 +599,7 @@ margin-top:26px
   color: #000000;
   border-bottom: 3px solid transparent;
   transition: color 0.25s ease, border-color 0.25s ease;
+  white-space: nowrap;
 }
 
 .leadership-tab-btn:hover {
@@ -1814,6 +1815,7 @@ margin-top:26px
   font-family: 'Manrope', sans-serif;
   font-size: 52px;
   font-weight: 800;
+  line-height: 1.15;
   color: #162779;
   margin: 0 0 0.75rem 0;
 }
@@ -3402,17 +3404,53 @@ margin-top:26px
   font-size: 1.5rem;
 }
 
+.site-header-mobile-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 100;
+}
+
 .site-header-mobile-menu {
   display: none;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 80%;
+  max-width: 320px;
   background-color: #060b18;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
   padding: 1.5rem;
+  z-index: 101;
+  transform: translateX(100%);
+  transition: transform 0.3s ease;
+  overflow-y: auto;
+}
+
+.site-header-mobile-menu.is-open {
+  transform: translateX(0);
+}
+
+.site-header-mobile-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-bottom: 1.5rem;
+  color: #ffffff;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.5rem;
+  padding: 0.5rem;
 }
 
 .site-header-mobile-nav {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 1.25rem;
 }
 
 .site-header-mobile-link {
@@ -4695,6 +4733,10 @@ margin-top:26px
     display: block;
   }
 
+  .site-header-mobile-overlay.is-open {
+    display: block;
+  }
+
   .site-header-inner {
     padding: 1.5rem;
   }
@@ -4933,6 +4975,12 @@ margin-top:26px
   .contact-cta-inner{
     display: block;
   }
+  .contact-cta-desc {
+    margin-bottom: 2rem;
+  }
+  .contact-cta-card {
+    padding: 1.5rem;
+  }
   .banner-heading{
     font-size: 1.75rem;
     line-height: 1.25;
@@ -4961,6 +5009,12 @@ margin-top:26px
     font-size: 1.85rem;
   }
 
+
+
+  .contact-form-simple-title {
+    font-size: 28px;
+  }
+
   .who-we-are-img-cont {
     flex-direction: column;
     gap: 1.75rem;
@@ -4979,6 +5033,10 @@ margin-top:26px
     font-size: 0.95rem;
   }
 
+  .vm-card-img-wrap {
+    height: 200px;
+  }
+
   .vm-card-body {
     padding: 1.75rem 1.25rem 2rem 1.25rem;
   }
@@ -4988,14 +5046,27 @@ margin-top:26px
   }
 
   .vm-brand-mark {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     font-size: 0.8rem;
     letter-spacing: 0.08em;
     text-align: center;
     white-space: normal;
+    row-gap: 0.75rem;
+    column-gap: 0.5rem;
   }
 
   .leadership-container {
     gap: 2.5rem;
+  }
+
+  .leadership-tabs {
+    gap: 0.25rem;
+  }
+
+  .leadership-tab-btn {
+    padding: 0.75rem 0.5rem;
+    font-size: 0.85rem;
   }
 
   .leadership-block + .leadership-block {
@@ -5030,10 +5101,36 @@ margin-top:26px
     flex-direction: column;
     align-items: flex-start;
     gap: 0.75rem;
+    width: 88%;
+    border-radius: 1.25rem;
+    box-sizing: border-box;
   }
 
   .cv-floating-dots {
     display: none;
+  }
+
+  .cv-corner-accent {
+    width: 60px;
+    height: 60px;
+    top: -6px;
+    right: -6px;
+    border-top-width: 4px;
+    border-right-width: 4px;
+  }
+
+  .contact-info-phone-list {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .contact-info-phone-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+
+  .contact-info-phone-value {
+    text-align: left;
   }
 
   /* Desktop-first restores: mobile overrides for selectors whose desktop values now live in the base rules above */
@@ -5860,6 +5957,9 @@ font-size: 4.25rem;
   .infra-gallery-grid {
     grid-template-columns: 1fr 1fr;
   }
+    .career-hero-title {
+    font-size: 30px;
+  }
 }
 
 /* ==========================================================================
@@ -6045,10 +6145,20 @@ font-size: 4.25rem;
   }
 
   .product-catalog-tabs {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
     gap: 0.5rem;
+    scrollbar-width: none;
+  }
+
+  .product-catalog-tabs::-webkit-scrollbar {
+    display: none;
   }
 
   .product-catalog-tab {
+    flex-shrink: 0;
+    white-space: nowrap;
     font-size: 0.8rem;
     padding: 0.5rem 1rem;
   }
@@ -6299,17 +6409,25 @@ font-size: 4.25rem;
   }
 
   .product-detail-second-section {
-    height: 22rem;
-    margin-bottom: 2rem;
+    height: auto;
+    padding-bottom: 2rem;
+    margin-bottom: 0;
   }
 
   .product-detail-second-card-wrap {
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
     width: 100%;
+    margin-top: 1.75rem;
+    padding: 0 1.5rem;
   }
 
   .product-detail-second-card {
     width: auto;
     max-width: 100%;
+    padding: 2rem 1.75rem;
   }
 
   .product-detail-stats-grid {
@@ -6317,6 +6435,25 @@ font-size: 4.25rem;
   }
 
   .product-detail-second-wrap {
-    padding: 80px 0;
+    padding: 3rem 0;
+  }
+}
+
+@media (max-width: 575px) {
+  .product-detail-second-card-wrap {
+    padding: 0 1.25rem;
+  }
+
+  .product-detail-second-card {
+    padding: 1.75rem 1.5rem;
+  }
+
+  .product-detail-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .product-detail-stat-value {
+    font-size: 2rem;
   }
 }

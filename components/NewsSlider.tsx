@@ -19,6 +19,8 @@ export default function NewsSlider({ articles }: NewsSliderProps) {
   const [slidesToShow, setSlidesToShow] = useState(3);
   const [touchStart, setTouchStart] = useState<number | null>(null);
   const [touchEnd, setTouchEnd] = useState<number | null>(null);
+  const [stepPx, setStepPx] = useState(0);
+  const trackRef = useRef<HTMLDivElement>(null);
 
   // Responsive breakpoints
   useEffect(() => {
@@ -36,6 +38,24 @@ export default function NewsSlider({ articles }: NewsSliderProps) {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
+
+  // Measure the actual rendered slide width (+gap) in pixels so the
+  // translate offset lines up exactly with one slide, regardless of the
+  // flex-basis/gap values set in CSS for the current breakpoint.
+  useEffect(() => {
+    const measure = () => {
+      const track = trackRef.current;
+      if (!track || track.children.length < 1) return;
+      const first = track.children[0] as HTMLElement;
+      const style = window.getComputedStyle(track);
+      const gap = parseFloat(style.columnGap || style.gap || '0');
+      setStepPx(first.offsetWidth + gap);
+    };
+
+    measure();
+    window.addEventListener('resize', measure);
+    return () => window.removeEventListener('resize', measure);
+  }, [slidesToShow, articles.length]);
 
   const maxIndex = Math.max(0, articles.length - slidesToShow);
 
@@ -73,23 +93,22 @@ export default function NewsSlider({ articles }: NewsSliderProps) {
     }
   };
 
-  // Calculate translate percentage
-  const slideWidthPercentage = 100 / slidesToShow;
-  const translateX = -(currentIndex * slideWidthPercentage);
+  const translateXPx = -(currentIndex * stepPx);
 
   return (
     <div className="news-slider-wrapper">
       {/* Viewport & Track */}
-      <div 
+      <div
         className="news-slider-viewport"
         onTouchStart={onTouchStart}
         onTouchMove={onTouchMove}
         onTouchEnd={onTouchEnd}
       >
-        <div 
+        <div
+          ref={trackRef}
           className="news-slider-track"
           style={{
-            transform: `translateX(${translateX}%)`,
+            transform: `translateX(${translateXPx}px)`,
           }}
         >
           {articles.map((article, idx) => (

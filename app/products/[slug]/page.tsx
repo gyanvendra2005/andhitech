@@ -70,9 +70,9 @@ export default function ProductDetailPage({ params }: { params: { slug: string }
       <section ref={overviewRef} className="section product-detail-overview-section">
         <div className="container product-detail-overview-grid">
           <div className="product-detail-overview-text">
-            <h2 className="section-title product-detail-overview-title">
+            {/* <h2 className="section-title product-detail-overview-title">
               {detail.overview.title}
-            </h2>
+            </h2> */}
             {detail.overview.paragraphs.map((para, idx) => (
               <p key={idx} className="product-detail-overview-para">
                 {para}

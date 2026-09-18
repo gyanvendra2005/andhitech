@@ -63,7 +63,13 @@ export default function OnlineComplaintPage() {
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    let sanitized = value;
+    if (name === 'contactPersonName') {
+      sanitized = value.replace(/[^A-Za-z\s]/g, '');
+    } else if (name === 'contactNo') {
+      sanitized = value.replace(/[^0-9+\s-]/g, '').slice(0, 15);
+    }
+    setFormData((prev) => ({ ...prev, [name]: sanitized }));
   };
 
   const handleSubmit = async (e: React.FormEvent) => {
@@ -421,6 +427,8 @@ export default function OnlineComplaintPage() {
                         placeholder="Enter contact person's full name"
                         value={formData.contactPersonName}
                         onChange={handleChange}
+                        pattern="[A-Za-z\s]+"
+                        title="Only letters and spaces are allowed"
                         required
                         className="complaint-input"
                       />
@@ -453,6 +461,8 @@ export default function OnlineComplaintPage() {
                         placeholder="+91 XXXXX XXXXX"
                         value={formData.contactNo}
                         onChange={handleChange}
+                        pattern="[0-9+\s-]{7,15}"
+                        title="Enter a valid phone number"
                         required
                         className="complaint-input"
                       />
@@ -469,6 +479,8 @@ export default function OnlineComplaintPage() {
                         placeholder="engineer@railnet.gov.in"
                         value={formData.emailId}
                         onChange={handleChange}
+                        pattern="[^\s@]+@[^\s@]+\.[^\s@]+"
+                        title="Enter a valid email address"
                         required
                         className="complaint-input"
                       />

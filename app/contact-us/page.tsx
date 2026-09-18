@@ -30,7 +30,13 @@ export default function ContactUsPage() {
     e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
-    setInquiryForm((prev) => ({ ...prev, [name]: value }));
+    let sanitized = value;
+    if (name === 'fullName') {
+      sanitized = value.replace(/[^A-Za-z\s]/g, '');
+    } else if (name === 'phone') {
+      sanitized = value.replace(/[^0-9+\s-]/g, '').slice(0, 15);
+    }
+    setInquiryForm((prev) => ({ ...prev, [name]: sanitized }));
   };
 
   const handleInquirySubmit = async (e: React.FormEvent) => {
@@ -175,6 +181,8 @@ export default function ContactUsPage() {
                         placeholder="e.g., Rajesh Sharma"
                         value={inquiryForm.fullName}
                         onChange={handleInquiryChange}
+                        pattern="[A-Za-z\s]+"
+                        title="Only letters and spaces are allowed"
                         required
                         className="contact-field-input"
                       />
@@ -191,6 +199,8 @@ export default function ContactUsPage() {
                         placeholder="engineer@rail-enterprise.com"
                         value={inquiryForm.email}
                         onChange={handleInquiryChange}
+                        pattern="[^\s@]+@[^\s@]+\.[^\s@]+"
+                        title="Enter a valid email address"
                         required
                         className="contact-field-input"
                       />
@@ -222,6 +232,8 @@ export default function ContactUsPage() {
                         placeholder="+91 XXXXX XXXXX"
                         value={inquiryForm.phone}
                         onChange={handleInquiryChange}
+                        pattern="[0-9+\s-]{7,15}"
+                        title="Enter a valid phone number"
                         className="contact-field-input"
                       />
                     </div>

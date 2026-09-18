@@ -78,7 +78,13 @@ export default function CareerPage() {
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
+    let sanitized = value;
+    if (name === 'candidateName') {
+      sanitized = value.replace(/[^A-Za-z\s]/g, '');
+    } else if (name === 'mobileNumber') {
+      sanitized = value.replace(/[^0-9+\s-]/g, '').slice(0, 15);
+    }
+    setFormData((prev) => ({ ...prev, [name]: sanitized }));
   };
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -263,6 +269,8 @@ export default function CareerPage() {
                         placeholder="Enter your full name"
                         value={formData.candidateName}
                         onChange={handleChange}
+                        pattern="[A-Za-z\s]+"
+                        title="Only letters and spaces are allowed"
                         required
                         className="complaint-input"
                       />
@@ -294,6 +302,8 @@ export default function CareerPage() {
                         placeholder="you@example.com"
                         value={formData.email}
                         onChange={handleChange}
+                        pattern="[^\s@]+@[^\s@]+\.[^\s@]+"
+                        title="Enter a valid email address"
                         required
                         className="complaint-input"
                       />

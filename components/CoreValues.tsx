@@ -102,7 +102,7 @@ export default function CoreValues() {
 
           <div className="cv-image-frame">
             <img
-              src="/assets/facility.jpg"
+              src="/assets/about/Core%20Values.webp"
               alt="AHIL Team & Manufacturing Engineers"
               className="cv-team-img"
             />

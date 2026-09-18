@@ -36,7 +36,9 @@ export default function WhoWeAre() {
 
         {/* Right Side Content with Scroll Reveal */}
         <div className="who-we-are-img-cont">
-          <img className="who-we-are-img" src="https://placehold.co/600x400" alt="AHIL Facility" />
+          <div className="who-we-are-img-wrap">
+            <img className="who-we-are-img" src="/assets/about/Who%20we%20are.webp" alt="AHIL Facility" />
+          </div>
           <div className="who-we-are-cont">
             <h2 className="section-title who-we-are-heading">
               Who we are

@@ -34,14 +34,12 @@ export default function Footer() {
           <div className="footer-col-heading">Explore</div>
           <ul className="footer-link-list">
             <li><Link href="/about-us" className="footer-link">About Us</Link></li>
+            <li><Link href="/infrastructure" className="footer-link">Infrastructure</Link></li>
+            <li><Link href="/products" className="footer-link">Products</Link></li>
             <li><Link href="/new&media" className="footer-link">News &amp; Media</Link></li>
             <li><Link href="/online-complaint" className="footer-link">Online Complaint</Link></li>
+            <li><Link href="/career" className="footer-link">Careers</Link></li>
             <li><Link href="/contact-us" className="footer-link">Contact Us</Link></li>
-            <li><a href="/#capabilities" className="footer-link">Capabilities</a></li>
-            <li><a href="/#products" className="footer-link">Products</a></li>
-            <li><a href="/#facility" className="footer-link">Facility</a></li>
-            <li><a href="/#sustainability" className="footer-link">Sustainability</a></li>
-            {/* <li><a href="/#clients" className="footer-link">Clients</a></li> */}
           </ul>
         </div>
         <div className="footer-col-contact">

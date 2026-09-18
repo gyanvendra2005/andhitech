@@ -10,6 +10,47 @@ import Leadership from '@/components/Leadership';
 import KeyStrengths from '@/components/KeyStrengths';
 import CoreValues from '@/components/CoreValues';
 
+function StatCounter({
+  target,
+  suffix = '',
+  start,
+  duration = 1600,
+}: {
+  target: number;
+  suffix?: string;
+  start: boolean;
+  duration?: number;
+}) {
+  const [value, setValue] = useState(0);
+
+  useEffect(() => {
+    if (!start) return;
+
+    let rafId: number;
+    const startTime = performance.now();
+
+    const tick = (now: number) => {
+      const progress = Math.min((now - startTime) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setValue(Math.round(eased * target));
+
+      if (progress < 1) {
+        rafId = requestAnimationFrame(tick);
+      }
+    };
+
+    rafId = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(rafId);
+  }, [start, target, duration]);
+
+  return (
+    <>
+      {value}
+      {suffix}
+    </>
+  );
+}
+
 export default function AboutUsPage() {
   const [quoteModalOpen, setQuoteModalOpen] = useState(false);
   const [statsVisible, setStatsVisible] = useState(false);
@@ -55,25 +96,25 @@ export default function AboutUsPage() {
       <section ref={statsRef} className="section stats-banner">
         <div className="container stats-banner-container">
           <div className={`stat-box fade-in-scroll ${statsVisible ? 'is-visible' : ''}`}>
-            <div className="stat-number">100+</div>
+            <div className="stat-number"><StatCounter target={250} suffix="+" start={statsVisible} /></div>
             <div className="stat-title">Skilled Professionals</div>
             <div className="stat-subtitle">Engineers &amp; manufacturing specialists</div>
           </div>
 
           <div className={`stat-box fade-in-scroll fade-in-scroll-delay-1 ${statsVisible ? 'is-visible' : ''}`}>
-            <div className="stat-number">50k+</div>
+            <div className="stat-number"><StatCounter target={50} suffix="k+" start={statsVisible} /></div>
             <div className="stat-title">Sq. Ft. Shop Floor</div>
             <div className="stat-subtitle">CNC machining &amp; assembly plant</div>
           </div>
 
           <div className={`stat-box fade-in-scroll fade-in-scroll-delay-2 ${statsVisible ? 'is-visible' : ''}`}>
-            <div className="stat-number">15+</div>
+            <div className="stat-number"><StatCounter target={15} suffix="+" start={statsVisible} /></div>
             <div className="stat-title">Active Programmes</div>
             <div className="stat-subtitle">Indian Railways &amp; Metro fleets</div>
           </div>
 
           <div className={`stat-box fade-in-scroll fade-in-scroll-delay-3 ${statsVisible ? 'is-visible' : ''}`}>
-            <div className="stat-number">100%</div>
+            <div className="stat-number"><StatCounter target={100} suffix="%" start={statsVisible} /></div>
             <div className="stat-title">Traceability &amp; Quality</div>
             <div className="stat-subtitle">RDSO &amp; IRIS standards compliant</div>
           </div>

@@ -5,11 +5,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import QuoteModal from '@/components/QuoteModal';
 import {
-  CheckCircle2,
   ShieldCheck,
-  PhoneCall,
-  Mail,
-  Clock
 } from 'lucide-react';
 
 export default function OnlineComplaintPage() {
@@ -173,31 +169,21 @@ export default function OnlineComplaintPage() {
                 </p>
               </div>
 
-              {/* Numbered Process List (Matching Reference Image 01, 02, 03, 04) */}
-           
+              <div className="contact-info-divider"></div>
 
-              {/* Rapid Helpdesk Contact Card */}
-              <div className="complaint-helpdesk-card fade-in-scroll fade-in-scroll-delay-1">
-                <h4 className="complaint-helpdesk-title">
-                  <PhoneCall className="complaint-helpdesk-title-icon" />
-                  <span>Direct Quality Helpdesk</span>
-                </h4>
-                <p className="complaint-helpdesk-desc">
-                  Need immediate technical clarification or emergency depot support? Contact our 24/7 central desk directly:
-                </p>
-                <div className="complaint-helpdesk-links">
-                  <div className="complaint-helpdesk-item">
-                    <PhoneCall className="complaint-helpdesk-item-icon" />
-                    <span>Emergency Hotline: <strong>+91 (0) 120-456-7890</strong></span>
-                  </div>
-                  <div className="complaint-helpdesk-item">
-                    <Mail className="complaint-helpdesk-item-icon" />
-                    <span>Quality Desk: <strong>service@andhitech.in</strong></span>
-                  </div>
-                  <div className="complaint-helpdesk-item">
-                    <Clock className="complaint-helpdesk-item-icon" />
-                    <span>Guaranteed SLA: <strong>&lt; 2 Hours Response</strong></span>
-                  </div>
+              {/* Plain Contact Details List */}
+              <div className="contact-info-phone-list">
+                <div className="contact-info-phone-row">
+                  <span className="contact-info-phone-label">Emergency Hotline</span>
+                  <span className="contact-info-phone-value">+91 (0) 120-456-7890</span>
+                </div>
+                <div className="contact-info-phone-row">
+                  <span className="contact-info-phone-label">Quality Desk</span>
+                  <span className="contact-info-phone-value">service@andhitech.in</span>
+                </div>
+                <div className="contact-info-phone-row">
+                  <span className="contact-info-phone-label">Guaranteed SLA</span>
+                  <span className="contact-info-phone-value">&lt; 2 Hours Response</span>
                 </div>
               </div>
             </div>

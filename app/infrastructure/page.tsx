@@ -10,6 +10,7 @@ import {
   ShieldCheck,
   Cog,
   Download,
+  X,
 } from 'lucide-react';
 
 const GALLERY_MEDIA_BASE = 'https://admin.andhitech.in/media/infrastructure/section_galleries/';
@@ -126,6 +127,7 @@ export default function InfrastructurePage() {
   const [quoteModalOpen, setQuoteModalOpen] = useState(false);
   const [videoActive, setVideoActive] = useState(false);
   const [activeFeature, setActiveFeature] = useState(0);
+  const [lightboxImage, setLightboxImage] = useState<string | null>(null);
   const videoSectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -270,9 +272,15 @@ export default function InfrastructurePage() {
             <h3 className="infra-gallery-title">{group.title}</h3>
             <div className="infra-gallery-grid">
               {group.images.map((src) => (
-                <div key={src} className="infra-gallery-item">
+                <button
+                  key={src}
+                  type="button"
+                  className="infra-gallery-item"
+                  onClick={() => setLightboxImage(src)}
+                  aria-label={`View larger image: ${group.title}`}
+                >
                   <img className="infra-gallery-img" src={src} alt={group.title} loading="lazy" />
-                </div>
+                </button>
               ))}
             </div>
           </div>
@@ -306,6 +314,26 @@ export default function InfrastructurePage() {
         isOpen={quoteModalOpen}
         onClose={() => setQuoteModalOpen(false)}
       />
+
+      {/* Gallery Image Lightbox */}
+      {lightboxImage && (
+        <div className="infra-lightbox-overlay" onClick={() => setLightboxImage(null)}>
+          <button
+            type="button"
+            className="infra-lightbox-close"
+            onClick={() => setLightboxImage(null)}
+            aria-label="Close image"
+          >
+            <X className="infra-lightbox-close-icon" />
+          </button>
+          <img
+            src={lightboxImage}
+            alt="Facility"
+            className="infra-lightbox-img"
+            onClick={(e) => e.stopPropagation()}
+          />
+        </div>
+      )}
     </div>
   );
 }

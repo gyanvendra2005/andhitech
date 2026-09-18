@@ -47,7 +47,7 @@ export default function VisionMission() {
           <div className="vm-showcase-card">
             <div className="vm-card-img-wrap">
               <img
-                src="/assets/hero-rail.jpg"
+                src="/assets/about/Vision.webp"
                 alt="AHIL Vision — Rail Mobility"
                 className="vm-card-img"
               />
@@ -67,7 +67,7 @@ export default function VisionMission() {
           <div className="vm-showcase-card">
             <div className="vm-card-img-wrap">
               <img
-                src="/assets/facility.jpg"
+                src="/assets/about/Mission.webp"
                 alt="AHIL Mission — Precision Manufacturing"
                 className="vm-card-img"
               />
@@ -86,7 +86,10 @@ export default function VisionMission() {
 
         {/* Bottom Brand Mark */}
         <div className={`vm-brand-mark fade-in-scroll fade-in-scroll-delay-2 ${isVisible ? 'is-visible' : ''}`}>
-          ENGINEER | MANUFACTURE | INNOVATE | DELIVER
+          <span>ENGINEER</span>
+          <span>MANUFACTURE</span>
+          <span>INNOVATE</span>
+          <span>DELIVER</span>
         </div>
       </div>
     </section>

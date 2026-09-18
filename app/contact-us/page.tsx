@@ -132,29 +132,6 @@ export default function ContactUsPage() {
                 </div>
               </div>
 
-              {/* Address / Info Card */}
-              <div className="contact-info-address-card">
-                <h4 className="contact-info-address-title">AHIL Saket Executive Office</h4>
-                <p className="contact-info-address-text">
-                  F-11, Select CITYWALK<br />
-                  District Centre, Saket<br />
-                  New Delhi, Delhi, 110017
-                </p>
-              </div>
-
-              {/* Direct Railway Grievance Notice */}
-              <div className="contact-info-address-card">
-                <h4 className="contact-info-address-title">
-                  Railway Depot Grievance or Component Failure?
-                </h4>
-                <p className="contact-info-address-text">
-                  For active rolling stock failure logs or warranty claims, please use our{' '}
-                  <Link href="/online-complaint" className="contact-info-address-link">
-                    Online Complaint Portal
-                  </Link>{' '}
-                  with 2-hour SLA tracking.
-                </p>
-              </div>
             </div>
 
             {/* Right Column: Interactive Form Card */}

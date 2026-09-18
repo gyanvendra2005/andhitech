@@ -223,13 +223,6 @@ export default function CareerPage() {
               </div>
 
               <div className="contact-info-divider"></div>
-
-              <div className="contact-info-address-card">
-                <h4 className="contact-info-address-title">What Happens Next</h4>
-                <p className="contact-info-address-text">
-                  Our HR team reviews every application within 3–5 business days and reaches out directly for roles that match your profile.
-                </p>
-              </div>
             </div>
 
             {/* Right Column: Application Form */}

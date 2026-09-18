@@ -1,8 +1,71 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
+
+function StatCounter({
+  target,
+  suffix = '',
+  start,
+  duration = 1600,
+}: {
+  target: number;
+  suffix?: string;
+  start: boolean;
+  duration?: number;
+}) {
+  const [value, setValue] = useState(0);
+
+  useEffect(() => {
+    if (!start) return;
+
+    let rafId: number;
+    const startTime = performance.now();
+
+    const tick = (now: number) => {
+      const progress = Math.min((now - startTime) / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      setValue(Math.round(eased * target));
+
+      if (progress < 1) {
+        rafId = requestAnimationFrame(tick);
+      }
+    };
+
+    rafId = requestAnimationFrame(tick);
+    return () => cancelAnimationFrame(rafId);
+  }, [start, target, duration]);
+
+  return (
+    <>
+      {value}
+      {suffix}
+    </>
+  );
+}
 
 export default function Facility() {
+  const [statVisible, setStatVisible] = useState(false);
+  const statRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setStatVisible(true);
+        }
+      },
+      { threshold: 0.3 }
+    );
+
+    if (statRef.current) {
+      observer.observe(statRef.current);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
     <section id="facility" className="section facility-section">
       <img
@@ -28,8 +91,10 @@ export default function Facility() {
         </div>
 
         <div className="facility-cards-grid fade-in-scroll fade-in-scroll-delay-1">
-          <div className="facility-card facility-card-stat">
-            <div className="facility-stat-number">50k+</div>
+          <div className="facility-card facility-card-stat" ref={statRef}>
+            <div className="facility-stat-number">
+              <StatCounter target={50} suffix="k+" start={statVisible} />
+            </div>
             <div className="facility-stat-label">Sq. ft. shop floor</div>
           </div>
           <div className="facility-card">

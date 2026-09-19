@@ -40,6 +40,6 @@ export const PRODUCT_CATALOG: CatalogProduct[] = [
   { slNo: 22, slug: 'heat-exchanger-coil', name: 'Heat Exchanger Coil', category: 'HVAC Products', segment: 'Three', image: '/assets/products/heat-exchanger-coil.jpg' },
   { slNo: 23, slug: 'clw-cab-ac-2ton', name: 'CLW CAB AC 2Ton', category: 'HVAC Products', segment: 'Three', image: '/assets/products/clw-cab-ac-2ton.jpg' },
   { slNo: 24, slug: 'iv-coupler', name: 'IV Coupler', category: 'Other Products', segment: 'Four', image: '/assets/products/iv-coupler.webp' },
-  { slNo: 25, slug: 'main-fiba-aha00601', name: 'Main FIBA (AHA00601)', category: 'Other Products', segment: 'Five', image: '/assets/products/placeholder.svg' },
-  { slNo: 26, slug: 'asce', name: 'ASCE', category: 'Other Products', segment: 'Five', image: '/assets/products/placeholder.svg' },
+  { slNo: 25, slug: 'main-fiba-aha00601', name: 'Main FIBA (AHA00601)', category: 'Other Products', segment: 'Five', image: '/assets/products/main-fiba-aha00601.webp' },
+  { slNo: 26, slug: 'asce', name: 'ASCE', category: 'Other Products', segment: 'Five', image: '/assets/products/asce.webp' },
 ];

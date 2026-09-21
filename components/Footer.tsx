@@ -45,7 +45,7 @@ export default function Footer() {
         <div className="footer-col-contact">
           <div className="footer-col-heading">Contact-us</div>
           <p className="footer-contact-text">
-            011-25710064<br />
+            +91 1144766444<br />
             info@andhitech.in
           </p>
         </div>

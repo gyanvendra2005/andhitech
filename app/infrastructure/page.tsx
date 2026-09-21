@@ -119,7 +119,7 @@ const GALLERY_SECTIONS = [
   ),
 }));
 
-const VIDEO_EMBED_URL = 'https://www.youtube.com/embed/wvhtFGp3vH4';
+const VIDEO_EMBED_URL = 'https://www.youtube.com/watch?v=n6gsPWA_h1s';
 const VIDEO_THUMBNAIL = 'https://admin.andhitech.in/media/infrastructure/video_thumbnails/bgvideo_JAxPwEg_UAttb4k.png';
 const BROCHURE_URL = 'https://admin.andhitech.in/media/brochures/Andhitech_Brochure_Brochure.pdf';
 

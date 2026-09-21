@@ -123,7 +123,7 @@ export default function ContactUsPage() {
               <div className="contact-info-divider"></div>
 
               {/* Plain Contact Details List */}
-              <div className="contact-info-phone-list">
+              {/* <div className="contact-info-phone-list">
                 <div className="contact-info-phone-row">
                   <span className="contact-info-phone-label">Engineering Desk</span>
                   <span className="contact-info-phone-value">+91 (0) 120-456-7890</span>
@@ -136,7 +136,7 @@ export default function ContactUsPage() {
                   <span className="contact-info-phone-label">Grievance SLA</span>
                   <span className="contact-info-phone-value">&lt; 2 Hours Response</span>
                 </div>
-              </div>
+              </div> */}
 
             </div>
 
@@ -191,12 +191,12 @@ export default function ContactUsPage() {
                     {/* Email */}
                     <div className="contact-input-group">
                       <label className="contact-form-label">
-                        Business Email <span className="contact-form-required">*</span>
+                       Email <span className="contact-form-required">*</span>
                       </label>
                       <input
                         type="email"
                         name="email"
-                        placeholder="engineer@rail-enterprise.com"
+                        placeholder="example@xyz.com"
                         value={inquiryForm.email}
                         onChange={handleInquiryChange}
                         pattern="[^\s@]+@[^\s@]+\.[^\s@]+"
@@ -207,7 +207,7 @@ export default function ContactUsPage() {
                     </div>
 
                     {/* Organization */}
-                    <div className="contact-input-group">
+                    {/* <div className="contact-input-group">
                       <label className="contact-form-label">
                         Organization / Railway Zone
                       </label>
@@ -219,12 +219,12 @@ export default function ContactUsPage() {
                         onChange={handleInquiryChange}
                         className="contact-field-input"
                       />
-                    </div>
+                    </div> */}
 
                     {/* Phone */}
                     <div className="contact-input-group">
                       <label className="contact-form-label">
-                        Phone Number
+                        Phone Number <span className="contact-form-required">*</span>
                       </label>
                       <input
                         type="tel"
@@ -234,6 +234,7 @@ export default function ContactUsPage() {
                         onChange={handleInquiryChange}
                         pattern="[0-9+\s-]{7,15}"
                         title="Enter a valid phone number"
+                        required
                         className="contact-field-input"
                       />
                     </div>
@@ -262,7 +263,7 @@ export default function ContactUsPage() {
                     {/* Message */}
                     <div className="contact-input-group col-span-2">
                       <label className="contact-form-label">
-                        Project Specifications &amp; Message <span className="contact-form-required">*</span>
+                        Message <span className="contact-form-required">*</span>
                       </label>
                       <textarea
                         name="message"
@@ -278,7 +279,7 @@ export default function ContactUsPage() {
                   <p className="contact-form-disclaimer">
                     Upon submitting this form, we will contact you using the information provided.
                     I agree to the processing and international transfer of my personal data by AHIL as described in the{' '}
-                    <Link href="/" className="contact-form-disclaimer-link">Privacy Policy</Link>.
+                    Privacy Policy.
                     You may unsubscribe at any time by clicking the unsubscribe link on any emails you receive.
                   </p>
 

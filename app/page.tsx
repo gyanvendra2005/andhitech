@@ -33,7 +33,7 @@ export default function Home() {
         <Facility />
         {/* <Sustainability /> */}
         <Clients />
-        <Contact onOpenQuote={() => setQuoteModalOpen(true)} />
+        {/* <Contact onOpenQuote={() => setQuoteModalOpen(true)} /> */}
       </main>
 
       <Footer />

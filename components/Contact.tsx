@@ -40,12 +40,12 @@ export default function Contact({ onOpenQuote }: ContactProps) {
                   +91 · Available on request
                 </div>
               </div>
-              <a href="https://andhitech.in" className="contact-cta-item">
+              {/* <a href="https://andhitech.in" className="contact-cta-item">
                 <div className="contact-cta-item-label">Website</div>
                 <div className="contact-cta-item-value">
                   andhitech.in
                 </div>
-              </a>
+              </a> */}
             </div>
           </div>
         </div>

@@ -35,14 +35,14 @@ export default function Capabilities() {
           <div className="capabilities-card fade-in-scroll fade-in-scroll-delay-3">
             <h3 className="underroof-card-heading">Quality and Validation</h3>
             <p className="capabilities-card-text">
-              Rigorous inspection, testing and validation throughout the manufacturing cycle to ensure consistent quality, performance and reliability aligned with RDSO EN-?? Standard and IRIS- grade quality standards.
+              Rigorous inspection, testing and validation throughout the manufacturing cycle to ensure consistent quality, performance and reliability aligned with RDSO EN- Standard and IRIS- grade quality standards.
             </p>
           </div>
 
           <div className="capabilities-card fade-in-scroll fade-in-scroll-delay-4">
             <h3 className="underroof-card-heading">Supply and Lifecycle Support</h3>
             <p className="capabilities-card-text">
-              From serial production and delivery to field support and continuous improvement, we stay connected throughout the product life cycle.
+              From serial production and delivery to field support and continuous improvement, we stay connected throughout the product lifecycle.
             </p>
           </div>
         </div>

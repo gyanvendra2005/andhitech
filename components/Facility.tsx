@@ -98,13 +98,13 @@ export default function Facility() {
             <div className="facility-stat-label">Sq. ft. shop floor</div>
           </div>
           <div className="facility-card">
-            <h3 className="facility-card-title">Precision machining</h3>
+            <h3 className="facility-card-title">Precision Machining</h3>
             <p className="facility-card-text">
-              CNC, VT machining for safety critical railway components.
+              CNC, VTL machining for safety critical railway components.
             </p>
           </div>
           <div className="facility-card">
-            <h3 className="facility-card-title">Assembly &amp; Integration</h3>
+            <h3 className="facility-card-title">Assembly and Integration</h3>
             <p className="facility-card-text">
               Controlled assembly for components and increasingly complex railway systems.
             </p>
@@ -116,7 +116,7 @@ export default function Facility() {
             </p>
           </div>
           <div className="facility-card">
-            <h3 className="facility-card-title">Testing and validation</h3>
+            <h3 className="facility-card-title">Testing and Validation</h3>
             <p className="facility-card-text">
               Product specific testing and validation to verify performance before dispatch.
             </p>

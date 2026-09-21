@@ -46,7 +46,7 @@ export default function Products() {
                   href="/products?category=Braking Products"
                   className="product-card-link"
                 >
-                  Technical datasheet <span className="product-card-link-arrow" aria-hidden="true">→</span>
+                  Know More <span className="product-card-link-arrow" aria-hidden="true">→</span>
                 </Link>
               </div>
             </div>
@@ -77,7 +77,7 @@ export default function Products() {
                   href="/products?category=HVAC Products"
                   className="product-card-link"
                 >
-                  Technical datasheet <span className="product-card-link-arrow" aria-hidden="true">→</span>
+                  Know More <span className="product-card-link-arrow" aria-hidden="true">→</span>
                 </Link>
               </div>
             </div>
@@ -108,7 +108,7 @@ export default function Products() {
                   href="/products?category=Suspension Products"
                   className="product-card-link"
                 >
-                  Technical datasheet <span className="product-card-link-arrow" aria-hidden="true">→</span>
+                  Know More <span className="product-card-link-arrow" aria-hidden="true">→</span>
                 </Link>
               </div>
             </div>
@@ -139,7 +139,7 @@ export default function Products() {
                   href="/products?category=Other Products"
                   className="product-card-link"
                 >
-                  Technical datasheet <span className="product-card-link-arrow" aria-hidden="true">→</span>
+                  Know More <span className="product-card-link-arrow" aria-hidden="true">→</span>
                 </Link>
               </div>
             </div>

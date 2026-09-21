@@ -122,21 +122,24 @@ export default function ContactUsPage() {
 
               <div className="contact-info-divider"></div>
 
-              {/* Plain Contact Details List */}
-              {/* <div className="contact-info-phone-list">
-                <div className="contact-info-phone-row">
-                  <span className="contact-info-phone-label">Engineering Desk</span>
-                  <span className="contact-info-phone-value">+91 (0) 120-456-7890</span>
+              {/* Main Location Map */}
+              <div className="contact-location-card contact-info-main-map">
+                <div className="contact-location-img-wrap">
+                  <iframe
+                    src={locationCards[0].mapEmbedUrl}
+                    title={locationCards[0].title}
+                    className="contact-location-map"
+                    loading="lazy"
+                    referrerPolicy="no-referrer-when-downgrade"
+                  />
                 </div>
-                <div className="contact-info-phone-row">
-                  <span className="contact-info-phone-label">Business Email</span>
-                  <span className="contact-info-phone-value">service@andhitech.in</span>
+
+                <div className="contact-location-content">
+                  <h3 className="contact-location-card-title">
+                    {locationCards[0].title}
+                  </h3>
                 </div>
-                <div className="contact-info-phone-row">
-                  <span className="contact-info-phone-label">Grievance SLA</span>
-                  <span className="contact-info-phone-value">&lt; 2 Hours Response</span>
-                </div>
-              </div> */}
+              </div>
 
             </div>
 

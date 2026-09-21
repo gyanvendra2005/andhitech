@@ -26,7 +26,7 @@ export default function Products() {
             <div className="product-card-split">
               <div className="product-card-media">
                 <img
-                  src="/assets/product-brake-disc.jpg"
+                  src="/assets/Brake Disc.webp"
                   alt="Axle & Wheel Mounted Brake Discs"
                   loading="lazy"
                   className="product-card-img"
@@ -57,7 +57,7 @@ export default function Products() {
             <div className="product-card-single">
               <div className="product-card-media">
                 <img
-                  src="/assets/product-hvac.jpg"
+                  src="/assets/HVAC.webp"
                   alt="Roof-Mounted Package Units (RMPU)"
                   loading="lazy"
                   className="product-card-img"
@@ -88,7 +88,7 @@ export default function Products() {
             <div className="product-card-single">
               <div className="product-card-media">
                 <img
-                  src="/assets/product-suspension.jpg"
+                  src="/assets/Damper.webp"
                   alt="Air Suspension & LHB Dampers"
                   loading="lazy"
                   className="product-card-img"
@@ -119,7 +119,7 @@ export default function Products() {
             <div className="product-card-split">
               <div className="product-card-media">
                 <img
-                  src="/assets/product-pantograph.jpg"
+                  src="/assets/pantograph.webp"
                   alt="Spring-Type Pantographs"
                   loading="lazy"
                   className="product-card-img"

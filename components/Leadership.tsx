@@ -81,7 +81,7 @@ export default function Leadership() {
         {activeTab === 'director' && (
           <div className={`leadership-block fade-in-scroll ${isVisible ? 'is-visible' : ''}`}>
             <div className="leadership-row leadership-row-6-6">
-              <div className="leadership-photo-wrap">
+              <div className="leadership-photo-wrap director-photo-wrap">
                 <img src="/assets/Neha.webp" alt="Ms. Neha Singh, Director" className="leadership-photo" />
                 <div className="leadership-caption">
                   <div className="leadership-name">Ms. Neha Singh</div>
@@ -102,7 +102,7 @@ export default function Leadership() {
             </div>
 
             <div className="leadership-row leadership-row-6-6">
-              <div className="leadership-photo-wrap">
+              <div className="leadership-photo-wrap director-photo-wrap">
                 <img src="/assets/Asha.webp" alt="Ms. Asha, Director" className="leadership-photo" />
                 <div className="leadership-caption">
                   <div className="leadership-name">Ms. Asha</div>

@@ -653,7 +653,7 @@ margin-top:26px
 
 .leadership-photo-wrap {
   width: 100%;
-  max-width: 26rem;
+  max-width: 20rem;
   margin: 0 auto;
 }
 
@@ -5413,6 +5413,10 @@ font-size: 4.25rem;
 
   .leadership-photo-wrap {
     max-width: 420px;
+  }
+
+  .director-photo-wrap {
+    max-width: 320px;
   }
 
   .leadership-quote {

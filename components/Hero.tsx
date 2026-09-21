@@ -52,7 +52,7 @@ export default function Hero() {
             </div>
             <div className="hero-stat-cell">
               <div className="hero-stat-number">15+</div>
-              <div className="hero-stat-label">Active programmes</div>
+              <div className="hero-stat-label">Products</div>
             </div>
             <div className="hero-stat-cell">
               <div className="hero-stat-number">ISO</div>

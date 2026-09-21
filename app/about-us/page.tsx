@@ -109,7 +109,7 @@ export default function AboutUsPage() {
 
           <div className={`stat-box fade-in-scroll fade-in-scroll-delay-2 ${statsVisible ? 'is-visible' : ''}`}>
             <div className="stat-number"><StatCounter target={15} suffix="+" start={statsVisible} /></div>
-            <div className="stat-title">Active Programmes</div>
+            <div className="stat-title">Products</div>
             <div className="stat-subtitle">Indian Railways &amp; Metro fleets</div>
           </div>
 

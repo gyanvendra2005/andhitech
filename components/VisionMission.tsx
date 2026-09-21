@@ -45,13 +45,13 @@ export default function VisionMission() {
         <div className={`vm-cards-showcase fade-in-scroll fade-in-scroll-delay-1 ${isVisible ? 'is-visible' : ''}`}>
           {/* Card 1: Vision */}
           <div className="vm-showcase-card">
-            <div className="vm-card-img-wrap">
+            {/* <div className="vm-card-img-wrap">
               <img
                 src="/assets/about/Vision.webp"
                 alt="AHIL Vision — Rail Mobility"
                 className="vm-card-img"
               />
-            </div>
+            </div> */}
             <div className="vm-card-body">
               {/* <div className="vm-accent-triangle"></div> */}
               <h3 className="vm-card-title">
@@ -65,13 +65,13 @@ export default function VisionMission() {
 
           {/* Card 2: Mission */}
           <div className="vm-showcase-card">
-            <div className="vm-card-img-wrap">
+            {/* <div className="vm-card-img-wrap">
               <img
                 src="/assets/about/Mission.webp"
                 alt="AHIL Mission — Precision Manufacturing"
                 className="vm-card-img"
               />
-            </div>
+            </div> */}
             <div className="vm-card-body">
               {/* <div className="vm-accent-triangle"></div> */}
               <h3 className="vm-card-title">

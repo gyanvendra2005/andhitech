@@ -15,7 +15,7 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
     email: '',
     company: '',
     phone: '',
-    product: 'Axle & Wheel Mounted Brake Discs',
+    product: '',
     notes: '',
   });
 
@@ -47,7 +47,7 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
             email: '',
             company: '',
             phone: '',
-            product: 'Axle & Wheel Mounted Brake Discs',
+            product: '',
             notes: '',
           });
         }, 3500);
@@ -113,7 +113,7 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
             </div>
             <div>
               <label className="quote-modal-label">Product System</label>
-              <select
+              {/* <select
                 value={formData.product}
                 onChange={(e) => setFormData({ ...formData, product: e.target.value })}
                 className="quote-modal-select"
@@ -122,7 +122,13 @@ export default function QuoteModal({ isOpen, onClose }: QuoteModalProps) {
                 <option value="Roof-Mounted Package Units (RMPU)">Roof-Mounted Package Units (RMPU)</option>
                 <option value="Air Suspension & LHB Dampers">Air Suspension & LHB Dampers</option>
                 <option value="Spring-Type Pantographs">Spring-Type Pantographs</option>
-              </select>
+              </select> */}
+                <input
+                type="text"
+                value={formData.product}
+                onChange={(e) => setFormData({ ...formData, product: e.target.value })}
+                className="quote-modal-input"
+              />
             </div>
             {errorMessage && (
               <div style={{ color: '#ef4444', fontSize: '0.85rem', marginTop: '0.5rem', fontWeight: 600 }}>
